@@ -300,6 +300,14 @@ function SearchPageContent() {
   const [showToast, setShowToast] = useState<string | null>(null);
 
   const query = searchParams.get("q") || "";
+  
+  // State for search input - sync with URL query
+  const [searchInput, setSearchInput] = useState(query);
+  
+  // Update search input when URL query changes
+  useEffect(() => {
+    setSearchInput(query);
+  }, [query]);
 
   const [filters, setFilters] = useState<FilterState>({
     priceRange: [0, 200000000],
@@ -413,9 +421,9 @@ function SearchPageContent() {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              const form = e.target as HTMLFormElement;
-              const input = form.querySelector("input") as HTMLInputElement;
-              router.push(`/search?q=${encodeURIComponent(input.value)}`);
+              if (searchInput.trim()) {
+                router.push(`/search?q=${encodeURIComponent(searchInput)}`);
+              }
             }}
             className="flex gap-2 max-w-2xl"
           >
@@ -423,7 +431,8 @@ function SearchPageContent() {
               <input
                 type="text"
                 name="q"
-                defaultValue={query}
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
                 placeholder="Tìm kiếm sản phẩm..."
                 className="w-full px-4 py-3 pl-11 border border-gray-300 rounded-xl focus:outline-none focus:border-[#e30019] focus:ring-2 focus:ring-[#e30019]/20"
               />
