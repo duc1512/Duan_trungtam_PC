@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useAuth } from "../../../hooks/useAuth";
 import { useCart } from "../../../hooks/useCart";
+import SearchBar from "./SearchBar";
 
 export default function Header() {
   const [activeTab, setActiveTab] = useState("login");
@@ -84,17 +85,7 @@ export default function Header() {
 
           {/* Thanh tìm kiếm */}
           <div className="flex-1 max-w-xl relative hidden md:block">
-            <input 
-              type="text" 
-              placeholder="Bạn cần tìm linh kiện, máy tính gì hôm nay?" 
-              className="w-full border-2 border-white bg-white/90 rounded-md py-2.5 pl-4 pr-12 focus:outline-none focus:ring-0 text-sm text-gray-800 placeholder-gray-600"
-            />
-            <div className="absolute right-3 top-1/2 -translate-y-1/2 text-black">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <circle cx="11" cy="11" r="8" strokeWidth="2"></circle>
-                <path d="m21 21-4.35-4.35" strokeWidth="2" strokeLinecap="round"></path>
-              </svg>
-            </div>
+            <SearchBar />
           </div>
 
           {/* Hotline & Showroom */}
