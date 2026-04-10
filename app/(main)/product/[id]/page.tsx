@@ -153,16 +153,18 @@ const ProductInfo = ({
   product,
   quantity,
   setQuantity,
+  onAddSuccess,
 }: {
   product: Product;
   quantity: number;
   setQuantity: (value: number) => void;
+  onAddSuccess?: (name: string, qty: number) => void;
 }) => {
   const { addItem, isInCart } = useCart();
   const [showAddedMessage, setShowAddedMessage] = useState(false);
 
   const handleAddToCart = () => {
-    addItem(
+    const success = addItem(
       {
         id: product.id,
         name: product.name,
@@ -172,8 +174,11 @@ const ProductInfo = ({
       },
       quantity
     );
-    setShowAddedMessage(true);
-    setTimeout(() => setShowAddedMessage(false), 2000);
+    if (success) {
+      setShowAddedMessage(true);
+      onAddSuccess?.(product.name, quantity);
+      setTimeout(() => setShowAddedMessage(false), 2000);
+    }
   };
 
   const discount = product.originalPrice
@@ -483,15 +488,50 @@ const Breadcrumb = ({ product }: { product: Product }) => {
   );
 };
 
+// Cart Toast Component
+const CartToast = ({ show, productName, quantity, onClose }: { show: boolean; productName: string; quantity: number; onClose: () => void }) => {
+  if (!show) return null;
+  return (
+    <div className="fixed top-20 right-4 bg-green-500 text-white px-4 py-3 rounded-lg shadow-lg z-50 animate-bounce flex items-center gap-3">
+      <div className="bg-white/20 rounded-full p-1">
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <div>
+        <div className="font-semibold">Đã thêm vào giỏ!</div>
+        <div className="text-sm opacity-90 line-clamp-1">{productName} x{quantity}</div>
+      </div>
+      <Link href="/cart" className="ml-2 bg-white/20 hover:bg-white/30 px-3 py-1 rounded text-sm">
+        Xem giỏ →
+      </Link>
+    </div>
+  );
+};
+
 // Main Product Detail Page
 export default function ProductDetailPage() {
   const [quantity, setQuantity] = useState(1);
+  const [cartToast, setCartToast] = useState({ show: false, productName: '', quantity: 0 });
   const params = useParams();
   const productId = (params?.id as string) || "laptop-001";
   const product = getProductById(productId) || products[0];
 
+  const handleCartSuccess = (name: string, qty: number) => {
+    setCartToast({ show: true, productName: name, quantity: qty });
+    setTimeout(() => setCartToast({ show: false, productName: '', quantity: 0 }), 2500);
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Cart Toast Notification */}
+      <CartToast 
+        show={cartToast.show} 
+        productName={cartToast.productName} 
+        quantity={cartToast.quantity}
+        onClose={() => setCartToast({ show: false, productName: '', quantity: 0 })}
+      />
+
       <div className="container mx-auto px-4 py-6">
         {/* Breadcrumb */}
         <Breadcrumb product={product} />
@@ -502,7 +542,7 @@ export default function ProductDetailPage() {
           <ImageGallery images={product.images} productName={product.name} />
 
           {/* Right: Product Info */}
-          <ProductInfo product={product} quantity={quantity} setQuantity={setQuantity} />
+          <ProductInfo product={product} quantity={quantity} setQuantity={setQuantity} onAddSuccess={handleCartSuccess} />
         </div>
 
         {/* Product Tabs */}
