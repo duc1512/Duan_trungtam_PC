@@ -2,10 +2,97 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
+interface RegisteredUser {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  password: string;
+  role: "user";
+  avatar: string;
+}
 
 export default function RegisterPage() {
+  const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [agreeTerms, setAgreeTerms] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    password: "",
+    confirmPassword: ""
+  });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    // Clear error when user types
+    if (errors[name]) {
+      setErrors(prev => { const newErrors = { ...prev }; delete newErrors[name]; return newErrors; });
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors: Record<string, string> = {};
+    
+    if (!formData.firstName.trim()) newErrors.firstName = "Vui lòng nhập họ";
+    if (!formData.lastName.trim()) newErrors.lastName = "Vui lòng nhập tên";
+    if (!formData.email.trim()) newErrors.email = "Vui lòng nhập email";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = "Email không hợp lệ";
+    if (!formData.phone.trim()) newErrors.phone = "Vui lòng nhập số điện thoại";
+    else if (!/^[0-9]{10,11}$/.test(formData.phone)) newErrors.phone = "Số điện thoại không hợp lệ";
+    if (!formData.password) newErrors.password = "Vui lòng nhập mật khẩu";
+    else if (formData.password.length < 6) newErrors.password = "Mật khẩu phải có ít nhất 6 ký tự";
+    if (formData.password !== formData.confirmPassword) newErrors.confirmPassword = "Mật khẩu xác nhận không khớp";
+    if (!agreeTerms) newErrors.terms = "Vui lòng đồng ý với điều khoản";
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!validateForm()) return;
+    
+    setIsLoading(true);
+    
+    // Simulate API call
+    setTimeout(() => {
+      // Check if email already exists
+      const existingUsers = JSON.parse(localStorage.getItem("registeredUsers") || "[]") as RegisteredUser[];
+      if (existingUsers.some(u => u.email === formData.email)) {
+        setErrors({ email: "Email đã được đăng ký" });
+        setIsLoading(false);
+        return;
+      }
+      
+      // Create new user
+      const newUser: RegisteredUser = {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone,
+        password: formData.password,
+        role: "user",
+        avatar: `https://ui-avatars.com/api/?name=${formData.firstName}+${formData.lastName}&background=e30019&color=fff&size=150`
+      };
+      
+      // Save to registered users list
+      existingUsers.push(newUser);
+      localStorage.setItem("registeredUsers", JSON.stringify(existingUsers));
+      
+      // Redirect to login with email pre-filled
+      router.push(`/dang-nhap?email=${encodeURIComponent(formData.email)}`);
+    }, 1000);
+  };
 
   return (
     <div className="animate-fade-in-up w-full max-w-sm mx-auto">
@@ -22,7 +109,7 @@ export default function RegisterPage() {
         </p>
       </div>
       
-      <form className="space-y-5">
+      <form className="space-y-5" onSubmit={handleSubmit}>
         {/* Row 1: Họ + Tên */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {/* Input: Họ */}
@@ -38,10 +125,14 @@ export default function RegisterPage() {
               </div>
               <input 
                 type="text" 
-                className="w-full bg-gray-900/50 border border-gray-700 rounded-xl pl-11 pr-4 py-3 text-sm text-white placeholder-gray-600 focus:bg-gray-800 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all duration-200 shadow-inner"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleInputChange}
+                className={`w-full bg-gray-900/50 border rounded-xl pl-11 pr-4 py-3 text-sm text-white placeholder-gray-600 focus:bg-gray-800 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all duration-200 shadow-inner ${errors.firstName ? "border-red-500" : "border-gray-700"}`}
                 placeholder="Nhập họ của bạn..."
               />
             </div>
+            {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
           </div>
 
           {/* Input: Tên */}
@@ -57,10 +148,14 @@ export default function RegisterPage() {
               </div>
               <input 
                 type="text" 
-                className="w-full bg-gray-900/50 border border-gray-700 rounded-xl pl-11 pr-4 py-3 text-sm text-white placeholder-gray-600 focus:bg-gray-800 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all duration-200 shadow-inner"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleInputChange}
+                className={`w-full bg-gray-900/50 border rounded-xl pl-11 pr-4 py-3 text-sm text-white placeholder-gray-600 focus:bg-gray-800 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all duration-200 shadow-inner ${errors.lastName ? "border-red-500" : "border-gray-700"}`}
                 placeholder="Nhập tên của bạn..."
               />
             </div>
+            {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
           </div>
         </div>
         
@@ -77,10 +172,14 @@ export default function RegisterPage() {
             </div>
             <input 
               type="email" 
-              className="w-full bg-gray-900/50 border border-gray-700 rounded-xl pl-11 pr-4 py-3 text-sm text-white placeholder-gray-600 focus:bg-gray-800 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all duration-200 shadow-inner"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              className={`w-full bg-gray-900/50 border rounded-xl pl-11 pr-4 py-3 text-sm text-white placeholder-gray-600 focus:bg-gray-800 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all duration-200 shadow-inner ${errors.email ? "border-red-500" : "border-gray-700"}`}
               placeholder="Email..."
             />
           </div>
+          {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
         </div>
 
         {/* Input: Số điện thoại */}
@@ -96,10 +195,14 @@ export default function RegisterPage() {
             </div>
             <input 
               type="tel" 
-              className="w-full bg-gray-900/50 border border-gray-700 rounded-xl pl-11 pr-4 py-3 text-sm text-white placeholder-gray-600 focus:bg-gray-800 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all duration-200 shadow-inner"
+              name="phone"
+              value={formData.phone}
+              onChange={handleInputChange}
+              className={`w-full bg-gray-900/50 border rounded-xl pl-11 pr-4 py-3 text-sm text-white placeholder-gray-600 focus:bg-gray-800 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all duration-200 shadow-inner ${errors.phone ? "border-red-500" : "border-gray-700"}`}
               placeholder="Số điện thoại..."
             />
           </div>
+          {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
         </div>
         
         {/* Input: Mật khẩu */}
@@ -114,8 +217,11 @@ export default function RegisterPage() {
               </svg>
             </div>
             <input 
-              type={showPassword ? "text" : "password"} 
-              className="w-full bg-gray-900/50 border border-gray-700 rounded-xl pl-11 pr-12 py-3.5 text-sm text-white placeholder-gray-600 focus:bg-gray-800 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all duration-200 font-mono shadow-inner"
+              type={showPassword ? "text" : "password"}
+              name="password"
+              value={formData.password}
+              onChange={handleInputChange}
+              className={`w-full bg-gray-900/50 border rounded-xl pl-11 pr-12 py-3.5 text-sm text-white placeholder-gray-600 focus:bg-gray-800 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all duration-200 font-mono shadow-inner ${errors.password ? "border-red-500" : "border-gray-700"}`}
               placeholder="••••••••"
             />
             <button
@@ -144,8 +250,11 @@ export default function RegisterPage() {
               </svg>
             </div>
             <input 
-              type={showConfirmPassword ? "text" : "password"} 
-              className="w-full bg-gray-900/50 border border-gray-700 rounded-xl pl-11 pr-12 py-3.5 text-sm text-white placeholder-gray-600 focus:bg-gray-800 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all duration-200 font-mono shadow-inner"
+              type={showConfirmPassword ? "text" : "password"}
+              name="confirmPassword"
+              value={formData.confirmPassword}
+              onChange={handleInputChange}
+              className={`w-full bg-gray-900/50 border rounded-xl pl-11 pr-12 py-3.5 text-sm text-white placeholder-gray-600 focus:bg-gray-800 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all duration-200 font-mono shadow-inner ${errors.confirmPassword ? "border-red-500" : "border-gray-700"}`}
               placeholder="••••••••"
             />
             <button
@@ -165,8 +274,10 @@ export default function RegisterPage() {
         {/* Checkbox điều khoản */}
         <div className="flex items-start">
           <input 
-            type="checkbox" 
-            className="w-4 h-4 mt-0.5 rounded border-gray-600 bg-gray-900 text-[#e30019] focus:ring-cyan-500 focus:ring-offset-gray-900 cursor-pointer" 
+            type="checkbox"
+            checked={agreeTerms}
+            onChange={(e) => setAgreeTerms(e.target.checked)}
+            className={`w-4 h-4 mt-0.5 rounded border-gray-600 bg-gray-900 text-[#e30019] focus:ring-cyan-500 focus:ring-offset-gray-900 cursor-pointer ${errors.terms ? "border-red-500" : ""}`}
           />
           <span className="ml-2 text-sm text-gray-400 leading-relaxed">
             Tôi đồng ý với{" "}
@@ -176,12 +287,15 @@ export default function RegisterPage() {
           </span>
         </div>
         
+        {errors.terms && <p className="text-red-500 text-xs -mt-3">{errors.terms}</p>}
+        
         {/* Nút Đăng ký */}
         <button 
           type="submit"
-          className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold py-3.5 rounded-xl shadow-[0_0_15px_rgba(8,145,178,0.4)] hover:shadow-[0_0_25px_rgba(8,145,178,0.6)] transition-all duration-300 active:scale-[0.98] mt-2"
+          disabled={isLoading}
+          className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold py-3.5 rounded-xl shadow-[0_0_15px_rgba(8,145,178,0.4)] hover:shadow-[0_0_25px_rgba(8,145,178,0.6)] transition-all duration-300 active:scale-[0.98] mt-2 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          TẠO TÀI KHOẢN
+          {isLoading ? "ĐANG TẠO TÀI KHOẢN..." : "TẠO TÀI KHOẢN"}
         </button>
       </form>
       
