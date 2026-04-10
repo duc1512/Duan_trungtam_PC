@@ -1,17 +1,37 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
-export default function LoginPage() {
+interface RegisteredUser {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  password: string;
+  role: "user" | "admin";
+  avatar: string;
+}
+
+function LoginPageContent() {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
     password: ""
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  // Read email from URL query params (when coming from registration)
+  useEffect(() => {
+    const emailFromUrl = searchParams.get("email");
+    if (emailFromUrl) {
+      setFormData(prev => ({ ...prev, email: emailFromUrl }));
+    }
+  }, [searchParams]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -19,33 +39,51 @@ export default function LoginPage() {
       ...prev,
       [name]: value
     }));
+    setError(""); // Clear error when user types
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
+    setError("");
 
     // Simulate login process
     setTimeout(() => {
       let userData = null;
       
-      // Check admin credentials
+      // Check admin credentials (hardcoded)
       if (formData.email === "admin@gmail.com" && formData.password === "123456") {
         userData = {
           name: "Admin",
           email: "admin@gmail.com",
-          avatar: "https://via.placeholder.com/150/cccccc/ffffff?text=👤",
-          role: "admin"
+          avatar: "https://i.pravatar.cc/150?img=5",
+          role: "admin" as const
         };
       }
-      // Check user credentials
+      // Check user credentials (hardcoded default user)
       else if (formData.email === "user@gmail.com" && formData.password === "123456") {
         userData = {
           name: "Đức",
           email: "user@gmail.com",
-          avatar: "https://via.placeholder.com/150/cccccc/ffffff?text=👤",
-          role: "user"
+          avatar: "https://i.pravatar.cc/150?img=1",
+          role: "user" as const
         };
+      }
+      // Check registered users from localStorage
+      else {
+        const registeredUsers = JSON.parse(localStorage.getItem("registeredUsers") || "[]") as RegisteredUser[];
+        const foundUser = registeredUsers.find(
+          u => u.email === formData.email && u.password === formData.password
+        );
+        
+        if (foundUser) {
+          userData = {
+            name: `${foundUser.firstName} ${foundUser.lastName}`,
+            email: foundUser.email,
+            avatar: foundUser.avatar,
+            role: foundUser.role
+          };
+        }
       }
       
       if (userData) {
@@ -53,14 +91,10 @@ export default function LoginPage() {
         localStorage.setItem("isLoggedIn", "true");
         localStorage.setItem("userProfile", JSON.stringify(userData));
         
-        // Redirect based on role
-        if (userData.role === "admin") {
-          router.push("/"); // Admin also goes to home page
-        } else {
-          router.push("/"); // Home page for regular user
-        }
+        // Redirect to home page
+        router.push("/");
       } else {
-        alert("Email hoặc mật khẩu không đúng!");
+        setError("Email hoặc mật khẩu không đúng!");
       }
       setIsLoading(false);
     }, 1000);
@@ -86,6 +120,12 @@ export default function LoginPage() {
           </span>
         </p>
       </div>
+      
+      {error && (
+        <div className="mb-4 p-3 bg-red-500/20 border border-red-500 rounded-xl text-red-400 text-sm text-center">
+          {error}
+        </div>
+      )}
       
       <form className="space-y-6" onSubmit={handleSubmit}>
         {/* Input: Tài khoản */}
@@ -168,5 +208,38 @@ export default function LoginPage() {
         </Link>
       </div>
     </div>
+  );
+}
+
+// Loading fallback
+function LoginPageLoading() {
+  return (
+    <div className="animate-fade-in-up w-full max-w-sm mx-auto">
+      <div className="text-center mb-10">
+        <div className="flex items-center justify-center gap-2 mb-4">
+          <div className="w-10 h-10 bg-[#e30019] rounded-lg flex items-center justify-center">
+            <span className="text-white font-black text-xl">T</span>
+          </div>
+          <span className="text-2xl font-black italic text-white tracking-tighter">Duke</span>
+        </div>
+        <h2 className="text-3xl font-extrabold text-white tracking-tight mb-2">
+          Chào mừng trở lại
+        </h2>
+      </div>
+      <div className="space-y-6">
+        <div className="h-12 bg-gray-800 rounded-xl animate-pulse"></div>
+        <div className="h-12 bg-gray-800 rounded-xl animate-pulse"></div>
+        <div className="h-12 bg-[#e30019] rounded-xl animate-pulse"></div>
+      </div>
+    </div>
+  );
+}
+
+// Main export with Suspense wrapper
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<LoginPageLoading />}>
+      <LoginPageContent />
+    </Suspense>
   );
 }
