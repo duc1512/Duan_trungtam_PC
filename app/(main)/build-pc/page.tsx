@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Breadcrumb from "@/app/components/layout/Breadcrumb";
 
@@ -29,7 +29,7 @@ const mockProducts: Record<ComponentCategory, { name: string; price: number; ima
   case: { name: "NZXT H5 Flow Black", price: 2150000, image: "https://picsum.photos/seed/case2/150/150", power: 0, specs: ["Mid Tower", "Kính cường lực"] },
 };
 
-export default function PremiumPCBuilder() {
+function PCBuilderContent() {
   const searchParams = useSearchParams();
   const slideType = searchParams.get("type");
   
@@ -317,5 +317,37 @@ export default function PremiumPCBuilder() {
         </div>
       </div>
     </div>
+  );
+}
+
+// Loading fallback component
+function PCBuilderLoading() {
+  return (
+    <div className="bg-[#f4f6f8] min-h-screen py-10 font-sans">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="animate-pulse">
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 mb-8 h-24"></div>
+          <div className="flex flex-col lg:flex-row gap-8">
+            <div className="w-full lg:w-2/3 space-y-4">
+              {[...Array(7)].map((_, i) => (
+                <div key={i} className="bg-white border border-gray-200 rounded-2xl p-4 h-24"></div>
+              ))}
+            </div>
+            <div className="w-full lg:w-1/3">
+              <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-6 h-96"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Main export with Suspense wrapper
+export default function PremiumPCBuilder() {
+  return (
+    <Suspense fallback={<PCBuilderLoading />}>
+      <PCBuilderContent />
+    </Suspense>
   );
 }

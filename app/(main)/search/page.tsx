@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useSearchParams, useRouter } from "next/navigation";
@@ -293,7 +293,7 @@ const FilterSidebar = ({
 };
 
 // ==================== MAIN SEARCH PAGE ====================
-export default function SearchPage() {
+function SearchPageContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const { addItem } = useCart();
@@ -601,5 +601,40 @@ export default function SearchPage() {
         </div>
       )}
     </div>
+  );
+}
+
+// Loading fallback component
+function SearchPageLoading() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-6">
+      <div className="container mx-auto px-4">
+        <div className="animate-pulse space-y-4">
+          <div className="h-8 bg-gray-200 rounded w-1/3"></div>
+          <div className="h-4 bg-gray-200 rounded w-1/4"></div>
+          <div className="h-12 bg-gray-200 rounded max-w-2xl"></div>
+          <div className="flex gap-6 mt-6">
+            <div className="hidden lg:block w-64 h-96 bg-gray-200 rounded-xl"></div>
+            <div className="flex-1 space-y-4">
+              <div className="h-16 bg-gray-200 rounded-xl"></div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+                {[...Array(6)].map((_, i) => (
+                  <div key={i} className="h-64 bg-gray-200 rounded-xl"></div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Main export with Suspense wrapper
+export default function SearchPage() {
+  return (
+    <Suspense fallback={<SearchPageLoading />}>
+      <SearchPageContent />
+    </Suspense>
   );
 }
