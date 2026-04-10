@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Breadcrumb from "@/app/components/layout/Breadcrumb";
 
 // Thay thế Emoji bằng SVG Icon chuyên nghiệp
@@ -29,7 +30,91 @@ const mockProducts: Record<ComponentCategory, { name: string; price: number; ima
 };
 
 export default function PremiumPCBuilder() {
+  const searchParams = useSearchParams();
+  const slideType = searchParams.get("type");
+  
   const [selectedParts, setSelectedParts] = useState<Partial<Record<ComponentCategory, { name: string; price: number; image: string; power: number; specs: string[]; }>>>({});
+
+  // Auto-build PC based on slide type
+  useEffect(() => {
+    if (slideType) {
+      const parts: Partial<Record<ComponentCategory, typeof mockProducts[ComponentCategory]>> = {};
+      
+      switch (slideType) {
+        case "rtx4090":
+          parts.vga = { 
+            name: "NVIDIA GeForce RTX 4090 24GB GDDR6X", 
+            price: 40990000, 
+            image: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=150&h=150&fit=crop", 
+            power: 450, 
+            specs: ["24GB GDDR6X", "CUDA 16384", "DLSS 3"] 
+          };
+          parts.cpu = { 
+            name: "Intel Core i9-14900K", 
+            price: 15490000, 
+            image: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=150&h=150&fit=crop", 
+            power: 253, 
+            specs: ["24 Core / 32 Thread", "Up to 6.0GHz"] 
+          };
+          parts.ram = { 
+            name: "G.Skill Trident Z5 RGB 64GB (2x32GB)", 
+            price: 8500000, 
+            image: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=150&h=150&fit=crop", 
+            power: 10, 
+            specs: ["DDR5-6400", "CL32"] 
+          };
+          parts.psu = { 
+            name: "ASUS ROG Thor 1000W Platinum II", 
+            price: 8500000, 
+            image: "https://images.unsplash.com/photo-1587202372775-4abc9295e321?w=150&h=150&fit=crop", 
+            power: 0, 
+            specs: ["1000W", "80 Plus Platinum", "RGB OLED"] 
+          };
+          break;
+        case "i9":
+          parts.cpu = { 
+            name: "Intel Core i9-14900K", 
+            price: 15490000, 
+            image: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=150&h=150&fit=crop", 
+            power: 253, 
+            specs: ["24 Core / 32 Thread", "Up to 6.0GHz"] 
+          };
+          parts.mainboard = { 
+            name: "ASUS ROG Maximus Z790 Hero", 
+            price: 12990000, 
+            image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=150&h=150&fit=crop", 
+            power: 50, 
+            specs: ["Z790", "DDR5", "PCIe 5.0", "WiFi 6E"] 
+          };
+          parts.ram = { 
+            name: "Corsair Dominator Platinum 32GB (2x16GB)", 
+            price: 4500000, 
+            image: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=150&h=150&fit=crop", 
+            power: 10, 
+            specs: ["DDR5-5600", "CL36"] 
+          };
+          break;
+        case "ssd":
+          parts.ssd = { 
+            name: "Samsung 990 PRO 2TB PCIe Gen 5.0", 
+            price: 4500000, 
+            image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=150&h=150&fit=crop", 
+            power: 7, 
+            specs: ["Đọc: 14,500MB/s", "Ghi: 13,000MB/s", "Gen 5"] 
+          };
+          parts.mainboard = { 
+            name: "MSI MPG Z790 Carbon WiFi", 
+            price: 8990000, 
+            image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=150&h=150&fit=crop", 
+            power: 45, 
+            specs: ["Z790", "PCIe 5.0 M.2", "WiFi 6E"] 
+          };
+          break;
+      }
+      
+      setSelectedParts(parts);
+    }
+  }, [slideType]);
 
   const handleSelect = (categoryId: ComponentCategory) => {
     if (mockProducts[categoryId]) {
