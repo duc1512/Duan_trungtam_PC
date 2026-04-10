@@ -14,7 +14,8 @@ export default function MainBanner() {
       description: "Giảm đến 30% + Tặng kèm Gaming Mouse worth 2.990.000đ. Hiệu năng vượt trội cho mọi game thủ.",
       price: "40.990.000đ",
       oldPrice: "53.990.000đ",
-      image: "https://images.unsplash.com/photo-1587202372775-4abc9295e321?w=900&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=900&h=400&fit=crop",
+      productId: "gpu-001"
     },
     {
       id: 2,
@@ -22,15 +23,17 @@ export default function MainBanner() {
       description: "Giảm 15% + Tặng kèm cooler. Hiệu năng vượt trội cho mọi game thủ.",
       price: "15.490.000đ",
       oldPrice: "17.990.000đ",
-      image: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=900&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=900&h=400&fit=crop",
+      productId: "cpu-001"
     },
     {
       id: 3,
       title: "SSD Gen5 - Tốc độ Vũ Trụ",
-      description: "Giảm 20% + Tặng kèm adapter. Tốc độ đọc 10.000MB/s.",
-      price: "2.990.000đ",
-      oldPrice: "3.990.000đ",
-      image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=900&h=400&fit=crop"
+      description: "Giảm 20% + Tặng kèm adapter. Tốc độ đọc 14.500MB/s.",
+      price: "4.990.000đ",
+      oldPrice: "5.990.000đ",
+      image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=900&h=400&fit=crop",
+      productId: "ssd-001"
     }
   ];
 
@@ -94,10 +97,13 @@ export default function MainBanner() {
             {currentSlideData.description}
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link href="/products" className="bg-[#e30019] text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors text-center">
+            <Link 
+              href={currentSlideData.productId.startsWith("category/") ? `/${currentSlideData.productId}` : `/product/${currentSlideData.productId}`} 
+              className="bg-[#e30019] text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors text-center"
+            >
               Khám phá ngay
             </Link>
-            <Link href="/build-pc" className="bg-white/20 backdrop-blur text-white px-6 py-3 rounded-lg font-bold hover:bg-white/30 transition-colors text-center border border-white/30">
+            <Link href={`/build-pc?type=${currentSlide === 0 ? "rtx4090" : currentSlide === 1 ? "i9" : "ssd"}`} className="bg-white/20 backdrop-blur text-white px-6 py-3 rounded-lg font-bold hover:bg-white/30 transition-colors text-center border border-white/30">
               Xây dựng PC
             </Link>
           </div>

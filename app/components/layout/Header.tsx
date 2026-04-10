@@ -6,18 +6,17 @@ import { useAuth } from "../../../hooks/useAuth";
 import { useCart } from "../../../hooks/useCart";
 
 export default function Header() {
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("login");
   const { isLoggedIn, userProfile, logout, isAdmin } = useAuth();
-  const { totalItems } = useCart();
+  const { totalItems, showLoginModal, setShowLoginModal } = useCart();
 
   const openLoginModal = () => {
-    setIsLoginModalOpen(true);
+    setShowLoginModal(true);
     setActiveTab("login");
   };
 
   const closeLoginModal = () => {
-    setIsLoginModalOpen(false);
+    setShowLoginModal(false);
   };
 
   const handleLogout = () => {
@@ -27,19 +26,19 @@ export default function Header() {
   return (
     <header className="bg-[#e30019] shadow-sm sticky top-0 z-50">
       {/* Login Modal with Backdrop */}
-      {isLoginModalOpen && (
+      {showLoginModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           {/* Backdrop */}
           <div 
             className="absolute inset-0 bg-black/70 "
-            onClick={closeLoginModal}
+            onClick={() => setShowLoginModal(false)}
           />
           
           {/* Modal Content */}
           <div className="relative bg-white rounded-xl shadow-2xl w-full max-w-sm mx-4 p-6 z-10">
             {/* Close Button */}
             <button 
-              onClick={closeLoginModal}
+              onClick={() => setShowLoginModal(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-xl"
             >
               ✕
@@ -50,7 +49,7 @@ export default function Header() {
             {/* Login Button */}
             <Link 
               href="/dang-nhap"
-              onClick={closeLoginModal}
+              onClick={() => setShowLoginModal(false)}
               className="block w-full bg-[#e30019] text-white font-bold py-3 rounded-lg hover:bg-red-700 transition-colors mb-3 text-center"
             >
                Đăng nhập
@@ -59,7 +58,7 @@ export default function Header() {
             {/* Register Button */}
             <Link 
               href="/dang-ky"
-              onClick={closeLoginModal}
+              onClick={() => setShowLoginModal(false)}
               className="block w-full bg-white border-2 border-[#e30019] text-[#e30019] font-bold py-3 rounded-lg hover:bg-gray-50 transition-colors text-center"
             >
                Đăng ký
@@ -133,7 +132,16 @@ export default function Header() {
               </div>
             </Link>
 
-            <Link href="/cart" className="flex items-center gap-2 text-sm font-semibold hover:text-white relative">
+            <button 
+              onClick={() => {
+                if (!isLoggedIn) {
+                  openLoginModal();
+                } else {
+                  window.location.href = "/cart";
+                }
+              }}
+              className="flex items-center gap-2 text-sm font-semibold hover:text-white relative"
+            >
               <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
               </svg>
@@ -141,7 +149,7 @@ export default function Header() {
               <div className="hidden sm:block">
                 <p className="text-white">Giỏ hàng</p>
               </div>
-            </Link>
+            </button>
 
             {/* Login Button / User Avatar */}
             {isLoggedIn && userProfile ? (

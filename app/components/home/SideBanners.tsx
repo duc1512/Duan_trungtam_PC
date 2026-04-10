@@ -25,7 +25,7 @@ export default function SideBanners() {
           <p className="text-white/90 text-sm mb-2">RTX 4070 - Intel i7</p>
           <div className="flex items-center justify-between">
             <span className="text-yellow-400 font-bold">28.990.000đ</span>
-            <Link href="/products/laptop" className="bg-white/20 backdrop-blur text-white px-3 py-1 rounded text-xs hover:bg-white/30 transition-colors">
+            <Link href="/product/laptop-003" className="bg-white/20 backdrop-blur text-white px-3 py-1 rounded text-xs hover:bg-white/30 transition-colors">
               Xem ngay
             </Link>
           </div>
@@ -51,7 +51,7 @@ export default function SideBanners() {
               <span className="text-yellow-400 font-bold">1.290.000đ</span>
               <span className="text-white/60 text-xs line-through ml-2">1.990.000đ</span>
             </div>
-            <Link href="/products/ssd" className="bg-white/20 backdrop-blur text-white px-3 py-1 rounded text-xs hover:bg-white/30 transition-colors">
+            <Link href="/product/ssd-002" className="bg-white/20 backdrop-blur text-white px-3 py-1 rounded text-xs hover:bg-white/30 transition-colors">
               Xem ngay
             </Link>
           </div>
