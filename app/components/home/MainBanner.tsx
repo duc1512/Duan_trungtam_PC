@@ -77,7 +77,7 @@ export default function MainBanner() {
                 src={imgErrors[slide.id] ? "/placeholder-product.png" : slide.image} 
                 alt={slide.title} 
                 onError={() => handleImgError(slide.id)}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                className="w-full h-full object-cover transition-transform duration-500" 
               />
             </div>
           ))}

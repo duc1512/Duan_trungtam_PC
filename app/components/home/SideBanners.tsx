@@ -35,7 +35,7 @@ export default function SideBanners() {
       {/* Bottom Banner - SSD Sale */}
       <div className="relative flex-1 bg-white rounded-md overflow-hidden shadow-sm h-[192px] group cursor-pointer">
         <img 
-          src={ssdImgError ? "/placeholder-product.png" : "https://images.unsplash.com/photo-1587202372775-4abc9295e321?w=300&h=192&fit=crop"} 
+          src={ssdImgError ? "/placeholder-product.png" : "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400&h=300&fit=crop"} 
           alt="SSD Sale" 
           onError={() => setSsdImgError(true)}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
