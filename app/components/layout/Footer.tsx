@@ -142,14 +142,32 @@ export default function Footer() {
             <div className="flex flex-col sm:flex-row items-center gap-6">
               {/* Payment Methods */}
               <div className="flex items-center gap-3">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png" alt="Visa" className="h-6 object-contain bg-white px-2 py-1 rounded" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1200px-Mastercard-logo.svg.png" alt="Mastercard" className="h-6 object-contain bg-white px-2 py-1 rounded" />
-                <img src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png" alt="MoMo" className="h-6 object-contain bg-white px-2 py-1 rounded" />
-                <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-ZaloPay-Square.png" alt="ZaloPay" className="h-6 w-10 object-contain bg-white px-1 py-1 rounded" />
+                {/* Visa */}
+                <div className="h-6 w-12 bg-white rounded flex items-center justify-center px-2">
+                  <svg viewBox="0 0 48 16" className="h-3 w-full">
+                    <path fill="#1A1F71" d="M17.68 0h-5.72l-3.5 11.13L8.66 3.5C8.2 1.4 6.48.28 4.6.08L4.5 0H0v.53c3.2.7 5.5 2.3 6.5 4.4l3.2 9.53h4L18.4 0h-.72zm12.6 2.4c-1 0-1.8.2-2.4.5l-.3.15-.5 2.9.4-.3c.6-.4 1.6-.7 2.6-.7 1 0 1.8.3 2.4.8l.2.15 2.2-2.5-.3-.2c-1.1-.8-2.8-1.3-4.6-1.3zm-6.8 4.6l-.1.6c-1.2-.5-2.5-.4-3.3.3l-.2.2 1.4 1.6.3-.2c.5-.4 1.2-.4 1.9-.1l.1.1 2.5-2.8-.2-.1c-.7-.5-1.5-.7-2.4-.7l-.2.1zm16.2-4.4h-3.5l-.1.6c3 .7 5.1 2.3 5.9 4.5l-1.7-5.1h-.5zm-6.4 0l-4 11.1h4l1.5-4.2h.3c1.5 0 2.9-.3 4.1-1l.2-.2-1.3-3.6-.3.2c-.6.4-1.3.6-2.1.6h-1.1l1.1-3h.5c.9 0 1.7.2 2.4.5l.3.1 1.2-3.2-.3-.1c-1-.5-2.2-.8-3.4-.8h-.2v.6z"/>
+                  </svg>
+                </div>
+                {/* Mastercard */}
+                <div className="h-6 w-12 bg-white rounded flex items-center justify-center px-1">
+                  <svg viewBox="0 0 24 16" className="h-4">
+                    <circle cx="6" cy="8" r="6" fill="#EB001B"/>
+                    <circle cx="18" cy="8" r="6" fill="#F79E1B"/>
+                    <path d="M12 3c-1.7 1.5-2.5 3.5-2.5 5s.8 3.5 2.5 5c1.7-1.5 2.5-3.5 2.5-5s-.8-3.5-2.5-5z" fill="#FF5F00"/>
+                  </svg>
+                </div>
+                {/* MoMo */}
+                <div className="h-6 w-12 bg-[#AE2070] rounded flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">MoMo</span>
+                </div>
+                {/* ZaloPay */}
+                <div className="h-6 w-12 bg-[#008FE5] rounded flex items-center justify-center">
+                  <span className="text-white text-[10px] font-bold">ZaloPay</span>
+                </div>
               </div>
               
               {/* Bo Cong Thuong Tag */}
-              <img src="https://theme.hstatic.net/1000300454/1000395368/14/logo-bct.png?v=330" alt="Đã thông báo Bộ Công Thương" className="h-10" />
+              <img src="https://images.dmca.com/Badges/dmca_protected_sml_120l.png?ID=your-id" alt="DMCA Protected" className="h-8" />
             </div>
             
           </div>

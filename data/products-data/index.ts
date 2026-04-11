@@ -10,6 +10,12 @@ export { monitor001 } from "./monitor-001";
 export { mouse001 } from "./mouse-001";
 export { keyboard001 } from "./keyboard-001";
 export { headset001 } from "./headset-001";
+export { flash001 } from "./flash-001";
+export { flash002 } from "./flash-002";
+export { flash003 } from "./flash-003";
+export { flash004 } from "./flash-004";
+export { flash005 } from "./flash-005";
+export { flash006 } from "./flash-006";
 
 import { laptop001 } from "./laptop-001";
 import { laptop002 } from "./laptop-002";
@@ -22,6 +28,12 @@ import { monitor001 } from "./monitor-001";
 import { mouse001 } from "./mouse-001";
 import { keyboard001 } from "./keyboard-001";
 import { headset001 } from "./headset-001";
+import { flash001 } from "./flash-001";
+import { flash002 } from "./flash-002";
+import { flash003 } from "./flash-003";
+import { flash004 } from "./flash-004";
+import { flash005 } from "./flash-005";
+import { flash006 } from "./flash-006";
 import { Product } from "./types";
 
 // Combine all products
@@ -37,7 +49,12 @@ export const products: Product[] = [
   ssd001,
   ssd002,
   cpu001,
-  // Add other products from old file here
+  flash001,
+  flash002,
+  flash003,
+  flash004,
+  flash005,
+  flash006,
 ];
 
 export const categories: Record<string, { name: string; description: string }> = {

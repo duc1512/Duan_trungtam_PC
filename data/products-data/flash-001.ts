@@ -1,0 +1,40 @@
+import { Product } from "./index";
+
+export const flash001: Product = {
+  id: "flash-001",
+  name: "Laptop Gaming ASUS ROG Strix G16 i9 RTX 4070 - Flash Sale",
+  brand: "ASUS",
+  price: 34990000,
+  originalPrice: 49990000,
+  rating: 4.9,
+  reviewCount: 256,
+  images: [
+    { id: 1, url: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800&h=600&fit=crop", alt: "ASUS ROG Strix G16 - Front" },
+    { id: 2, url: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800&h=600&fit=crop", alt: "ASUS ROG Strix G16 - Side" },
+    { id: 3, url: "https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=800&h=600&fit=crop", alt: "ASUS ROG Strix G16 - Back" },
+  ],
+  image: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=400&h=300&fit=crop",
+  description: "Laptop gaming cao cấp với CPU Intel Core i9-14900HX và GPU RTX 4070. Màn hình 16 inch QHD+ 240Hz, RAM 32GB DDR5, SSD 1TB NVMe. Thiết kế tản nhiện tiên tiến với công nghệ Liquid Metal.",
+  specifications: [
+    { label: "CPU", value: "Intel Core i9-14900HX (24 nhân, 32 luồng)" },
+    { label: "GPU", value: "NVIDIA RTX 4070 8GB GDDR6" },
+    { label: "RAM", value: "32GB DDR5-5600MHz" },
+    { label: "Storage", value: "1TB PCIe Gen 4 NVMe SSD" },
+    { label: "Màn hình", value: "16\" QHD+ (2560x1600) 240Hz IPS" },
+    { label: "Pin", value: "90Wh, sạc 280W" },
+  ],
+  features: [
+    "Màn hình 240Hz siêu mượt cho gaming",
+    "Tản nhiện ROG Intelligent Cooling với Liquid Metal",
+    "Bàn phím RGB ROG Optical-Mechanical",
+    "WiFi 6E và Bluetooth 5.3",
+    "Âm thanh Dolby Atmos 6 loa",
+  ],
+  stock: 8,
+  sku: "G614JVR-I94R4070",
+  warranty: "24 tháng chính hãng",
+  category: "laptop-gaming",
+  inStock: true,
+  status: "active",
+  sales: 42,
+};
