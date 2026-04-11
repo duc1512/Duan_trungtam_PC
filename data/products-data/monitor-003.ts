@@ -2,20 +2,38 @@ import { Product } from "./types";
 
 export const monitor003: Product = {
   id: "monitor-003",
-  name: "LG UltraGear 32GQ950-B 32\" 4K 144Hz",
+  name: 'LG UltraGear 32GQ950-B 32" 4K 144Hz',
   brand: "LG",
   price: 18990000,
   originalPrice: 21990000,
   rating: 4.8,
   reviewCount: 234,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1547394765-1858a97d4f15?w=800&h=600&fit=crop", alt: "LG 32GQ950 - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&h=600&fit=crop", alt: "LG 32GQ950 - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop", alt: "LG 32GQ950 - Stand" },
-    { id: 4, url: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800&h=600&fit=crop", alt: "LG 32GQ950 - Detail" },
+    {
+      id: 1,
+      url: "https://www.lg.com/content/dam/channel/wcms/in/images/monitors/32gq950-b_atr_eail_in_c/gallery/32GQ950-B-Gaming-Monitor-side-view-DZ-03.jpg",
+      alt: "LG 32GQ950 - Front View",
+    },
+    {
+      id: 2,
+      url: "https://www.lg.com/content/dam/channel/wcms/in/images/monitors/32gq950-b_atr_eail_in_c/gallery/32GQ950-B-Gaming-Monitor-side-view-DZ-03.jpg",
+      alt: "LG 32GQ950 - Side View",
+    },
+    {
+      id: 3,
+      url: "https://www.lg.com/content/dam/channel/wcms/in/images/monitors/32gq950-b_atr_eail_in_c/gallery/32GQ950-B-Gaming-Monitor-side-view-DZ-03.jpg",
+      alt: "LG 32GQ950 - Stand",
+    },
+    {
+      id: 4,
+      url: "https://www.lg.com/content/dam/channel/wcms/in/images/monitors/32gq950-b_atr_eail_in_c/gallery/32GQ950-B-Gaming-Monitor-side-view-DZ-03.jpg",
+      alt: "LG 32GQ950 - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1547394765-1858a97d4f15?w=400&h=300&fit=crop",
-  description: "LG UltraGear 32GQ950-B - Màn hình gaming 32 inch 4K 144Hz, IPS Nano, HDR 1000, 1ms GTG. Gaming 4K mượt mà với G-SYNC Compatible và FreeSync Premium Pro.",
+  image:
+    "https://www.lg.com/content/dam/channel/wcms/in/images/monitors/32gq950-b_atr_eail_in_c/gallery/32GQ950-B-Gaming-Monitor-side-view-DZ-03.jpg",
+  description:
+    "LG UltraGear 32GQ950-B - Màn hình gaming 32 inch 4K 144Hz, IPS Nano, HDR 1000, 1ms GTG. Gaming 4K mượt mà với G-SYNC Compatible và FreeSync Premium Pro.",
   specifications: [
     { label: "Kích thước", value: "32 inch (81.3cm)" },
     { label: "Độ phân giải", value: "3840 x 2160 (4K UHD)" },

@@ -9,13 +9,31 @@ export const gpu003: Product = {
   rating: 4.7,
   reviewCount: 356,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1587202372775-4abc9295e321?w=800&h=600&fit=crop", alt: "RTX 4070 MSI - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800&h=600&fit=crop", alt: "RTX 4070 MSI - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "RTX 4070 MSI - RGB" },
-    { id: 4, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "RTX 4070 MSI - Detail" },
+    {
+      id: 1,
+      url: "https://c1.neweggimages.com/productimage/nb1280/14-137-791-09.jpg",
+      alt: "RTX 4070 MSI - Front View",
+    },
+    {
+      id: 2,
+      url: "https://c1.neweggimages.com/productimage/nb1280/14-137-791-09.jpg",
+      alt: "RTX 4070 MSI - Side View",
+    },
+    {
+      id: 3,
+      url: "https://c1.neweggimages.com/productimage/nb1280/14-137-791-09.jpg",
+      alt: "RTX 4070 MSI - RGB",
+    },
+    {
+      id: 4,
+      url: "https://c1.neweggimages.com/productimage/nb1280/14-137-791-09.jpg",
+      alt: "RTX 4070 MSI - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1587202372775-4abc9295e321?w=400&h=300&fit=crop",
-  description: "MSI Gaming GeForce RTX 4070 12GB Gaming X Trio - Card đồ họa tầm trung cao cấp với tản nhiệt TRI FROZR 3, phù hợp gaming 2K 144Hz và streaming.",
+  image:
+    "https://c1.neweggimages.com/productimage/nb1280/14-137-791-09.jpg",
+  description:
+    "MSI Gaming GeForce RTX 4070 12GB Gaming X Trio - Card đồ họa tầm trung cao cấp với tản nhiệt TRI FROZR 3, phù hợp gaming 2K 144Hz và streaming.",
   specifications: [
     { label: "GPU", value: "NVIDIA AD104-250-A1 (Ada Lovelace)" },
     { label: "CUDA Cores", value: "5,888" },

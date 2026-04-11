@@ -9,13 +9,31 @@ export const keyboard004: Product = {
   rating: 4.7,
   reviewCount: 256,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=800&h=600&fit=crop", alt: "K70 RGB Pro - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800&h=600&fit=crop", alt: "K70 RGB Pro - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1587829741301-dc798b91add1?w=800&h=600&fit=crop", alt: "K70 RGB Pro - RGB" },
-    { id: 4, url: "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=800&h=600&fit=crop", alt: "K70 RGB Pro - Detail" },
+    {
+      id: 1,
+      url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6491/6491897_sd.jpg",
+      alt: "Corsair K70 RGB Pro - Front View",
+    },
+    {
+      id: 2,
+      url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6491/6491897_sd.jpg",
+      alt: "Corsair K70 RGB Pro - Side View",
+    },
+    {
+      id: 3,
+      url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6491/6491897_sd.jpg",
+      alt: "Corsair K70 RGB Pro - RGB",
+    },
+    {
+      id: 4,
+      url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6491/6491897_sd.jpg",
+      alt: "Corsair K70 RGB Pro - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=400&h=300&fit=crop",
-  description: "Corsair K70 RGB Pro - Bàn phím cơ gaming full-size, switch Cherry MX Speed Silver, keycap PBT doubleshot, aluminum frame, polling rate 8000Hz, iCUE RGB.",
+  image:
+    "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6491/6491897_sd.jpg",
+  description:
+    "Corsair K70 RGB Pro - Bàn phím cơ gaming full-size, switch Cherry MX Speed Silver, keycap PBT doubleshot, aluminum frame, polling rate 8000Hz, iCUE RGB.",
   specifications: [
     { label: "Switch", value: "Cherry MX Speed Silver (1.2mm actuation)" },
     { label: "Actuation", value: "1.2mm / 45g" },

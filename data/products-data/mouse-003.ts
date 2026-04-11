@@ -9,13 +9,31 @@ export const mouse003: Product = {
   rating: 4.9,
   reviewCount: 356,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=800&h=600&fit=crop", alt: "G Pro X Superlight 2 - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&h=600&fit=crop", alt: "G Pro X Superlight 2 - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1586816879360-004f5b0c51e3?w=800&h=600&fit=crop", alt: "G Pro X Superlight 2 - Top View" },
-    { id: 4, url: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&h=600&fit=crop", alt: "G Pro X Superlight 2 - Detail" },
+    {
+      id: 1,
+      url: "https://tse3.mm.bing.net/th/id/OIP.RXG5FSlnLOxs--JxlbZo8AHaFj?pid=Api&P=0&h=180",
+      alt: "G Pro X Superlight 2 - Front View",
+    },
+    {
+      id: 2,
+      url: "https://tse3.mm.bing.net/th/id/OIP.RXG5FSlnLOxs--JxlbZo8AHaFj?pid=Api&P=0&h=180",
+      alt: "G Pro X Superlight 2 - Side View",
+    },
+    {
+      id: 3,
+      url: "https://tse3.mm.bing.net/th/id/OIP.RXG5FSlnLOxs--JxlbZo8AHaFj?pid=Api&P=0&h=180",
+      alt: "G Pro X Superlight 2 - Top View",
+    },
+    {
+      id: 4,
+      url: "https://tse3.mm.bing.net/th/id/OIP.RXG5FSlnLOxs--JxlbZo8AHaFj?pid=Api&P=0&h=180",
+      alt: "G Pro X Superlight 2 - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=400&h=300&fit=crop",
-  description: "Logitech G Pro X Superlight 2 - Chuột gaming siêu nhẹ 60g, sensor HERO 2 32K, wireless 2000Hz polling rate, LIGHTSPEED. Phiên bản trắng tinh tế.",
+  image:
+    "https://tse3.mm.bing.net/th/id/OIP.RXG5FSlnLOxs--JxlbZo8AHaFj?pid=Api&P=0&h=180",
+  description:
+    "Logitech G Pro X Superlight 2 - Chuột gaming siêu nhẹ 60g, sensor HERO 2 32K, wireless 2000Hz polling rate, LIGHTSPEED. Phiên bản trắng tinh tế.",
   specifications: [
     { label: "Cảm biến", value: "Logitech HERO 2 32K DPI" },
     { label: "Trọng lượng", value: "60g (siêu nhẹ)" },

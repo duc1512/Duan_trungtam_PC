@@ -9,13 +9,31 @@ export const gpu005: Product = {
   rating: 4.6,
   reviewCount: 412,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "RTX 4060 Ti - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "RTX 4060 Ti - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1587202372775-4abc9295e321?w=800&h=600&fit=crop", alt: "RTX 4060 Ti - RGB" },
-    { id: 4, url: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800&h=600&fit=crop", alt: "RTX 4060 Ti - Detail" },
+    {
+      id: 1,
+      url: "https://songphuong.vn/Content/uploads/2023/05/VGA-Colorful-IGame-GeForce-RTX-4060-Ti-Ultra-W-DUO-OC-8GB-V-songphuong.vn-01.jpg",
+      alt: "RTX 4060 Ti - Front View",
+    },
+    {
+      id: 2,
+      url: "https://songphuong.vn/Content/uploads/2023/05/VGA-Colorful-IGame-GeForce-RTX-4060-Ti-Ultra-W-DUO-OC-8GB-V-songphuong.vn-01.jpg",
+      alt: "RTX 4060 Ti - Side View",
+    },
+    {
+      id: 3,
+      url: "https://songphuong.vn/Content/uploads/2023/05/VGA-Colorful-IGame-GeForce-RTX-4060-Ti-Ultra-W-DUO-OC-8GB-V-songphuong.vn-01.jpg",
+      alt: "RTX 4060 Ti - RGB",
+    },
+    {
+      id: 4,
+      url: "https://songphuong.vn/Content/uploads/2023/05/VGA-Colorful-IGame-GeForce-RTX-4060-Ti-Ultra-W-DUO-OC-8GB-V-songphuong.vn-01.jpg",
+      alt: "RTX 4060 Ti - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=400&h=300&fit=crop",
-  description: "Colorful iGame GeForce RTX 4060 Ti Ultra W OC 8GB - Card đồ họa gaming tầm trung với thiết kế trắng độc đáo, tản nhiệt hiệu quả, giá tốt cho gaming 1080p/1440p.",
+  image:
+    "https://songphuong.vn/Content/uploads/2023/05/VGA-Colorful-IGame-GeForce-RTX-4060-Ti-Ultra-W-DUO-OC-8GB-V-songphuong.vn-01.jpg",
+  description:
+    "Colorful iGame GeForce RTX 4060 Ti Ultra W OC 8GB - Card đồ họa gaming tầm trung với thiết kế trắng độc đáo, tản nhiệt hiệu quả, giá tốt cho gaming 1080p/1440p.",
   specifications: [
     { label: "GPU", value: "NVIDIA AD106-350-A1 (Ada Lovelace)" },
     { label: "CUDA Cores", value: "4,352" },

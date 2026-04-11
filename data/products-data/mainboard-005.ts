@@ -9,13 +9,31 @@ export const mainboard005: Product = {
   rating: 4.5,
   reviewCount: 523,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "MSI H610M-G - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "MSI H610M-G - IO Panel" },
-    { id: 3, url: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=800&h=600&fit=crop", alt: "MSI H610M-G - Heatsink" },
-    { id: 4, url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop", alt: "MSI H610M-G - Detail" },
+    {
+      id: 1,
+      url: "https://cdn11.bigcommerce.com/s-sp9oc95xrw/images/stencil/2560w/products/10036/50610/5f0863f3ab2ed04e57c5e0ff91b6b315-hi__67880.1672395199.jpg?c=2",
+      alt: "MSI H610M-G - Front View",
+    },
+    {
+      id: 2,
+      url: "https://cdn11.bigcommerce.com/s-sp9oc95xrw/images/stencil/2560w/products/10036/50610/5f0863f3ab2ed04e57c5e0ff91b6b315-hi__67880.1672395199.jpg?c=2",
+      alt: "MSI H610M-G - IO Panel",
+    },
+    {
+      id: 3,
+      url: "https://cdn11.bigcommerce.com/s-sp9oc95xrw/images/stencil/2560w/products/10036/50610/5f0863f3ab2ed04e57c5e0ff91b6b315-hi__67880.1672395199.jpg?c=2",
+      alt: "MSI H610M-G - Heatsink",
+    },
+    {
+      id: 4,
+      url: "https://cdn11.bigcommerce.com/s-sp9oc95xrw/images/stencil/2560w/products/10036/50610/5f0863f3ab2ed04e57c5e0ff91b6b315-hi__67880.1672395199.jpg?c=2",
+      alt: "MSI H610M-G - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=400&h=300&fit=crop",
-  description: "MSI PRO H610M-G DDR4 - Mainboard entry-level Micro ATX cho Intel 12/13/14th Gen, DDR4-3200, PCIe 4.0. Giá rẻ phù hợp build PC văn phòng và gaming cơ bản.",
+  image:
+    "https://cdn11.bigcommerce.com/s-sp9oc95xrw/images/stencil/2560w/products/10036/50610/5f0863f3ab2ed04e57c5e0ff91b6b315-hi__67880.1672395199.jpg?c=2",
+  description:
+    "MSI PRO H610M-G DDR4 - Mainboard entry-level Micro ATX cho Intel 12/13/14th Gen, DDR4-3200, PCIe 4.0. Giá rẻ phù hợp build PC văn phòng và gaming cơ bản.",
   specifications: [
     { label: "Socket", value: "LGA 1700 (Intel 12/13/14th Gen)" },
     { label: "Chipset", value: "Intel H610" },

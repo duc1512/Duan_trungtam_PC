@@ -9,13 +9,31 @@ export const pcgaming004: Product = {
   rating: 4.8,
   reviewCount: 198,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800&h=600&fit=crop", alt: "PC Gaming RX 7800 XT - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1624705002806-5d72df19c3ad?w=800&h=600&fit=crop", alt: "PC Gaming RX 7800 XT - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800&h=600&fit=crop", alt: "PC Gaming RX 7800 XT - GPU" },
-    { id: 4, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "PC Gaming RX 7800 XT - Detail" },
+    {
+      id: 1,
+      url: "https://tse3.mm.bing.net/th/id/OIP.v1_DFhhgyQUklXETUVIb4gHaHJ?pid=Api&P=0&h=180",
+      alt: "ITX Gaming PC - Front View",
+    },
+    {
+      id: 2,
+      url: "https://tse3.mm.bing.net/th/id/OIP.v1_DFhhgyQUklXETUVIb4gHaHJ?pid=Api&P=0&h=180",
+      alt: "ITX Gaming PC - Side View",
+    },
+    {
+      id: 3,
+      url: "https://tse3.mm.bing.net/th/id/OIP.v1_DFhhgyQUklXETUVIb4gHaHJ?pid=Api&P=0&h=180",
+      alt: "ITX Gaming PC - Interior",
+    },
+    {
+      id: 4,
+      url: "https://tse3.mm.bing.net/th/id/OIP.v1_DFhhgyQUklXETUVIb4gHaHJ?pid=Api&P=0&h=180",
+      alt: "ITX Gaming PC - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=400&h=300&fit=crop",
-  description: "PC Gaming Duke Titan RX 7800 XT Ryzen 7 - Cấu hình AMD đỉnh cao với Ryzen 7 7800X3D, RX 7800 XT 16GB, 32GB DDR5-5600. Gaming 2K max setting, bộ nhớ cache 3D V-Cache cực lớn.",
+  image:
+    "https://tse3.mm.bing.net/th/id/OIP.v1_DFhhgyQUklXETUVIb4gHaHJ?pid=Api&P=0&h=180",
+  description:
+    "PC Gaming Duke Titan RX 7800 XT Ryzen 7 - Cấu hình AMD đỉnh cao với Ryzen 7 7800X3D, RX 7800 XT 16GB, 32GB DDR5-5600. Gaming 2K max setting, bộ nhớ cache 3D V-Cache cực lớn.",
   specifications: [
     { label: "CPU", value: "AMD Ryzen 7 7800X3D (8C/16T, 5.0GHz, 96MB Cache)" },
     { label: "GPU", value: "AMD Radeon RX 7800 XT 16GB GDDR6" },

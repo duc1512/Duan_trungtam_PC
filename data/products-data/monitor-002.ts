@@ -11,27 +11,26 @@ export const monitor002: Product = {
   images: [
     {
       id: 1,
-      url: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&h=600&fit=crop",
-      alt: "ROG Swift PG27AQN - Front View",
+      url: "https://m.media-amazon.com/images/I/81huRqtwTFL._AC_SL1500_.jpg",
+      alt: "Samsung Odyssey G8 - Front View",
     },
     {
       id: 2,
-      url: "https://images.unsplash.com/photo-1547394765-1858a97d4f15?w=800&h=600&fit=crop",
-      alt: "ROG Swift PG27AQN - Side View",
+      url: "https://m.media-amazon.com/images/I/81huRqtwTFL._AC_SL1500_.jpg",
+      alt: "Samsung Odyssey G8 - Curved",
     },
     {
       id: 3,
-      url: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800&h=600&fit=crop",
-      alt: "ROG Swift PG27AQN - Stand",
+      url: "https://m.media-amazon.com/images/I/81huRqtwTFL._AC_SL1500_.jpg",
+      alt: "Samsung Odyssey G8 - Side View",
     },
     {
       id: 4,
-      url: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop",
-      alt: "ROG Swift PG27AQN - Detail",
+      url: "https://m.media-amazon.com/images/I/81huRqtwTFL._AC_SL1500_.jpg",
+      alt: "Samsung Odyssey G8 - Stand",
     },
   ],
-  image:
-    "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&h=300&fit=crop",
+  image: "https://m.media-amazon.com/images/I/81huRqtwTFL._AC_SL1500_.jpg",
   description:
     "ASUS ROG Swift PG27AQN - Màn hình gaming 27 inch 360Hz nhanh nhất thế giới, IPS QHD 1440p, ULMB 2, NVIDIA Reflex Analyzer. Chiến esports đỉnh cao.",
   specifications: [

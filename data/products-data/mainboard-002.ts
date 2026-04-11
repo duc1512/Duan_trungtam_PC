@@ -9,13 +9,31 @@ export const mainboard002: Product = {
   rating: 4.7,
   reviewCount: 423,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop", alt: "MSI B760M Gaming Plus - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "MSI B760M Gaming Plus - IO Panel" },
-    { id: 3, url: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=800&h=600&fit=crop", alt: "MSI B760M Gaming Plus - Heatsink" },
-    { id: 4, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "MSI B760M Gaming Plus - Detail" },
+    {
+      id: 1,
+      url: "https://storage-asset.msi.com/global/picture/image/feature/mb/B760/b760m-gaming-plus-wifi/msi-b760m-gaming-plus-wifi-kv.png",
+      alt: "MSI B760M Gaming Plus - Front View",
+    },
+    {
+      id: 2,
+      url: "https://storage-asset.msi.com/global/picture/image/feature/mb/B760/b760m-gaming-plus-wifi/msi-b760m-gaming-plus-wifi-kv.png",
+      alt: "MSI B760M Gaming Plus - IO Panel",
+    },
+    {
+      id: 3,
+      url: "https://storage-asset.msi.com/global/picture/image/feature/mb/B760/b760m-gaming-plus-wifi/msi-b760m-gaming-plus-wifi-kv.png",
+      alt: "MSI B760M Gaming Plus - Heatsink",
+    },
+    {
+      id: 4,
+      url: "https://storage-asset.msi.com/global/picture/image/feature/mb/B760/b760m-gaming-plus-wifi/msi-b760m-gaming-plus-wifi-kv.png",
+      alt: "MSI B760M Gaming Plus - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop",
-  description: "MSI MPG B760M Gaming Plus WiFi - Mainboard Micro ATX tầm trung cho Intel 12/13/14th Gen, DDR5-6800, PCIe 4.0, WiFi 6E. Giá tốt hiệu năng cao.",
+  image:
+    "https://storage-asset.msi.com/global/picture/image/feature/mb/B760/b760m-gaming-plus-wifi/msi-b760m-gaming-plus-wifi-kv.png",
+  description:
+    "MSI MPG B760M Gaming Plus WiFi - Mainboard Micro ATX tầm trung cho Intel 12/13/14th Gen, DDR5-6800, PCIe 4.0, WiFi 6E. Giá tốt hiệu năng cao.",
   specifications: [
     { label: "Socket", value: "LGA 1700 (Intel 12/13/14th Gen)" },
     { label: "Chipset", value: "Intel B760" },

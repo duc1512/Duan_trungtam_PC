@@ -9,13 +9,31 @@ export const mouse004: Product = {
   rating: 4.6,
   reviewCount: 178,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1586816879360-004f5b0c51e3?w=800&h=600&fit=crop", alt: "Aerox 5 Wireless - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=800&h=600&fit=crop", alt: "Aerox 5 Wireless - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo/1527864550417-7fd91fc51a46?w=800&h=600&fit=crop", alt: "Aerox 5 Wireless - Top View" },
-    { id: 4, url: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&h=600&fit=crop", alt: "Aerox 5 Wireless - Detail" },
+    {
+      id: 1,
+      url: "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23B9WR/fcd2164-def642cd8f4d9f1e26815eec.png/f/steelseries-aerox-5-wireless-gaming-mouse.png",
+      alt: "Aerox 5 Wireless - Front View",
+    },
+    {
+      id: 2,
+      url: "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23B9WR/fcd2164-def642cd8f4d9f1e26815eec.png/f/steelseries-aerox-5-wireless-gaming-mouse.png",
+      alt: "Aerox 5 Wireless - Side View",
+    },
+    {
+      id: 3,
+      url: "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23B9WR/fcd2164-def642cd8f4d9f1e26815eec.png/f/steelseries-aerox-5-wireless-gaming-mouse.png",
+      alt: "Aerox 5 Wireless - Top View",
+    },
+    {
+      id: 4,
+      url: "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23B9WR/fcd2164-def642cd8f4d9f1e26815eec.png/f/steelseries-aerox-5-wireless-gaming-mouse.png",
+      alt: "Aerox 5 Wireless - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1586816879360-004f5b0c51e3?w=400&h=300&fit=crop",
-  description: "SteelSeries Aerox 5 Wireless - Chuột gaming honeycomb siêu nhẹ 74g, 9 nút programmable, sensor TrueMove Air 18K, 180 giờ pin, IP54 chống bụi nước.",
+  image:
+    "https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/23B9WR/fcd2164-def642cd8f4d9f1e26815eec.png/f/steelseries-aerox-5-wireless-gaming-mouse.png",
+  description:
+    "SteelSeries Aerox 5 Wireless - Chuột gaming honeycomb siêu nhẹ 74g, 9 nút programmable, sensor TrueMove Air 18K, 180 giờ pin, IP54 chống bụi nước.",
   specifications: [
     { label: "Cảm biến", value: "SteelSeries TrueMove Air 18K DPI" },
     { label: "Trọng lượng", value: "74g (honeycomb design)" },

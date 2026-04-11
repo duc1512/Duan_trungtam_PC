@@ -9,13 +9,31 @@ export const keyboard002: Product = {
   rating: 4.8,
   reviewCount: 234,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800&h=600&fit=crop", alt: "Huntsman V2 Analog - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1587829741301-dc798b91add1?w=800&h=600&fit=crop", alt: "Huntsman V2 Analog - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=800&h=600&fit=crop", alt: "Huntsman V2 Analog - RGB" },
-    { id: 4, url: "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=800&h=600&fit=crop", alt: "Huntsman V2 Analog - Detail" },
+    {
+      id: 1,
+      url: "https://images-na.ssl-images-amazon.com/images/I/81DltM4sMlL._AC_SL1500_.jpg",
+      alt: "Razer Huntsman V2 Analog - Front View",
+    },
+    {
+      id: 2,
+      url: "https://images-na.ssl-images-amazon.com/images/I/81DltM4sMlL._AC_SL1500_.jpg",
+      alt: "Razer Huntsman V2 Analog - Side View",
+    },
+    {
+      id: 3,
+      url: "https://images-na.ssl-images-amazon.com/images/I/81DltM4sMlL._AC_SL1500_.jpg",
+      alt: "Razer Huntsman V2 Analog - RGB",
+    },
+    {
+      id: 4,
+      url: "https://images-na.ssl-images-amazon.com/images/I/81DltM4sMlL._AC_SL1500_.jpg",
+      alt: "Razer Huntsman V2 Analog - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1595225476474-87563907a212?w=400&h=300&fit=crop",
-  description: "Razer Huntsman V2 Analog - Bàn phím cơ optical analog đầu tiên thế giới, điều chỉnh độ sâu actuation từ 1.5-3.6mm, RGB Chroma, wrist rest magnetic.",
+  image:
+    "https://images-na.ssl-images-amazon.com/images/I/81DltM4sMlL._AC_SL1500_.jpg",
+  description:
+    "Razer Huntsman V2 Analog - Bàn phím cơ optical analog đầu tiên thế giới, điều chỉnh độ sâu actuation từ 1.5-3.6mm, RGB Chroma, wrist rest magnetic.",
   specifications: [
     { label: "Switch", value: "Razer Analog Optical (Red)" },
     { label: "Actuation", value: "Adjustable 1.5 - 3.6mm" },

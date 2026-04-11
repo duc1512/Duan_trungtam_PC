@@ -11,27 +11,27 @@ export const case001: Product = {
   images: [
     {
       id: 1,
-      url: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800&h=600&fit=crop",
-      alt: "O11D EVO XL - Front View",
+      url: "https://os-jo.com/image/cache/catalog/products/cases/O11DEXL/O11DEXLX-002-1200x630.jpg",
+      alt: "NZXT H9 Elite - Front View",
     },
     {
       id: 2,
-      url: "https://images.unsplash.com/photo-1624705002806-5d72df19c3ad?w=800&h=600&fit=crop",
-      alt: "O11D EVO XL - Side View",
+      url: "https://os-jo.com/image/cache/catalog/products/cases/O11DEXL/O11DEXLX-002-1200x630.jpg",
+      alt: "NZXT H9 Elite - Side View",
     },
     {
       id: 3,
-      url: "https://images.unsplash.com/photo-1592419044706-39796d40f98c?w=800&h=600&fit=crop",
-      alt: "O11D EVO XL - Inside",
+      url: "https://os-jo.com/image/cache/catalog/products/cases/O11DEXL/O11DEXLX-002-1200x630.jpg",
+      alt: "NZXT H9 Elite - Inside",
     },
     {
       id: 4,
-      url: "https://images.unsplash.com/photo-1587202372775-4abc9295e321?w=800&h=600&fit=crop",
-      alt: "O11D EVO XL - RGB",
+      url: "https://os-jo.com/image/cache/catalog/products/cases/O11DEXL/O11DEXLX-002-1200x630.jpg",
+      alt: "NZXT H9 Elite - RGB",
     },
   ],
   image:
-    "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=400&h=300&fit=crop",
+    "https://os-jo.com/image/cache/catalog/products/cases/O11DEXL/O11DEXLX-002-1200x630.jpg",
   description:
     "Lian Li O11 Dynamic EVO XL - Case Full Tower cao cấp, hỗ trợ E-ATX, dual chamber, kính cường lực 4mm, tản nhiệt nước custom tối ưu. Phiên bản lớn nhất dòng O11.",
   specifications: [

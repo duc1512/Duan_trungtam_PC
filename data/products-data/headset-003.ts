@@ -9,13 +9,31 @@ export const headset003: Product = {
   rating: 4.7,
   reviewCount: 456,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&h=600&fit=crop", alt: "Cloud III Wireless - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=600&fit=crop", alt: "Cloud III Wireless - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&h=600&fit=crop", alt: "Cloud III Wireless - Mic" },
-    { id: 4, url: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&h=600&fit=crop", alt: "Cloud III Wireless - Detail" },
+    {
+      id: 1,
+      url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6558/6558734cv16d.jpg",
+      alt: "Cloud III Wireless - Front View",
+    },
+    {
+      id: 2,
+      url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6558/6558734cv16d.jpg",
+      alt: "Cloud III Wireless - Side View",
+    },
+    {
+      id: 3,
+      url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6558/6558734cv16d.jpg",
+      alt: "Cloud III Wireless - Mic",
+    },
+    {
+      id: 4,
+      url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6558/6558734cv16d.jpg",
+      alt: "Cloud III Wireless - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400&h=300&fit=crop",
-  description: "HyperX Cloud III Wireless - Tai nghe gaming wireless thế hệ mới, driver 53mm angled, pin 120 giờ, DTS Headphone:X spatial audio, microphone 10mm noise-cancelling.",
+  image:
+    "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6558/6558734cv16d.jpg",
+  description:
+    "HyperX Cloud III Wireless - Tai nghe gaming wireless thế hệ mới, driver 53mm angled, pin 120 giờ, DTS Headphone:X spatial audio, microphone 10mm noise-cancelling.",
   specifications: [
     { label: "Driver", value: "53mm Angled Dynamic" },
     { label: "Dải tần", value: "10-21,000 Hz" },

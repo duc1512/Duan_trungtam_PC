@@ -9,19 +9,40 @@ export const mainboard003: Product = {
   rating: 4.8,
   reviewCount: 178,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=800&h=600&fit=crop", alt: "Gigabyte X670E AORUS Master - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "Gigabyte X670E AORUS Master - IO Panel" },
-    { id: 3, url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop", alt: "Gigabyte X670E AORUS Master - Heatsink" },
-    { id: 4, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "Gigabyte X670E AORUS Master - Detail" },
+    {
+      id: 1,
+      url: "https://gaming-house.cl/wp-content/uploads/2023/04/Diseno-sin-titulo-48.png",
+      alt: "Gigabyte X670E AORUS Master - Front View",
+    },
+    {
+      id: 2,
+      url: "https://gaming-house.cl/wp-content/uploads/2023/04/Diseno-sin-titulo-48.png",
+      alt: "Gigabyte X670E AORUS Master - IO Panel",
+    },
+    {
+      id: 3,
+      url: "https://gaming-house.cl/wp-content/uploads/2023/04/Diseno-sin-titulo-48.png",
+      alt: "Gigabyte X670E AORUS Master - Heatsink",
+    },
+    {
+      id: 4,
+      url: "https://gaming-house.cl/wp-content/uploads/2023/04/Diseno-sin-titulo-48.png",
+      alt: "Gigabyte X670E AORUS Master - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=400&h=300&fit=crop",
-  description: "Gigabyte X670E AORUS Master - Mainboard cao cấp cho AMD Ryzen 7000, E-ATX, DDR5-8000, PCIe 5.0 x16 và M.2, WiFi 6E. Thiết kế VRM khủng 16+2+2 phase 105A.",
+  image:
+    "https://gaming-house.cl/wp-content/uploads/2023/04/Diseno-sin-titulo-48.png",
+  description:
+    "Gigabyte X670E AORUS Master - Mainboard cao cấp cho AMD Ryzen 7000, E-ATX, DDR5-8000, PCIe 5.0 x16 và M.2, WiFi 6E. Thiết kế VRM khủng 16+2+2 phase 105A.",
   specifications: [
     { label: "Socket", value: "AM5 (AMD Ryzen 7000 series)" },
     { label: "Chipset", value: "AMD X670E (Dual chip)" },
     { label: "Form factor", value: "E-ATX (305 x 244 mm)" },
     { label: "RAM", value: "4x DDR5-8000, up to 192GB" },
-    { label: "PCIe", value: "1x PCIe 5.0 x16, 1x PCIe 4.0 x16, 1x PCIe 3.0 x1" },
+    {
+      label: "PCIe",
+      value: "1x PCIe 5.0 x16, 1x PCIe 4.0 x16, 1x PCIe 3.0 x1",
+    },
     { label: "Storage", value: "4x M.2 (1x PCIe 5.0, 3x PCIe 4.0), 4x SATA" },
     { label: "USB", value: "1x USB 3.2 Gen 2x2 Type-C, 8x USB 3.2 Gen 2" },
     { label: "Network", value: "Marvell 10GbE + Intel 2.5GbE, WiFi 6E" },

@@ -9,13 +9,31 @@ export const ram004: Product = {
   rating: 4.8,
   reviewCount: 198,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop", alt: "T-Force Delta RGB - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=800&h=600&fit=crop", alt: "T-Force Delta RGB - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "T-Force Delta RGB - RGB" },
-    { id: 4, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "T-Force Delta RGB - Detail" },
+    {
+      id: 1,
+      url: "https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/661239_536730_04_package_zoom.jpg",
+      alt: "T-Force Delta RGB - Front View",
+    },
+    {
+      id: 2,
+      url: "https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/661239_536730_04_package_zoom.jpg",
+      alt: "T-Force Delta RGB - Side View",
+    },
+    {
+      id: 3,
+      url: "https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/661239_536730_04_package_zoom.jpg",
+      alt: "T-Force Delta RGB - RGB",
+    },
+    {
+      id: 4,
+      url: "https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/661239_536730_04_package_zoom.jpg",
+      alt: "T-Force Delta RGB - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop",
-  description: "Teamgroup T-Force Delta RGB DDR5-7200 - Kit RAM 32GB tốc độ cao cho gaming hiệu năng, 7200MHz CL34, LED RGB 120° siêu rộng.",
+  image:
+    "https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/661239_536730_04_package_zoom.jpg",
+  description:
+    "Teamgroup T-Force Delta RGB DDR5-7200 - Kit RAM 32GB tốc độ cao cho gaming hiệu năng, 7200MHz CL34, LED RGB 120° siêu rộng.",
   specifications: [
     { label: "Dung lượng", value: "32GB Kit (2 x 16GB)" },
     { label: "Chuẩn", value: "DDR5-7200" },

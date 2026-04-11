@@ -9,13 +9,31 @@ export const mouse005: Product = {
   rating: 4.7,
   reviewCount: 234,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&h=600&fit=crop", alt: "Model O Wireless - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1586816879360-004f5b0c51e3?w=800&h=600&fit=crop", alt: "Model O Wireless - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo/1615663245857-ac93bb7c39e7?w=800&h=600&fit=crop", alt: "Model O Wireless - Honeycomb" },
-    { id: 4, url: "https://images.unsplash.com/photo/1527864550417-7fd91fc51a46?w=800&h=600&fit=crop", alt: "Model O Wireless - Detail" },
+    {
+      id: 1,
+      url: "https://files.pccasegear.com/UserFiles/GO-MS-OW-MW-glorious-model-o-wireless-gaming-mouse-matte-white-product1.jpg",
+      alt: "Model O Wireless - Front View",
+    },
+    {
+      id: 2,
+      url: "https://files.pccasegear.com/UserFiles/GO-MS-OW-MW-glorious-model-o-wireless-gaming-mouse-matte-white-product1.jpg",
+      alt: "Model O Wireless - Side View",
+    },
+    {
+      id: 3,
+      url: "https://files.pccasegear.com/UserFiles/GO-MS-OW-MW-glorious-model-o-wireless-gaming-mouse-matte-white-product1.jpg",
+      alt: "Model O Wireless - Honeycomb",
+    },
+    {
+      id: 4,
+      url: "https://files.pccasegear.com/UserFiles/GO-MS-OW-MW-glorious-model-o-wireless-gaming-mouse-matte-white-product1.jpg",
+      alt: "Model O Wireless - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&h=300&fit=crop",
-  description: "Glorious Model O Wireless - Chuột gaming honeycomb siêu nhẹ 69g, sensor BAMF 19K, wireless 2.4GHz polling 1000Hz, PTFE feet 100% virgin, màu trắng matte.",
+  image:
+    "https://files.pccasegear.com/UserFiles/GO-MS-OW-MW-glorious-model-o-wireless-gaming-mouse-matte-white-product1.jpg",
+  description:
+    "Glorious Model O Wireless - Chuột gaming honeycomb siêu nhẹ 69g, sensor BAMF 19K, wireless 2.4GHz polling 1000Hz, PTFE feet 100% virgin, màu trắng matte.",
   specifications: [
     { label: "Cảm biến", value: "Glorious BAMF 19K DPI" },
     { label: "Trọng lượng", value: "69g (honeycomb design)" },

@@ -9,13 +9,31 @@ export const case004: Product = {
   rating: 4.8,
   reviewCount: 412,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo/1587202372775-4abc9295e321?w=800&h=600&fit=crop", alt: "4000D Airflow - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo/1592419044706-39796d40f98c?w=800&h=600&fit=crop", alt: "4000D Airflow - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo/1624705002806-5d72df19c3ad?w=800&h=600&fit=crop", alt: "4000D Airflow - Inside" },
-    { id: 4, url: "https://images.unsplash.com/photo/1587202372634-32705e3bf49c?w=800&h=600&fit=crop", alt: "4000D Airflow - Cable" },
+    {
+      id: 1,
+      url: "https://tandoanh.vn/wp-content/uploads/2021/10/Corsair-4000D-AIRFLOW-Tempered-Glass-Mid-Tower-ATX-Case-%E2%80%93-Black-h1.jpg",
+      alt: "Fractal North - Front View",
+    },
+    {
+      id: 2,
+      url: "https://tandoanh.vn/wp-content/uploads/2021/10/Corsair-4000D-AIRFLOW-Tempered-Glass-Mid-Tower-ATX-Case-%E2%80%93-Black-h1.jpg",
+      alt: "Fractal North - Side View",
+    },
+    {
+      id: 3,
+      url: "https://tandoanh.vn/wp-content/uploads/2021/10/Corsair-4000D-AIRFLOW-Tempered-Glass-Mid-Tower-ATX-Case-%E2%80%93-Black-h1.jpg",
+      alt: "Fractal North - Inside",
+    },
+    {
+      id: 4,
+      url: "https://tandoanh.vn/wp-content/uploads/2021/10/Corsair-4000D-AIRFLOW-Tempered-Glass-Mid-Tower-ATX-Case-%E2%80%93-Black-h1.jpg",
+      alt: "Fractal North - Wood Panel",
+    },
   ],
-  image: "https://images.unsplash.com/photo/1587202372775-4abc9295e321?w=400&h=300&fit=crop",
-  description: "Corsair 4000D Airflow - Case Mid Tower phổ biến nhất với steel front panel mesh, 2 fan 120mm included, RapidRoute cable management, tempered glass. Bền bỉ, dễ build.",
+  image:
+    "https://tandoanh.vn/wp-content/uploads/2021/10/Corsair-4000D-AIRFLOW-Tempered-Glass-Mid-Tower-ATX-Case-%E2%80%93-Black-h1.jpg",
+  description:
+    "Corsair 4000D Airflow - Case Mid Tower phổ biến nhất với steel front panel mesh, 2 fan 120mm included, RapidRoute cable management, tempered glass. Bền bỉ, dễ build.",
   specifications: [
     { label: "Form factor", value: "Mid Tower ATX" },
     { label: "Kích thước", value: "453 x 230 x 466mm (D x R x C)" },
@@ -25,7 +43,7 @@ export const case004: Product = {
     { label: "PSU", value: "Up to 180mm" },
     { label: "Quạt included", value: "2x 120mm AirGuide" },
     { label: "Radiator", value: "Up to 360mm front, 280mm top, 120mm rear" },
-    { label: "Ổ đĩa", value: "2x 3.5\", 2x 2.5\"" },
+    { label: "Ổ đĩa", value: '2x 3.5", 2x 2.5"' },
   ],
   stock: 52,
   sku: "CC-9011200-WW",

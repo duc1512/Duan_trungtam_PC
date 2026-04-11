@@ -9,13 +9,31 @@ export const case005: Product = {
   rating: 4.5,
   reviewCount: 523,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo/1587202372634-32705e3bf49c?w=800&h=600&fit=crop", alt: "Q300L - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo/1587202372775-4abc9295e321?w=800&h=600&fit=crop", alt: "Q300L - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo/1592419044706-39796d40f98c?w=800&h=600&fit=crop", alt: "Q300L - IO Panel" },
-    { id: 4, url: "https://images.unsplash.com/photo/1624705002806-5d72df19c3ad?w=800&h=600&fit=crop", alt: "Q300L - Inside" },
+    {
+      id: 1,
+      url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/47d9e03d-4ffe-448c-914f-112a7aa89aad.__CR121,93,933,933_PT0_SX300_V1___.png",
+      alt: "Q300L - Front View",
+    },
+    {
+      id: 2,
+      url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/47d9e03d-4ffe-448c-914f-112a7aa89aad.__CR121,93,933,933_PT0_SX300_V1___.png",
+      alt: "Q300L - Side View",
+    },
+    {
+      id: 3,
+      url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/47d9e03d-4ffe-448c-914f-112a7aa89aad.__CR121,93,933,933_PT0_SX300_V1___.png",
+      alt: "Q300L - IO Panel",
+    },
+    {
+      id: 4,
+      url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/47d9e03d-4ffe-448c-914f-112a7aa89aad.__CR121,93,933,933_PT0_SX300_V1___.png",
+      alt: "Q300L - Inside",
+    },
   ],
-  image: "https://images.unsplash.com/photo/1587202372634-32705e3bf49c?w=400&h=300&fit=crop",
-  description: "Cooler Master MasterBox Q300L - Case Micro-ATX giá rẻ, nhỏ gọn, IO panel di động, hỗ trợ fan 240mm radiator. Phù hợp build PC nhỏ gọn, tiết kiệm không gian.",
+  image:
+    "https://m.media-amazon.com/images/S/aplus-media-library-service-media/47d9e03d-4ffe-448c-914f-112a7aa89aad.__CR121,93,933,933_PT0_SX300_V1___.png",
+  description:
+    "Cooler Master MasterBox Q300L - Case Micro-ATX giá rẻ, nhỏ gọn, IO panel di động, hỗ trợ fan 240mm radiator. Phù hợp build PC nhỏ gọn, tiết kiệm không gian.",
   specifications: [
     { label: "Form factor", value: "Micro-ATX / Mini-ITX" },
     { label: "Kích thước", value: "387 x 230 x 381mm (D x R x C)" },
@@ -25,7 +43,7 @@ export const case005: Product = {
     { label: "PSU", value: "Standard ATX (up to 160mm)" },
     { label: "Quạt", value: "2x 120mm front (optional)" },
     { label: "Radiator", value: "Up to 240mm front, 120mm rear" },
-    { label: "Ổ đĩa", value: "1x 3.5\", 2x 2.5\"" },
+    { label: "Ổ đĩa", value: '1x 3.5", 2x 2.5"' },
   ],
   stock: 68,
   sku: "MCB-Q300L-KANN-S00",

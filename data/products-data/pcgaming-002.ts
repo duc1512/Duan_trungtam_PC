@@ -9,13 +9,31 @@ export const pcgaming002: Product = {
   rating: 4.8,
   reviewCount: 256,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1624705002806-5d72df19c3ad?w=800&h=600&fit=crop", alt: "PC Gaming RTX 4070 Ti - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1592419044706-39796d40f98c?w=800&h=600&fit=crop", alt: "PC Gaming RTX 4070 Ti - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "PC Gaming RTX 4070 Ti - Components" },
-    { id: 4, url: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800&h=600&fit=crop", alt: "PC Gaming RTX 4070 Ti - RGB" },
+    {
+      id: 1,
+      url: "https://pcdubai.com/wp-content/uploads/2023/05/Phoenix-Gaming-Pc.jpg",
+      alt: "Mid Range Gaming PC - Front View",
+    },
+    {
+      id: 2,
+      url: "https://pcdubai.com/wp-content/uploads/2023/05/Phoenix-Gaming-Pc.jpg",
+      alt: "Mid Range Gaming PC - Side View",
+    },
+    {
+      id: 3,
+      url: "https://pcdubai.com/wp-content/uploads/2023/05/Phoenix-Gaming-Pc.jpg",
+      alt: "Mid Range Gaming PC - Interior",
+    },
+    {
+      id: 4,
+      url: "https://pcdubai.com/wp-content/uploads/2023/05/Phoenix-Gaming-Pc.jpg",
+      alt: "Mid Range Gaming PC - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1624705002806-5d72df19c3ad?w=400&h=300&fit=crop",
-  description: "PC Gaming Duke Phoenix RTX 4070 Ti i7 - Cấu hình cân bằng hiệu năng/giá với Intel Core i7-14700K, RTX 4070 Ti 12GB, 32GB DDR5-5600. Gaming 2K 165FPS+ mượt mà, streaming không lag.",
+  image:
+    "https://pcdubai.com/wp-content/uploads/2023/05/Phoenix-Gaming-Pc.jpg",
+  description:
+    "PC Gaming Duke Phoenix RTX 4070 Ti i7 - Cấu hình cân bằng hiệu năng/giá với Intel Core i7-14700K, RTX 4070 Ti 12GB, 32GB DDR5-5600. Gaming 2K 165FPS+ mượt mà, streaming không lag.",
   specifications: [
     { label: "CPU", value: "Intel Core i7-14700K (20C/28T, up to 5.6GHz)" },
     { label: "GPU", value: "NVIDIA GeForce RTX 4070 Ti 12GB GDDR6X" },

@@ -2,20 +2,37 @@ import { Product } from "./types";
 
 export const monitor004: Product = {
   id: "monitor-004",
-  name: "Dell Alienware AW3423DW 34\" QD-OLED",
+  name: 'Dell Alienware AW3423DW 34" QD-OLED',
   brand: "Dell",
   price: 28990000,
   originalPrice: 32990000,
   rating: 4.9,
   reviewCount: 178,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop", alt: "Alienware AW3423DW - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&h=600&fit=crop", alt: "Alienware AW3423DW - Curved" },
-    { id: 3, url: "https://images.unsplash.com/photo-1547394765-1858a97d4f15?w=800&h=600&fit=crop", alt: "Alienware AW3423DW - Side View" },
-    { id: 4, url: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800&h=600&fit=crop", alt: "Alienware AW3423DW - Stand" },
+    {
+      id: 1,
+      url: "https://images-na.ssl-images-amazon.com/images/I/71ufV5NQ44L.jpg",
+      alt: "Alienware AW3423DW - Front View",
+    },
+    {
+      id: 2,
+      url: "https://images-na.ssl-images-amazon.com/images/I/71ufV5NQ44L.jpg",
+      alt: "Alienware AW3423DW - Curved",
+    },
+    {
+      id: 3,
+      url: "https://images-na.ssl-images-amazon.com/images/I/71ufV5NQ44L.jpg",
+      alt: "Alienware AW3423DW - Side View",
+    },
+    {
+      id: 4,
+      url: "https://images-na.ssl-images-amazon.com/images/I/71ufV5NQ44L.jpg",
+      alt: "Alienware AW3423DW - Stand",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&h=300&fit=crop",
-  description: "Dell Alienware AW3423DW - Màn hình gaming Ultrawide 34 inch QD-OLED cong 1800R, 175Hz, 0.1ms GTG, HDR 400 True Black. Màu sắc OLED tuyệt đẹp, tương phản vô hạn.",
+  image: "https://images-na.ssl-images-amazon.com/images/I/71ufV5NQ44L.jpg",
+  description:
+    "Dell Alienware AW3423DW - Màn hình gaming Ultrawide 34 inch QD-OLED cong 1800R, 175Hz, 0.1ms GTG, HDR 400 True Black. Màu sắc OLED tuyệt đẹp, tương phản vô hạn.",
   specifications: [
     { label: "Kích thước", value: "34 inch (86.4cm) Ultrawide cong 1800R" },
     { label: "Độ phân giải", value: "3440 x 1440 (WQHD)" },

@@ -9,13 +9,30 @@ export const mouse002: Product = {
   rating: 4.9,
   reviewCount: 412,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&h=600&fit=crop", alt: "DeathAdder V3 Pro - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=800&h=600&fit=crop", alt: "DeathAdder V3 Pro - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1586816879360-004f5b0c51e3?w=800&h=600&fit=crop", alt: "DeathAdder V3 Pro - Top View" },
-    { id: 4, url: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&h=600&fit=crop", alt: "DeathAdder V3 Pro - Detail" },
+    {
+      id: 1,
+      url: "https://m.media-amazon.com/images/I/514G5ZEPm9L.jpg",
+      alt: "DeathAdder V3 Pro - Front View",
+    },
+    {
+      id: 2,
+      url: "https://m.media-amazon.com/images/I/514G5ZEPm9L.jpg",
+      alt: "DeathAdder V3 Pro - Side View",
+    },
+    {
+      id: 3,
+      url: "https://m.media-amazon.com/images/I/514G5ZEPm9L.jpg",
+      alt: "DeathAdder V3 Pro - Top View",
+    },
+    {
+      id: 4,
+      url: "https://m.media-amazon.com/images/I/514G5ZEPm9L.jpg",
+      alt: "DeathAdder V3 Pro - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&h=300&fit=crop",
-  description: "Razer DeathAdder V3 Pro White - Chuột gaming siêu nhẹ 63g, sensor Focus Pro 30K, wireless 4000Hz polling rate. Thiết kế ergo hoàn hảo, phiên bản trắng độc đáo.",
+  image: "https://m.media-amazon.com/images/I/514G5ZEPm9L.jpg",
+  description:
+    "Razer DeathAdder V3 Pro White - Chuột gaming siêu nhẹ 63g, sensor Focus Pro 30K, wireless 4000Hz polling rate. Thiết kế ergo hoàn hảo, phiên bản trắng độc đáo.",
   specifications: [
     { label: "Cảm biến", value: "Razer Focus Pro 30K Optical" },
     { label: "Trọng lượng", value: "63g (siêu nhẹ)" },

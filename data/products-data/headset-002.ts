@@ -9,13 +9,31 @@ export const headset002: Product = {
   rating: 4.8,
   reviewCount: 198,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=600&fit=crop", alt: "Arctis Nova Pro - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&h=600&fit=crop", alt: "Arctis Nova Pro - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&h=600&fit=crop", alt: "Arctis Nova Pro - Dock" },
-    { id: 4, url: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&h=600&fit=crop", alt: "Arctis Nova Pro - Detail" },
+    {
+      id: 1,
+      url: "https://i5.walmartimages.com/seo/SteelSeries-Arctis-Nova-Pro-Wireless-Gaming-Headset-For-Xbox-Black_0bff987c-4904-4a98-9b7c-106cfe873e57.c69b7f4fa9e7b47559f33a7a4e813c63.jpeg",
+      alt: "Arctis Nova Pro - Front View",
+    },
+    {
+      id: 2,
+      url: "https://i5.walmartimages.com/seo/SteelSeries-Arctis-Nova-Pro-Wireless-Gaming-Headset-For-Xbox-Black_0bff987c-4904-4a98-9b7c-106cfe873e57.c69b7f4fa9e7b47559f33a7a4e813c63.jpeg",
+      alt: "Arctis Nova Pro - Side View",
+    },
+    {
+      id: 3,
+      url: "https://i5.walmartimages.com/seo/SteelSeries-Arctis-Nova-Pro-Wireless-Gaming-Headset-For-Xbox-Black_0bff987c-4904-4a98-9b7c-106cfe873e57.c69b7f4fa9e7b47559f33a7a4e813c63.jpeg",
+      alt: "Arctis Nova Pro - Dock",
+    },
+    {
+      id: 4,
+      url: "https://i5.walmartimages.com/seo/SteelSeries-Arctis-Nova-Pro-Wireless-Gaming-Headset-For-Xbox-Black_0bff987c-4904-4a98-9b7c-106cfe873e57.c69b7f4fa9e7b47559f33a7a4e813c63.jpeg",
+      alt: "Arctis Nova Pro - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop",
-  description: "SteelSeries Arctis Nova Pro Wireless - Tai nghe gaming cao cấp driver 40mm, Active Noise Cancellation, dock đa năng, 2 pin hoán đổi không gián đoạn.",
+  image:
+    "https://i5.walmartimages.com/seo/SteelSeries-Arctis-Nova-Pro-Wireless-Gaming-Headset-For-Xbox-Black_0bff987c-4904-4a98-9b7c-106cfe873e57.c69b7f4fa9e7b47559f33a7a4e813c63.jpeg",
+  description:
+    "SteelSeries Arctis Nova Pro Wireless - Tai nghe gaming cao cấp driver 40mm, Active Noise Cancellation, dock đa năng, 2 pin hoán đổi không gián đoạn.",
   specifications: [
     { label: "Driver", value: "40mm Nova Pro Acoustic" },
     { label: "Dải tần", value: "10-40,000 Hz" },

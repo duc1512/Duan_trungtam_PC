@@ -9,13 +9,31 @@ export const cpu002: Product = {
   rating: 4.9,
   reviewCount: 312,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "Ryzen 9 7950X3D - Box View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop", alt: "Ryzen 9 7950X3D - CPU View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=800&h=600&fit=crop", alt: "Ryzen 9 7950X3D - Detail View" },
-    { id: 4, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "Ryzen 9 7950X3D - Socket View" },
+    {
+      id: 1,
+      url: "https://www.coolmatica.pt/store/256149-large_default/processador-amd-ryzen-9-7950x3d-42ghz-128mb-l3-box.jpg",
+      alt: "Ryzen 9 7950X3D - Box View",
+    },
+    {
+      id: 2,
+      url: "https://www.coolmatica.pt/store/256149-large_default/processador-amd-ryzen-9-7950x3d-42ghz-128mb-l3-box.jpg",
+      alt: "Ryzen 9 7950X3D - CPU View",
+    },
+    {
+      id: 3,
+      url: "https://www.coolmatica.pt/store/256149-large_default/processador-amd-ryzen-9-7950x3d-42ghz-128mb-l3-box.jpg",
+      alt: "Ryzen 9 7950X3D - Detail View",
+    },
+    {
+      id: 4,
+      url: "https://www.coolmatica.pt/store/256149-large_default/processador-amd-ryzen-9-7950x3d-42ghz-128mb-l3-box.jpg",
+      alt: "Ryzen 9 7950X3D - Socket View",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=400&h=300&fit=crop",
-  description: "AMD Ryzen 9 7950X3D - CPU gaming đỉnh cao với 16 nhân 32 luồng và công nghệ 3D V-Cache 128MB, hiệu năng gaming vượt trội hơn cả i9-13900K.",
+  image:
+    "https://www.coolmatica.pt/store/256149-large_default/processador-amd-ryzen-9-7950x3d-42ghz-128mb-l3-box.jpg",
+  description:
+    "AMD Ryzen 9 7950X3D - CPU gaming đỉnh cao với 16 nhân 32 luồng và công nghệ 3D V-Cache 128MB, hiệu năng gaming vượt trội hơn cả i9-13900K.",
   specifications: [
     { label: "Dòng CPU", value: "AMD Ryzen 7000 Series Zen 4" },
     { label: "Nhân luồng", value: "16 nhân (32 luồng)" },

@@ -9,13 +9,31 @@ export const pcgaming003: Product = {
   rating: 4.7,
   reviewCount: 312,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1592419044706-39796d40f98c?w=800&h=600&fit=crop", alt: "PC Gaming RTX 4060 - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1624705002806-5d72df19c3ad?w=800&h=600&fit=crop", alt: "PC Gaming RTX 4060 - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "PC Gaming RTX 4060 - Inside" },
-    { id: 4, url: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800&h=600&fit=crop", alt: "PC Gaming RTX 4060 - Setup" },
+    {
+      id: 1,
+      url: "https://tse1.mm.bing.net/th/id/OIP.y5owUSVPGm-2WR2mTywyOwHaHa?pid=Api&P=0&h=180",
+      alt: "Budget Gaming PC - Front View",
+    },
+    {
+      id: 2,
+      url: "https://tse1.mm.bing.net/th/id/OIP.y5owUSVPGm-2WR2mTywyOwHaHa?pid=Api&P=0&h=180",
+      alt: "Budget Gaming PC - Side View",
+    },
+    {
+      id: 3,
+      url: "https://tse1.mm.bing.net/th/id/OIP.y5owUSVPGm-2WR2mTywyOwHaHa?pid=Api&P=0&h=180",
+      alt: "Budget Gaming PC - Interior",
+    },
+    {
+      id: 4,
+      url: "https://tse1.mm.bing.net/th/id/OIP.y5owUSVPGm-2WR2mTywyOwHaHa?pid=Api&P=0&h=180",
+      alt: "Budget Gaming PC - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1592419044706-39796d40f98c?w=400&h=300&fit=crop",
-  description: "PC Gaming Duke Viper RTX 4060 i5 - Cấu hình gaming phổ thông tối ưu với Intel Core i5-14400F, RTX 4060 8GB, 16GB DDR4-3200. Gaming Full HD 144FPS+ mượt mà, nhiệt độ thấp.",
+  image:
+    "https://tse1.mm.bing.net/th/id/OIP.y5owUSVPGm-2WR2mTywyOwHaHa?pid=Api&P=0&h=180",
+  description:
+    "PC Gaming Duke Viper RTX 4060 i5 - Cấu hình gaming phổ thông tối ưu với Intel Core i5-14400F, RTX 4060 8GB, 16GB DDR4-3200. Gaming Full HD 144FPS+ mượt mà, nhiệt độ thấp.",
   specifications: [
     { label: "CPU", value: "Intel Core i5-14400F (10C/16T, up to 4.7GHz)" },
     { label: "GPU", value: "NVIDIA GeForce RTX 4060 8GB GDDR6" },

@@ -9,16 +9,37 @@ export const keyboard003: Product = {
   rating: 4.8,
   reviewCount: 312,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1587829741301-dc798b91add1?w=800&h=600&fit=crop", alt: "G Pro X - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800&h=600&fit=crop", alt: "G Pro X - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=800&h=600&fit=crop", alt: "G Pro X - Switches" },
-    { id: 4, url: "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=800&h=600&fit=crop", alt: "G Pro X - Detail" },
+    {
+      id: 1,
+      url: "https://www.bhphotovideo.com/images/images2500x2500/razer_rz03_03930200_r3u1_huntsman_v2_optical_1710294.jpg",
+      alt: "Logitech G Pro X - Front View",
+    },
+    {
+      id: 2,
+      url: "https://www.bhphotovideo.com/images/images2500x2500/razer_rz03_03930200_r3u1_huntsman_v2_optical_1710294.jpg",
+      alt: "Logitech G Pro X - Side View",
+    },
+    {
+      id: 3,
+      url: "https://www.bhphotovideo.com/images/images2500x2500/razer_rz03_03930200_r3u1_huntsman_v2_optical_1710294.jpg",
+      alt: "Logitech G Pro X - Switches",
+    },
+    {
+      id: 4,
+      url: "https://www.bhphotovideo.com/images/images2500x2500/razer_rz03_03930200_r3u1_huntsman_v2_optical_1710294.jpg",
+      alt: "Logitech G Pro X - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1587829741301-dc798b91add1?w=400&h=300&fit=crop",
-  description: "Logitech G Pro X Mechanical - Bàn phím cơ gaming esports chuyên nghiệp, switch GX Blue/Brown/Red tùy chọn, keycap PBT, detachable cable, tenkeyless.",
+  image:
+    "https://www.bhphotovideo.com/images/images2500x2500/razer_rz03_03930200_r3u1_huntsman_v2_optical_1710294.jpg",
+  description:
+    "Logitech G Pro X Mechanical - Bàn phím cơ gaming esports chuyên nghiệp, switch GX Blue/Brown/Red tùy chọn, keycap PBT, detachable cable, tenkeyless.",
   specifications: [
     { label: "Switch", value: "Logitech GX Blue/Brown/Red (tùy chọn)" },
-    { label: "Actuation", value: "2.0mm (GX Blue), 1.9mm (GX Brown), 2.0mm (GX Red)" },
+    {
+      label: "Actuation",
+      value: "2.0mm (GX Blue), 1.9mm (GX Brown), 2.0mm (GX Red)",
+    },
     { label: "Layout", value: "Tenkeyless 87 phím" },
     { label: "Kết nối", value: "Detachable Micro-USB" },
     { label: "Phần mềm", value: "Logitech G HUB" },

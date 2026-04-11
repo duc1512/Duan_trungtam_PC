@@ -9,13 +9,31 @@ export const cpu004: Product = {
   rating: 4.7,
   reviewCount: 512,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=800&h=600&fit=crop", alt: "Ryzen 5 7600X - Box View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "Ryzen 5 7600X - CPU View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop", alt: "Ryzen 5 7600X - Detail View" },
-    { id: 4, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "Ryzen 5 7600X - Socket View" },
+    {
+      id: 1,
+      url: "https://c.dns-shop.kz/thumb/st4/fit/500/500/00940cbbe1c470bcceb1c9bdc4874954/61371f8730f421e1d12a8a97e35e4eb91e07de430b6d01a5aab04dd4ed13b32e.jpg",
+      alt: "Ryzen 5 7600X - Box View",
+    },
+    {
+      id: 2,
+      url: "https://c.dns-shop.kz/thumb/st4/fit/500/500/00940cbbe1c470bcceb1c9bdc4874954/61371f8730f421e1d12a8a97e35e4eb91e07de430b6d01a5aab04dd4ed13b32e.jpg",
+      alt: "Ryzen 5 7600X - CPU View",
+    },
+    {
+      id: 3,
+      url: "https://c.dns-shop.kz/thumb/st4/fit/500/500/00940cbbe1c470bcceb1c9bdc4874954/61371f8730f421e1d12a8a97e35e4eb91e07de430b6d01a5aab04dd4ed13b32e.jpg",
+      alt: "Ryzen 5 7600X - Detail View",
+    },
+    {
+      id: 4,
+      url: "https://c.dns-shop.kz/thumb/st4/fit/500/500/00940cbbe1c470bcceb1c9bdc4874954/61371f8730f421e1d12a8a97e35e4eb91e07de430b6d01a5aab04dd4ed13b32e.jpg",
+      alt: "Ryzen 5 7600X - Socket View",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=400&h=300&fit=crop",
-  description: "AMD Ryzen 5 7600X - CPU gaming tầm trung xuất sắc với 6 nhân 12 luồng Zen 4, xung nhịp 5.3GHz. Hiệu năng gaming vượt trội, hỗ trợ DDR5 và PCIe 5.0.",
+  image:
+    "https://c.dns-shop.kz/thumb/st4/fit/500/500/00940cbbe1c470bcceb1c9bdc4874954/61371f8730f421e1d12a8a97e35e4eb91e07de430b6d01a5aab04dd4ed13b32e.jpg",
+  description:
+    "AMD Ryzen 5 7600X - CPU gaming tầm trung xuất sắc với 6 nhân 12 luồng Zen 4, xung nhịp 5.3GHz. Hiệu năng gaming vượt trội, hỗ trợ DDR5 và PCIe 5.0.",
   specifications: [
     { label: "Dòng CPU", value: "AMD Ryzen 7000 Series Zen 4" },
     { label: "Nhân luồng", value: "6 nhân (12 luồng)" },

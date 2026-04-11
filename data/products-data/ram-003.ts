@@ -9,13 +9,31 @@ export const ram003: Product = {
   rating: 4.6,
   reviewCount: 678,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "Kingston FURY Beast - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "Kingston FURY Beast - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=800&h=600&fit=crop", alt: "Kingston FURY Beast - Heatspreader" },
-    { id: 4, url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop", alt: "Kingston FURY Beast - Detail" },
+    {
+      id: 1,
+      url: "https://tse4.mm.bing.net/th/id/OIP.dM038nmpIuOaFCZ4ilb8SQHaHa?pid=Api&P=0&h=180",
+      alt: "Kingston FURY Beast - Front View",
+    },
+    {
+      id: 2,
+      url: "https://tse4.mm.bing.net/th/id/OIP.dM038nmpIuOaFCZ4ilb8SQHaHa?pid=Api&P=0&h=180",
+      alt: "Kingston FURY Beast - Side View",
+    },
+    {
+      id: 3,
+      url: "https://tse4.mm.bing.net/th/id/OIP.dM038nmpIuOaFCZ4ilb8SQHaHa?pid=Api&P=0&h=180",
+      alt: "Kingston FURY Beast - Heatspreader",
+    },
+    {
+      id: 4,
+      url: "https://tse4.mm.bing.net/th/id/OIP.dM038nmpIuOaFCZ4ilb8SQHaHa?pid=Api&P=0&h=180",
+      alt: "Kingston FURY Beast - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400&h=300&fit=crop",
-  description: "Kingston FURY Beast DDR4-3200 - Kit RAM 32GB giá tốt cho PC gaming DDR4, tốc độ 3200MHz, độ trễ CL16, tản nhiệt heatspreader đen.",
+  image:
+    "https://tse4.mm.bing.net/th/id/OIP.dM038nmpIuOaFCZ4ilb8SQHaHa?pid=Api&P=0&h=180",
+  description:
+    "Kingston FURY Beast DDR4-3200 - Kit RAM 32GB giá tốt cho PC gaming DDR4, tốc độ 3200MHz, độ trễ CL16, tản nhiệt heatspreader đen.",
   specifications: [
     { label: "Dung lượng", value: "32GB Kit (2 x 16GB)" },
     { label: "Chuẩn", value: "DDR4-3200" },

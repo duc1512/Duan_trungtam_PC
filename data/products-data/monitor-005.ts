@@ -2,20 +2,37 @@ import { Product } from "./types";
 
 export const monitor005: Product = {
   id: "monitor-005",
-  name: "AOC 24G2SP 24\" 165Hz IPS",
+  name: 'AOC 24G2SP 24" 165Hz IPS',
   brand: "AOC",
   price: 3490000,
   originalPrice: 3990000,
   rating: 4.6,
   reviewCount: 678,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800&h=600&fit=crop", alt: "AOC 24G2SP - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop", alt: "AOC 24G2SP - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&h=600&fit=crop", alt: "AOC 24G2SP - Stand" },
-    { id: 4, url: "https://images.unsplash.com/photo-1547394765-1858a97d4f15?w=800&h=600&fit=crop", alt: "AOC 24G2SP - Detail" },
+    {
+      id: 1,
+      url: "https://m.media-amazon.com/images/I/71dqrdXvfnL._AC_SL1500_.jpg",
+      alt: "AOC 24G2SP - Front View",
+    },
+    {
+      id: 2,
+      url: "https://m.media-amazon.com/images/I/71dqrdXvfnL._AC_SL1500_.jpg",
+      alt: "AOC 24G2SP - Side View",
+    },
+    {
+      id: 3,
+      url: "https://m.media-amazon.com/images/I/71dqrdXvfnL._AC_SL1500_.jpg",
+      alt: "AOC 24G2SP - Stand",
+    },
+    {
+      id: 4,
+      url: "https://m.media-amazon.com/images/I/71dqrdXvfnL._AC_SL1500_.jpg",
+      alt: "AOC 24G2SP - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=400&h=300&fit=crop",
-  description: "AOC 24G2SP - Màn hình gaming 24 inch 165Hz giá tốt, IPS Full HD, 1ms MPRT, FreeSync Premium, độ bao phủ màu 126% sRGB. Phù hợp gaming esports và văn phòng.",
+  image: "https://m.media-amazon.com/images/I/71dqrdXvfnL._AC_SL1500_.jpg",
+  description:
+    "AOC 24G2SP - Màn hình gaming 24 inch 165Hz giá tốt, IPS Full HD, 1ms MPRT, FreeSync Premium, độ bao phủ màu 126% sRGB. Phù hợp gaming esports và văn phòng.",
   specifications: [
     { label: "Kích thước", value: "24 inch (60.5cm)" },
     { label: "Độ phân giải", value: "1920 x 1080 (Full HD)" },

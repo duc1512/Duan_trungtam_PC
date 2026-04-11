@@ -9,13 +9,31 @@ export const ram005: Product = {
   rating: 4.5,
   reviewCount: 456,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "XPG Spectrix D50 - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "XPG Spectrix D50 - RGB" },
-    { id: 3, url: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=800&h=600&fit=crop", alt: "XPG Spectrix D50 - Side View" },
-    { id: 4, url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop", alt: "XPG Spectrix D50 - Detail" },
+    {
+      id: 1,
+      url: "https://www.gamedude.com.au/images/com_hikashop/upload/d50_972570529.png",
+      alt: "XPG Spectrix D50 - Front View",
+    },
+    {
+      id: 2,
+      url: "https://www.gamedude.com.au/images/com_hikashop/upload/d50_972570529.png",
+      alt: "XPG Spectrix D50 - RGB",
+    },
+    {
+      id: 3,
+      url: "https://www.gamedude.com.au/images/com_hikashop/upload/d50_972570529.png",
+      alt: "XPG Spectrix D50 - Side View",
+    },
+    {
+      id: 4,
+      url: "https://www.gamedude.com.au/images/com_hikashop/upload/d50_972570529.png",
+      alt: "XPG Spectrix D50 - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=400&h=300&fit=crop",
-  description: "ADATA XPG Spectrix D50 DDR4-3200 RGB - Kit RAM 16GB giá rẻ có RGB cho PC gaming entry-level, tốc độ 3200MHz, LED RGB đồng bộ motherboard.",
+  image:
+    "https://www.gamedude.com.au/images/com_hikashop/upload/d50_972570529.png",
+  description:
+    "ADATA XPG Spectrix D50 DDR4-3200 RGB - Kit RAM 16GB giá rẻ có RGB cho PC gaming entry-level, tốc độ 3200MHz, LED RGB đồng bộ motherboard.",
   specifications: [
     { label: "Dung lượng", value: "16GB Kit (2 x 8GB)" },
     { label: "Chuẩn", value: "DDR4-3200" },

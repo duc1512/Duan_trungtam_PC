@@ -9,13 +9,31 @@ export const headset005: Product = {
   rating: 4.6,
   reviewCount: 456,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&h=600&fit=crop", alt: "G435 - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&h=600&fit=crop", alt: "G435 - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&h=600&fit=crop", alt: "G435 - Folded" },
-    { id: 4, url: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=600&fit=crop", alt: "G435 - Detail" },
+    {
+      id: 1,
+      url: "https://tse1.mm.bing.net/th/id/OIP.OjDV83NFO64WBBhCU_jbnwHaHa?pid=Api&P=0&h=180",
+      alt: "G435 - Front View",
+    },
+    {
+      id: 2,
+      url: "https://tse1.mm.bing.net/th/id/OIP.OjDV83NFO64WBBhCU_jbnwHaHa?pid=Api&P=0&h=180",
+      alt: "G435 - Side View",
+    },
+    {
+      id: 3,
+      url: "https://tse1.mm.bing.net/th/id/OIP.OjDV83NFO64WBBhCU_jbnwHaHa?pid=Api&P=0&h=180",
+      alt: "G435 - Folded",
+    },
+    {
+      id: 4,
+      url: "https://tse1.mm.bing.net/th/id/OIP.OjDV83NFO64WBBhCU_jbnwHaHa?pid=Api&P=0&h=180",
+      alt: "G435 - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400&h=300&fit=crop",
-  description: "Logitech G435 Lightspeed - Tai nghe gaming wireless siêu nhẹ 165g, pin 18 giờ, âm thanh Dolby Atmos, beamforming mics tích hợp. Màu Lilac độc đáo, phù hợp cả gaming và học online.",
+  image:
+    "https://tse1.mm.bing.net/th/id/OIP.OjDV83NFO64WBBhCU_jbnwHaHa?pid=Api&P=0&h=180",
+  description:
+    "Logitech G435 Lightspeed - Tai nghe gaming wireless siêu nhẹ 165g, pin 18 giờ, âm thanh Dolby Atmos, beamforming mics tích hợp. Màu Lilac độc đáo, phù hợp cả gaming và học online.",
   specifications: [
     { label: "Driver", value: "40mm" },
     { label: "Dải tần", value: "20-20,000 Hz" },

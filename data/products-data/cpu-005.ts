@@ -9,13 +9,31 @@ export const cpu005: Product = {
   rating: 4.6,
   reviewCount: 678,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "Intel Core i5-14400F - Box View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=800&h=600&fit=crop", alt: "Intel Core i5-14400F - CPU View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop", alt: "Intel Core i5-14400F - Detail View" },
-    { id: 4, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "Intel Core i5-14400F - Socket View" },
+    {
+      id: 1,
+      url: "https://thaher.tech/wp-content/uploads/2024/02/1-22.jpg",
+      alt: "Intel Core i5-14400F - Box View",
+    },
+    {
+      id: 2,
+      url: "https://thaher.tech/wp-content/uploads/2024/02/1-22.jpg",
+      alt: "Intel Core i5-14400F - CPU View",
+    },
+    {
+      id: 3,
+      url: "https://thaher.tech/wp-content/uploads/2024/02/1-22.jpg",
+      alt: "Intel Core i5-14400F - Detail View",
+    },
+    {
+      id: 4,
+      url: "https://thaher.tech/wp-content/uploads/2024/02/1-22.jpg",
+      alt: "Intel Core i5-14400F - Socket View",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400&h=300&fit=crop",
-  description: "Intel Core i5-14400F - CPU gaming phổ thông 10 nhân 16 luồng, xung nhịp 4.7GHz. Phiên bản không iGPU, giá tốt hơn, dùng card rời hiệu quả.",
+  image:
+    "https://thaher.tech/wp-content/uploads/2024/02/1-22.jpg",
+  description:
+    "Intel Core i5-14400F - CPU gaming phổ thông 10 nhân 16 luồng, xung nhịp 4.7GHz. Phiên bản không iGPU, giá tốt hơn, dùng card rời hiệu quả.",
   specifications: [
     { label: "Dòng CPU", value: "Intel Core 14th Gen Raptor Lake Refresh" },
     { label: "Nhân luồng", value: "10 nhân (6P+4E), 16 luồng" },

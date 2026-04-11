@@ -9,13 +9,31 @@ export const ssd003: Product = {
   rating: 4.9,
   reviewCount: 456,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "Samsung 990 PRO - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=800&h=600&fit=crop", alt: "Samsung 990 PRO - Chip" },
-    { id: 3, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "Samsung 990 PRO - Detail" },
-    { id: 4, url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop", alt: "Samsung 990 PRO - Box" },
+    {
+      id: 1,
+      url: "https://cdn.mwave.com.au/images/400/samsung_990_pro_2tb_pcie_40_nvme_m2_2280_ssd_mzv9p2t0bw_ac58657_54766.jpg",
+      alt: "Samsung 990 PRO - Front View",
+    },
+    {
+      id: 2,
+      url: "https://cdn.mwave.com.au/images/400/samsung_990_pro_2tb_pcie_40_nvme_m2_2280_ssd_mzv9p2t0bw_ac58657_54766.jpg",
+      alt: "Samsung 990 PRO - Chip",
+    },
+    {
+      id: 3,
+      url: "https://cdn.mwave.com.au/images/400/samsung_990_pro_2tb_pcie_40_nvme_m2_2280_ssd_mzv9p2t0bw_ac58657_54766.jpg",
+      alt: "Samsung 990 PRO - Detail",
+    },
+    {
+      id: 4,
+      url: "https://cdn.mwave.com.au/images/400/samsung_990_pro_2tb_pcie_40_nvme_m2_2280_ssd_mzv9p2t0bw_ac58657_54766.jpg",
+      alt: "Samsung 990 PRO - Box",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=400&h=300&fit=crop",
-  description: "Samsung 990 PRO 2TB - SSD NVMe PCIe 4.0 x4 tốc độ cao nhất thị trường, đọc 7450MB/s ghi 6900MB/s, controller Pascal Samsung, bộ nhớ V-NAND 7th Gen.",
+  image:
+    "https://cdn.mwave.com.au/images/400/samsung_990_pro_2tb_pcie_40_nvme_m2_2280_ssd_mzv9p2t0bw_ac58657_54766.jpg",
+  description:
+    "Samsung 990 PRO 2TB - SSD NVMe PCIe 4.0 x4 tốc độ cao nhất thị trường, đọc 7450MB/s ghi 6900MB/s, controller Pascal Samsung, bộ nhớ V-NAND 7th Gen.",
   specifications: [
     { label: "Dung lượng", value: "2TB (1,024GB usable)" },
     { label: "Giao tiếp", value: "PCIe 4.0 x4, NVMe 2.0" },

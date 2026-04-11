@@ -9,13 +9,31 @@ export const ssd005: Product = {
   rating: 4.8,
   reviewCount: 89,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "Crucial T700 - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=800&h=600&fit=crop", alt: "Crucial T700 - Chip" },
-    { id: 3, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "Crucial T700 - Heatsink" },
-    { id: 4, url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop", alt: "Crucial T700 - Box" },
+    {
+      id: 1,
+      url: "https://tse4.mm.bing.net/th/id/OIP.ebU33qX_xZW5ueoe5l0STQHaHa?pid=Api&P=0&h=180",
+      alt: "Crucial T700 - Front View",
+    },
+    {
+      id: 2,
+      url: "https://tse4.mm.bing.net/th/id/OIP.ebU33qX_xZW5ueoe5l0STQHaHa?pid=Api&P=0&h=180",
+      alt: "Crucial T700 - Chip",
+    },
+    {
+      id: 3,
+      url: "https://tse4.mm.bing.net/th/id/OIP.ebU33qX_xZW5ueoe5l0STQHaHa?pid=Api&P=0&h=180",
+      alt: "Crucial T700 - Heatsink",
+    },
+    {
+      id: 4,
+      url: "https://tse4.mm.bing.net/th/id/OIP.ebU33qX_xZW5ueoe5l0STQHaHa?pid=Api&P=0&h=180",
+      alt: "Crucial T700 - Box",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400&h=300&fit=crop",
-  description: "Crucial T700 2TB - SSD NVMe PCIe 5.0 x4 thế hệ mới, đọc 12400MB/s ghi 11800MB/s, tản nhiệt nhôm cao cấp. Hiệu năng vượt trội cho platform AM5 và Intel 13th/14th Gen.",
+  image:
+    "https://tse4.mm.bing.net/th/id/OIP.ebU33qX_xZW5ueoe5l0STQHaHa?pid=Api&P=0&h=180",
+  description:
+    "Crucial T700 2TB - SSD NVMe PCIe 5.0 x4 thế hệ mới, đọc 12400MB/s ghi 11800MB/s, tản nhiệt nhôm cao cấp. Hiệu năng vượt trội cho platform AM5 và Intel 13th/14th Gen.",
   specifications: [
     { label: "Dung lượng", value: "2TB (1,024GB usable)" },
     { label: "Giao tiếp", value: "PCIe 5.0 x4, NVMe 2.0" },

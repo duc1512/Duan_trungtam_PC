@@ -9,13 +9,31 @@ export const pcgaming001: Product = {
   rating: 4.9,
   reviewCount: 128,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800&h=600&fit=crop", alt: "PC Gaming RTX 4090 - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800&h=600&fit=crop", alt: "PC Gaming RTX 4090 - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "PC Gaming RTX 4090 - Inside" },
-    { id: 4, url: "https://images.unsplash.com/photo-1624705002806-5d72df19c3ad?w=800&h=600&fit=crop", alt: "PC Gaming RTX 4090 - RGB" },
+    {
+      id: 1,
+      url: "https://media.very.co.uk/i/very/VQ09U_SQ1_0000000004_BLACK_SLf",
+      alt: "RTX 4090 Gaming PC - Front View",
+    },
+    {
+      id: 2,
+      url: "https://media.very.co.uk/i/very/VQ09U_SQ1_0000000004_BLACK_SLf",
+      alt: "RTX 4090 Gaming PC - Side View",
+    },
+    {
+      id: 3,
+      url: "https://media.very.co.uk/i/very/VQ09U_SQ1_0000000004_BLACK_SLf",
+      alt: "RTX 4090 Gaming PC - Interior",
+    },
+    {
+      id: 4,
+      url: "https://media.very.co.uk/i/very/VQ09U_SQ1_0000000004_BLACK_SLf",
+      alt: "RTX 4090 Gaming PC - RGB",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=400&h=300&fit=crop",
-  description: "PC Gaming Duke Dragon RTX 4090 i9 - Chiến binh gaming đỉnh cao với Intel Core i9-14900K, RTX 4090 24GB, 64GB DDR5-6400. Case Full Tower kính cường lực, tản nhiệt nước AIO 360mm, PSU 1200W 80 Plus Platinum.",
+  image:
+    "https://media.very.co.uk/i/very/VQ09U_SQ1_0000000004_BLACK_SLf",
+  description:
+    "PC Gaming Duke Dragon RTX 4090 i9 - Chiến binh gaming đỉnh cao với Intel Core i9-14900K, RTX 4090 24GB, 64GB DDR5-6400. Case Full Tower kính cường lực, tản nhiệt nước AIO 360mm, PSU 1200W 80 Plus Platinum.",
   specifications: [
     { label: "CPU", value: "Intel Core i9-14900K (24C/32T, up to 6.0GHz)" },
     { label: "GPU", value: "NVIDIA GeForce RTX 4090 24GB GDDR6X" },

@@ -9,20 +9,41 @@ export const mainboard001: Product = {
   rating: 4.9,
   reviewCount: 156,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "ROG Maximus Z790 Hero - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop", alt: "ROG Maximus Z790 Hero - IO Panel" },
-    { id: 3, url: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=800&h=600&fit=crop", alt: "ROG Maximus Z790 Hero - Heatsink" },
-    { id: 4, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "ROG Maximus Z790 Hero - Detail" },
+    {
+      id: 1,
+      url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6523/6523718cv11d.jpg",
+      alt: "ROG Maximus Z790 Hero - Front View",
+    },
+    {
+      id: 2,
+      url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6523/6523718cv11d.jpg",
+      alt: "ROG Maximus Z790 Hero - IO Panel",
+    },
+    {
+      id: 3,
+      url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6523/6523718cv11d.jpg",
+      alt: "ROG Maximus Z790 Hero - Heatsink",
+    },
+    {
+      id: 4,
+      url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6523/6523718cv11d.jpg",
+      alt: "ROG Maximus Z790 Hero - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=400&h=300&fit=crop",
-  description: "ASUS ROG Maximus Z790 Hero - Mainboard cao cấp cho Intel 12/13/14th Gen, E-ATX, DDR5-8000, PCIe 5.0, WiFi 6E, 5 M.2 slots. Thiết kế đỉnh cao cho PC gaming khủng.",
+  image:
+    "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6523/6523718cv11d.jpg",
+  description:
+    "ASUS ROG Maximus Z790 Hero - Mainboard cao cấp cho Intel 12/13/14th Gen, E-ATX, DDR5-8000, PCIe 5.0, WiFi 6E, 5 M.2 slots. Thiết kế đỉnh cao cho PC gaming khủng.",
   specifications: [
     { label: "Socket", value: "LGA 1700 (Intel 12/13/14th Gen)" },
     { label: "Chipset", value: "Intel Z790" },
     { label: "Form factor", value: "E-ATX (305 x 244 mm)" },
     { label: "RAM", value: "4x DDR5-8000, up to 192GB" },
     { label: "PCIe", value: "1x PCIe 5.0 x16, 1x PCIe 4.0 x16" },
-    { label: "Storage", value: "5x M.2 (1x PCIe 5.0, 4x PCIe 4.0), 4x SATA 6Gb/s" },
+    {
+      label: "Storage",
+      value: "5x M.2 (1x PCIe 5.0, 4x PCIe 4.0), 4x SATA 6Gb/s",
+    },
     { label: "USB", value: "2x Thunderbolt 4, 6x USB 3.2 Gen 2" },
     { label: "Network", value: "Marvell 10GbE + Intel 2.5GbE, WiFi 6E" },
     { label: "Audio", value: "ROG SupremeFX ALC4082" },

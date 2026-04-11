@@ -9,13 +9,30 @@ export const ram001: Product = {
   rating: 4.9,
   reviewCount: 234,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "Trident Z5 RGB - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=800&h=600&fit=crop", alt: "Trident Z5 RGB - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "Trident Z5 RGB - RGB" },
-    { id: 4, url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop", alt: "Trident Z5 RGB - Detail" },
+    {
+      id: 1,
+      url: "https://m.media-amazon.com/images/I/71DiVTefKBL._AC_.jpg",
+      alt: "Trident Z5 RGB - Front View",
+    },
+    {
+      id: 2,
+      url: "https://m.media-amazon.com/images/I/71DiVTefKBL._AC_.jpg",
+      alt: "Trident Z5 RGB - Side View",
+    },
+    {
+      id: 3,
+      url: "https://m.media-amazon.com/images/I/71DiVTefKBL._AC_.jpg",
+      alt: "Trident Z5 RGB - RGB",
+    },
+    {
+      id: 4,
+      url: "https://m.media-amazon.com/images/I/71DiVTefKBL._AC_.jpg",
+      alt: "Trident Z5 RGB - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=400&h=300&fit=crop",
-  description: "G.Skill Trident Z5 RGB DDR5-6400 - Kit RAM 64GB cao cấp cho PC gaming và workstation, tốc độ 6400MHz, độ trễ CL32, LED RGB tùy chỉnh.",
+  image: "https://m.media-amazon.com/images/I/71DiVTefKBL._AC_.jpg",
+  description:
+    "G.Skill Trident Z5 RGB DDR5-6400 - Kit RAM 64GB cao cấp cho PC gaming và workstation, tốc độ 6400MHz, độ trễ CL32, LED RGB tùy chỉnh.",
   specifications: [
     { label: "Dung lượng", value: "64GB Kit (2 x 32GB)" },
     { label: "Chuẩn", value: "DDR5-6400" },

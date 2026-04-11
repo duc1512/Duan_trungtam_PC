@@ -9,13 +9,31 @@ export const cpu003: Product = {
   rating: 4.8,
   reviewCount: 423,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop", alt: "Intel Core i7-14700K - Box View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "Intel Core i7-14700K - CPU View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=800&h=600&fit=crop", alt: "Intel Core i7-14700K - Detail View" },
-    { id: 4, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "Intel Core i7-14700K - Socket View" },
+    {
+      id: 1,
+      url: "https://maytinhdalat.vn/Images/Product/maytinhdalat_cpu-intel-core-i7-14700k-box-chinh-hang-full.jpg",
+      alt: "Intel Core i7-14700K - Box View",
+    },
+    {
+      id: 2,
+      url: "https://maytinhdalat.vn/Images/Product/maytinhdalat_cpu-intel-core-i7-14700k-box-chinh-hang-full.jpg",
+      alt: "Intel Core i7-14700K - CPU View",
+    },
+    {
+      id: 3,
+      url: "https://maytinhdalat.vn/Images/Product/maytinhdalat_cpu-intel-core-i7-14700k-box-chinh-hang-full.jpg",
+      alt: "Intel Core i7-14700K - Detail View",
+    },
+    {
+      id: 4,
+      url: "https://maytinhdalat.vn/Images/Product/maytinhdalat_cpu-intel-core-i7-14700k-box-chinh-hang-full.jpg",
+      alt: "Intel Core i7-14700K - Socket View",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop",
-  description: "Intel Core i7-14700K - CPU 14th Gen với 20 nhân 28 luồng, xung nhịp lên đến 5.6GHz. Hiệu năng đa nhiệm và gaming tuyệt vời, giá tốt hơn i9.",
+  image:
+    "https://maytinhdalat.vn/Images/Product/maytinhdalat_cpu-intel-core-i7-14700k-box-chinh-hang-full.jpg",
+  description:
+    "Intel Core i7-14700K - CPU 14th Gen với 20 nhân 28 luồng, xung nhịp lên đến 5.6GHz. Hiệu năng đa nhiệm và gaming tuyệt vời, giá tốt hơn i9.",
   specifications: [
     { label: "Dòng CPU", value: "Intel Core 14th Gen Raptor Lake Refresh" },
     { label: "Nhân luồng", value: "20 nhân (8P+12E), 28 luồng" },

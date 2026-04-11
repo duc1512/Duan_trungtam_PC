@@ -9,13 +9,31 @@ export const pcgaming005: Product = {
   rating: 4.6,
   reviewCount: 428,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "PC Gaming RTX 3060 - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1592419044706-39796d40f98c?w=800&h=600&fit=crop", alt: "PC Gaming RTX 3060 - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1624705002806-5d72df19c3ad?w=800&h=600&fit=crop", alt: "PC Gaming RTX 3060 - RGB" },
-    { id: 4, url: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800&h=600&fit=crop", alt: "PC Gaming RTX 3060 - Setup" },
+    {
+      id: 1,
+      url: "https://c1.neweggimages.com/productimage/nb1280/AZBDS2305310BH29CB0.jpg",
+      alt: "Streaming Gaming PC - Front View",
+    },
+    {
+      id: 2,
+      url: "https://c1.neweggimages.com/productimage/nb1280/AZBDS2305310BH29CB0.jpg",
+      alt: "Streaming Gaming PC - Side View",
+    },
+    {
+      id: 3,
+      url: "https://c1.neweggimages.com/productimage/nb1280/AZBDS2305310BH29CB0.jpg",
+      alt: "Streaming Gaming PC - Interior",
+    },
+    {
+      id: 4,
+      url: "https://c1.neweggimages.com/productimage/nb1280/AZBDS2305310BH29CB0.jpg",
+      alt: "Streaming Gaming PC - RGB",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=400&h=300&fit=crop",
-  description: "PC Gaming Duke Striker RTX 3060 i3 - Cấu hình gaming entry-level tốt với Intel Core i3-14100F, RTX 3060 12GB, 16GB DDR4-3200. Gaming esports 144FPS+ mượt mà, giá cực tốt cho học sinh sinh viên.",
+  image:
+    "https://c1.neweggimages.com/productimage/nb1280/AZBDS2305310BH29CB0.jpg",
+  description:
+    "PC Gaming Duke Striker RTX 3060 i3 - Cấu hình gaming entry-level tốt với Intel Core i3-14100F, RTX 3060 12GB, 16GB DDR4-3200. Gaming esports 144FPS+ mượt mà, giá cực tốt cho học sinh sinh viên.",
   specifications: [
     { label: "CPU", value: "Intel Core i3-14100F (4C/8T, up to 4.7GHz)" },
     { label: "GPU", value: "NVIDIA GeForce RTX 3060 12GB GDDR6" },

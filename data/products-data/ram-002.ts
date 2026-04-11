@@ -9,13 +9,31 @@ export const ram002: Product = {
   rating: 4.7,
   reviewCount: 412,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=800&h=600&fit=crop", alt: "Corsair Vengeance RGB - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "Corsair Vengeance RGB - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "Corsair Vengeance RGB - RGB" },
-    { id: 4, url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop", alt: "Corsair Vengeance RGB - Detail" },
+    {
+      id: 1,
+      url: "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Memory/vengeance-rgb-ddr5-blk-config/Gallery/Vengeance-RGB-DDR5-2UP-BLACK_01.webp",
+      alt: "Corsair Vengeance RGB - Front View",
+    },
+    {
+      id: 2,
+      url: "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Memory/vengeance-rgb-ddr5-blk-config/Gallery/Vengeance-RGB-DDR5-2UP-BLACK_01.webp",
+      alt: "Corsair Vengeance RGB - Side View",
+    },
+    {
+      id: 3,
+      url: "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Memory/vengeance-rgb-ddr5-blk-config/Gallery/Vengeance-RGB-DDR5-2UP-BLACK_01.webp",
+      alt: "Corsair Vengeance RGB - RGB",
+    },
+    {
+      id: 4,
+      url: "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Memory/vengeance-rgb-ddr5-blk-config/Gallery/Vengeance-RGB-DDR5-2UP-BLACK_01.webp",
+      alt: "Corsair Vengeance RGB - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=400&h=300&fit=crop",
-  description: "Corsair Vengeance RGB DDR5-5600 - Kit RAM 32GB tầm trung cho PC gaming, tốc độ 5600MHz, độ trễ CL36, LED RGB đồng bộ Corsair iCUE.",
+  image:
+    "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Memory/vengeance-rgb-ddr5-blk-config/Gallery/Vengeance-RGB-DDR5-2UP-BLACK_01.webp",
+  description:
+    "Corsair Vengeance RGB DDR5-5600 - Kit RAM 32GB tầm trung cho PC gaming, tốc độ 5600MHz, độ trễ CL36, LED RGB đồng bộ Corsair iCUE.",
   specifications: [
     { label: "Dung lượng", value: "32GB Kit (2 x 16GB)" },
     { label: "Chuẩn", value: "DDR5-5600" },

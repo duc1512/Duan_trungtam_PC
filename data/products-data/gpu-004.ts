@@ -9,13 +9,31 @@ export const gpu004: Product = {
   rating: 4.7,
   reviewCount: 198,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "RX 7900 XTX - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1587202372775-4abc9295e321?w=800&h=600&fit=crop", alt: "RX 7900 XTX - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800&h=600&fit=crop", alt: "RX 7900 XTX - Backplate" },
-    { id: 4, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "RX 7900 XTX - Detail" },
+    {
+      id: 1,
+      url: "https://static.gigabyte.com/StaticFile/Image/Global/ffebdb331cdc6e8eecf7f2b4b42b8232/Product/32793",
+      alt: "RX 7900 XTX - Front View",
+    },
+    {
+      id: 2,
+      url: "https://static.gigabyte.com/StaticFile/Image/Global/ffebdb331cdc6e8eecf7f2b4b42b8232/Product/32793",
+      alt: "RX 7900 XTX - Side View",
+    },
+    {
+      id: 3,
+      url: "https://static.gigabyte.com/StaticFile/Image/Global/ffebdb331cdc6e8eecf7f2b4b42b8232/Product/32793",
+      alt: "RX 7900 XTX - Backplate",
+    },
+    {
+      id: 4,
+      url: "https://static.gigabyte.com/StaticFile/Image/Global/ffebdb331cdc6e8eecf7f2b4b42b8232/Product/32793",
+      alt: "RX 7900 XTX - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400&h=300&fit=crop",
-  description: "Gigabyte AORUS Radeon RX 7900 XTX Elite 24G - Card đồ họa AMD đỉnh cao với 24GB GDDR6, hiệu năng cạnh tranh RTX 4080, giá tốt hơn. Tản nhiệt Windforce cực mát.",
+  image:
+    "https://static.gigabyte.com/StaticFile/Image/Global/ffebdb331cdc6e8eecf7f2b4b42b8232/Product/32793",
+  description:
+    "Gigabyte AORUS Radeon RX 7900 XTX Elite 24G - Card đồ họa AMD đỉnh cao với 24GB GDDR6, hiệu năng cạnh tranh RTX 4080, giá tốt hơn. Tản nhiệt Windforce cực mát.",
   specifications: [
     { label: "GPU", value: "AMD Navi 31 (RDNA 3)" },
     { label: "Stream Processors", value: "6,144" },

@@ -9,13 +9,31 @@ export const keyboard005: Product = {
   rating: 4.8,
   reviewCount: 312,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=800&h=600&fit=crop", alt: "Keychron K3 Pro - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=800&h=600&fit=crop", alt: "Keychron K3 Pro - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800&h=600&fit=crop", alt: "Keychron K3 Pro - Low Profile" },
-    { id: 4, url: "https://images.unsplash.com/photo-1587829741301-dc798b91add1?w=800&h=600&fit=crop", alt: "Keychron K3 Pro - Detail" },
+    {
+      id: 1,
+      url: "https://tse2.mm.bing.net/th/id/OIP.VCIJCLyd1jngHYVdQ-0lSwHaEh?pid=Api&P=0&h=180",
+      alt: "Keychron K3 Pro - Front View",
+    },
+    {
+      id: 2,
+      url: "https://tse2.mm.bing.net/th/id/OIP.VCIJCLyd1jngHYVdQ-0lSwHaEh?pid=Api&P=0&h=180",
+      alt: "Keychron K3 Pro - Side View",
+    },
+    {
+      id: 3,
+      url: "https://tse2.mm.bing.net/th/id/OIP.VCIJCLyd1jngHYVdQ-0lSwHaEh?pid=Api&P=0&h=180",
+      alt: "Keychron K3 Pro - Low Profile",
+    },
+    {
+      id: 4,
+      url: "https://tse2.mm.bing.net/th/id/OIP.VCIJCLyd1jngHYVdQ-0lSwHaEh?pid=Api&P=0&h=180",
+      alt: "Keychron K3 Pro - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=400&h=300&fit=crop",
-  description: "Keychron K3 Pro - Bàn phím cơ low profile 75% layout, switch Gateron Low Profile, hot-swappable, wireless Bluetooth 5.1 + wired, QMK/VIA programmable.",
+  image:
+    "https://tse2.mm.bing.net/th/id/OIP.VCIJCLyd1jngHYVdQ-0lSwHaEh?pid=Api&P=0&h=180",
+  description:
+    "Keychron K3 Pro - Bàn phím cơ low profile 75% layout, switch Gateron Low Profile, hot-swappable, wireless Bluetooth 5.1 + wired, QMK/VIA programmable.",
   specifications: [
     { label: "Switch", value: "Gateron Low Profile (Red/Brown)" },
     { label: "Actuation", value: "1.7mm / 50g" },

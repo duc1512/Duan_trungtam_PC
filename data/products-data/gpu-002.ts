@@ -9,13 +9,31 @@ export const gpu002: Product = {
   rating: 4.8,
   reviewCount: 289,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800&h=600&fit=crop", alt: "RTX 4080 Strix - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1587202372775-4abc9295e321?w=800&h=600&fit=crop", alt: "RTX 4080 Strix - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "RTX 4080 Strix - Backplate" },
-    { id: 4, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "RTX 4080 Strix - Ports" },
+    {
+      id: 1,
+      url: "https://dlcdnwebimgs.asus.com/gain/B53652E9-4893-427F-93AE-EE64969629F1/w1000/h732",
+      alt: "RTX 4080 Strix - Front View",
+    },
+    {
+      id: 2,
+      url: "https://dlcdnwebimgs.asus.com/gain/B53652E9-4893-427F-93AE-EE64969629F1/w1000/h732",
+      alt: "RTX 4080 Strix - Side View",
+    },
+    {
+      id: 3,
+      url: "https://dlcdnwebimgs.asus.com/gain/B53652E9-4893-427F-93AE-EE64969629F1/w1000/h732",
+      alt: "RTX 4080 Strix - Backplate",
+    },
+    {
+      id: 4,
+      url: "https://dlcdnwebimgs.asus.com/gain/B53652E9-4893-427F-93AE-EE64969629F1/w1000/h732",
+      alt: "RTX 4080 Strix - Ports",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=400&h=300&fit=crop",
-  description: "ASUS ROG Strix GeForce RTX 4080 OC 16GB - Card đồ họa gaming cao cấp với hiệu năng vượt trội, tản nhiệt 3 quạt Axial-tech, thiết kế RGB Aura Sync đỉnh cao.",
+  image:
+    "https://dlcdnwebimgs.asus.com/gain/B53652E9-4893-427F-93AE-EE64969629F1/w1000/h732",
+  description:
+    "ASUS ROG Strix GeForce RTX 4080 OC 16GB - Card đồ họa gaming cao cấp với hiệu năng vượt trội, tản nhiệt 3 quạt Axial-tech, thiết kế RGB Aura Sync đỉnh cao.",
   specifications: [
     { label: "GPU", value: "NVIDIA AD103-300-A1 (Ada Lovelace)" },
     { label: "CUDA Cores", value: "9,728" },
