@@ -9,6 +9,7 @@ interface RegisteredUser {
   lastName: string;
   email: string;
   phone: string;
+  address: string;
   password: string;
   role: "user";
   avatar: string;
@@ -25,6 +26,7 @@ export default function RegisterPage() {
     lastName: "",
     email: "",
     phone: "",
+    address: "",
     password: "",
     confirmPassword: ""
   });
@@ -48,6 +50,7 @@ export default function RegisterPage() {
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = "Email không hợp lệ";
     if (!formData.phone.trim()) newErrors.phone = "Vui lòng nhập số điện thoại";
     else if (!/^[0-9]{10,11}$/.test(formData.phone)) newErrors.phone = "Số điện thoại không hợp lệ";
+    if (!formData.address.trim()) newErrors.address = "Vui lòng nhập địa chỉ";
     if (!formData.password) newErrors.password = "Vui lòng nhập mật khẩu";
     else if (formData.password.length < 6) newErrors.password = "Mật khẩu phải có ít nhất 6 ký tự";
     if (formData.password !== formData.confirmPassword) newErrors.confirmPassword = "Mật khẩu xác nhận không khớp";
@@ -80,6 +83,7 @@ export default function RegisterPage() {
         lastName: formData.lastName,
         email: formData.email,
         phone: formData.phone,
+        address: formData.address,
         password: formData.password,
         role: "user",
         avatar: `https://ui-avatars.com/api/?name=${formData.firstName}+${formData.lastName}&background=e30019&color=fff&size=150`
@@ -203,6 +207,30 @@ export default function RegisterPage() {
             />
           </div>
           {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
+        </div>
+
+        {/* Input: Địa chỉ */}
+        <div>
+          <label className="block text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wider text-xs">
+            Địa chỉ
+          </label>
+          <div className="relative group">
+            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-600 group-focus-within:text-cyan-400 transition-colors">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <input 
+              type="text" 
+              name="address"
+              value={formData.address}
+              onChange={handleInputChange}
+              className={`w-full bg-gray-900/50 border rounded-xl pl-11 pr-4 py-3 text-sm text-white placeholder-gray-600 focus:bg-gray-800 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all duration-200 shadow-inner ${errors.address ? "border-red-500" : "border-gray-700"}`}
+              placeholder="Nhập địa chỉ của bạn..."
+            />
+          </div>
+          {errors.address && <p className="text-red-500 text-xs mt-1">{errors.address}</p>}
         </div>
         
         {/* Input: Mật khẩu */}

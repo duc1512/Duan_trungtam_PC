@@ -170,16 +170,20 @@ export default function UserAccount() {
                     <label className="block text-sm font-medium text-gray-700 mb-2">Số điện thoại</label>
                     <input
                       type="tel"
+                      value={userProfile.phone || ""}
                       placeholder="Nhập số điện thoại"
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#e30019]"
+                      readOnly
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Địa chỉ</label>
                     <input
                       type="text"
+                      value={userProfile.address || ""}
                       placeholder="Nhập địa chỉ"
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#e30019]"
+                      readOnly
                     />
                   </div>
                 </div>

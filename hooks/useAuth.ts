@@ -7,6 +7,8 @@ interface UserProfile {
   email: string;
   avatar: string;
   role: 'admin' | 'user';
+  phone?: string;
+  address?: string;
 }
 
 export function useAuth() {
@@ -20,10 +22,14 @@ export function useAuth() {
     
     if (loginState === "true" && savedProfile) {
       const profile = JSON.parse(savedProfile);
+      // Preserve user's actual name and avatar from registration
+      // Only override for admin with default values
       const updatedProfile = { 
         ...profile, 
-        name: profile.role === 'admin' ? 'Admin' : 'Đức',
-        avatar: profile.role === 'admin' ? 'https://i.pravatar.cc/150?img=5' : 'https://i.pravatar.cc/150?img=1'
+        name: profile.role === 'admin' ? 'Admin' : (profile.name || 'Người dùng'),
+        avatar: profile.role === 'admin' 
+          ? 'https://i.pravatar.cc/150?img=5' 
+          : (profile.avatar || `https://ui-avatars.com/api/?name=${encodeURIComponent(profile.name || 'User')}&background=e30019&color=fff&size=150`)
       };
       setIsLoggedIn(true);
       setUserProfile(updatedProfile);
@@ -32,10 +38,14 @@ export function useAuth() {
   }, []);
 
   const login = (profile: UserProfile) => {
+    // Preserve user's actual name and avatar from registration
+    // Only override for admin with default values
     const updatedProfile = { 
       ...profile, 
-      name: profile.role === 'admin' ? 'Admin' : 'Đức',
-      avatar: profile.role === 'admin' ? 'https://i.pravatar.cc/150?img=5' : 'https://i.pravatar.cc/150?img=1'
+      name: profile.role === 'admin' ? 'Admin' : (profile.name || 'Người dùng'),
+      avatar: profile.role === 'admin' 
+        ? 'https://i.pravatar.cc/150?img=5' 
+        : (profile.avatar || `https://ui-avatars.com/api/?name=${encodeURIComponent(profile.name || 'User')}&background=e30019&color=fff&size=150`)
     };
     localStorage.setItem("isLoggedIn", "true");
     localStorage.setItem("userProfile", JSON.stringify(updatedProfile));

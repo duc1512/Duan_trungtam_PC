@@ -9,6 +9,7 @@ interface RegisteredUser {
   lastName: string;
   email: string;
   phone: string;
+  address: string;
   password: string;
   role: "user" | "admin";
   avatar: string;
@@ -81,7 +82,9 @@ function LoginPageContent() {
             name: `${foundUser.firstName} ${foundUser.lastName}`,
             email: foundUser.email,
             avatar: foundUser.avatar,
-            role: foundUser.role
+            role: foundUser.role,
+            phone: foundUser.phone,
+            address: foundUser.address
           };
         }
       }
