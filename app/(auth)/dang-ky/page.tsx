@@ -93,6 +93,9 @@ export default function RegisterPage() {
       existingUsers.push(newUser);
       localStorage.setItem("registeredUsers", JSON.stringify(existingUsers));
       
+      // Set success flag for login page to show notification
+      localStorage.setItem("showRegisterSuccess", "true");
+      
       // Redirect to login with email pre-filled
       router.push(`/dang-nhap?email=${encodeURIComponent(formData.email)}`);
     }, 1000);

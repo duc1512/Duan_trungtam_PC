@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { AdminProvider } from "../../hooks/useAdmin";
 
 const menuItems = [
   {
@@ -189,7 +190,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
         {/* Page Content */}
         <main className="flex-1 p-6 overflow-auto">
-          {children}
+          <AdminProvider>{children}</AdminProvider>
         </main>
       </div>
     </div>
