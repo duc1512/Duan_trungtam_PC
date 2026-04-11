@@ -3,6 +3,7 @@
 import { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
+import { toast } from "sonner";
 
 interface RegisteredUser {
   firstName: string;
@@ -27,10 +28,22 @@ function LoginPageContent() {
   const searchParams = useSearchParams();
 
   // Read email from URL query params (when coming from registration)
+  // and check for registration success flag
   useEffect(() => {
     const emailFromUrl = searchParams.get("email");
     if (emailFromUrl) {
       setFormData(prev => ({ ...prev, email: emailFromUrl }));
+    }
+    
+    // Check if coming from successful registration
+    const showRegisterSuccess = localStorage.getItem("showRegisterSuccess");
+    if (showRegisterSuccess === "true") {
+      localStorage.removeItem("showRegisterSuccess");
+      // Show Sonner toast for registration success
+      toast.success("Đăng ký thành công!", {
+        description: "Vui lòng đăng nhập để tiếp tục",
+        duration: 4000,
+      });
     }
   }, [searchParams]);
 
@@ -94,8 +107,11 @@ function LoginPageContent() {
         localStorage.setItem("isLoggedIn", "true");
         localStorage.setItem("userProfile", JSON.stringify(userData));
         
-        // Redirect to home page
-        router.push("/");
+        // Set login success flag with timestamp for homepage to show notification
+        localStorage.setItem("showLoginSuccess", Date.now().toString());
+        
+        // Redirect to home page with force reload to ensure toast shows
+        window.location.href = "/";
       } else {
         setError("Email hoặc mật khẩu không đúng!");
       }
