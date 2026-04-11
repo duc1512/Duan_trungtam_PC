@@ -2,6 +2,7 @@ import Header from "../components/layout/Header";
 import Navigation from "../components/layout/Navigation";
 import Footer from "../components/layout/Footer";
 import { CartProvider } from "../../hooks/useCart";
+import { Toaster } from "sonner";
 
 export default function MainLayout({
   children,
@@ -17,6 +18,16 @@ export default function MainLayout({
           {children}
         </main>
         <Footer />
+        <Toaster 
+          position="top-right"
+          toastOptions={{
+            style: {
+              background: '#22c55e',
+              color: '#fff',
+              border: 'none',
+            },
+          }}
+        />
       </div>
     </CartProvider>
   );

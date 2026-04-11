@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { Toaster } from "sonner";
 
 // Mảng chứa dữ liệu các slide (Ảnh, Tiêu đề, Mô tả)
 const SLIDES = [
@@ -200,10 +201,21 @@ export default function AuthLayout({
         
         {/* Footer của form */}
         <div className="mt-12 text-center text-sm text-gray-500 relative z-20">
-          <p className="text-gray-400">© {new Date().getFullYear()} Duke Computer. Tất cả quyền được bảo lưu.</p>
+          <p className="text-gray-400"> {new Date().getFullYear()} Duke Computer. Tất cả quyền được bảo lưu.</p>
         </div>
       </div>
       
+      {/* Sonner Toaster for notifications */}
+      <Toaster 
+        position="top-center"
+        toastOptions={{
+          style: {
+            background: '#22c55e',
+            color: '#fff',
+            border: 'none',
+          },
+        }}
+      />
     </div>
   );
 }
