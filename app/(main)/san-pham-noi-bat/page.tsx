@@ -15,6 +15,8 @@ interface FilterState {
 
 type SortOption = "default" | "price-asc" | "price-desc" | "rating" | "sales";
 
+const ITEMS_PER_PAGE = 12;
+
 export default function FeaturedProductsPage() {
   const [filters, setFilters] = useState<FilterState>({
     categories: [],
@@ -23,6 +25,7 @@ export default function FeaturedProductsPage() {
     brands: [],
   });
   const [sortBy, setSortBy] = useState<SortOption>("default");
+  const [currentPage, setCurrentPage] = useState(1);
   const { totalItems, totalPrice } = useCart();
   const [cartNotification, setCartNotification] = useState<{show: boolean; productName: string}>({show: false, productName: ''});
 
@@ -80,6 +83,24 @@ export default function FeaturedProductsPage() {
 
     return result;
   }, [featuredProducts, filters, sortBy]);
+
+  // Pagination logic
+  const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
+  const paginatedProducts = useMemo(() => {
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredProducts.slice(start, start + ITEMS_PER_PAGE);
+  }, [filteredProducts, currentPage]);
+
+  // Reset to page 1 when filters or sort change
+  const handleFilterChange = (newFilters: FilterState) => {
+    setFilters(newFilters);
+    setCurrentPage(1);
+  };
+
+  const handleSortChange = (newSort: SortOption) => {
+    setSortBy(newSort);
+    setCurrentPage(1);
+  };
 
   // Calculate stats for filters
   const availableCategories = useMemo(() => {
@@ -190,7 +211,7 @@ export default function FeaturedProductsPage() {
             <span className="text-sm text-gray-600">Sắp xếp:</span>
             <select
               value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as SortOption)}
+              onChange={(e) => handleSortChange(e.target.value as SortOption)}
               className="px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-[#e30019] focus:border-transparent bg-white"
             >
               <option value="default">Nổi bật</option>
@@ -258,7 +279,7 @@ export default function FeaturedProductsPage() {
           <div className="w-full lg:w-64 flex-shrink-0">
             <FilterSidebar
               filters={filters}
-              onFilterChange={setFilters}
+              onFilterChange={handleFilterChange}
               availableCategories={availableCategories}
               availableBrands={availableBrands}
             />
@@ -269,7 +290,7 @@ export default function FeaturedProductsPage() {
             {filteredProducts.length > 0 ? (
               <>
                 <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
-                  {filteredProducts.map((product) => (
+                  {paginatedProducts.map((product) => (
                     <ProductCard
                       key={product.id}
                       product={product}
@@ -278,16 +299,61 @@ export default function FeaturedProductsPage() {
                   ))}
                 </div>
 
-                {/* Load More / End */}
-                <div className="text-center mt-8">
+                {/* Pagination */}
+                {totalPages > 1 && (
+                  <div className="flex items-center justify-center gap-2 mt-8">
+                    {/* Prev Button */}
+                    <button
+                      onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                      disabled={currentPage === 1}
+                      className="px-3 py-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 hover:text-[#e30019] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7"/>
+                      </svg>
+                    </button>
+
+                    {/* Page Numbers */}
+                    {[...Array(totalPages)].map((_, i) => {
+                      const pageNum = i + 1;
+                      return (
+                        <button
+                          key={i}
+                          onClick={() => setCurrentPage(pageNum)}
+                          className={`w-10 h-10 rounded-lg font-semibold transition-colors ${
+                            currentPage === pageNum
+                              ? "bg-[#e30019] text-white"
+                              : "bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 hover:text-[#e30019]"
+                          }`}
+                        >
+                          {pageNum}
+                        </button>
+                      );
+                    })}
+
+                    {/* Next Button */}
+                    <button
+                      onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                      disabled={currentPage === totalPages}
+                      className="px-3 py-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-50 hover:text-[#e30019] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
+                      </svg>
+                    </button>
+                  </div>
+                )}
+
+                {/* Page Info */}
+                <div className="text-center mt-4">
                   <p className="text-gray-500 text-sm">
-                    Hiển thị {filteredProducts.length} sản phẩm
+                    Trang {currentPage}/{totalPages} • Hiển thị {paginatedProducts.length} / {filteredProducts.length} sản phẩm
                   </p>
                 </div>
               </>
             ) : (
               <div className="text-center py-16 bg-white rounded-xl">
-                <div className="text-6xl mb-4">�</div>
+                <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2">
                   Không tìm thấy sản phẩm
                 </h3>

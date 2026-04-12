@@ -168,6 +168,10 @@ const nextConfig: NextConfig = {
         protocol: "http",
         hostname: "www.maccenter.vn",
       },
+      {
+        protocol: "https",
+        hostname: "i.pravatar.cc",
+      },
     ],
   },
 };

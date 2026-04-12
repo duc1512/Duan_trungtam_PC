@@ -2,26 +2,14 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import { useAdmin, type AdminUser } from "../../../hooks/useAdmin";
 
-interface User {
-  id: string;
+interface UserFormData {
   name: string;
   email: string;
   phone: string;
   role: "admin" | "user";
-  status: "active" | "inactive" | "banned";
-  joinDate: string;
-  orders: number;
-  totalSpent: number;
 }
-
-const mockUsers: User[] = [
-  { id: "1", name: "Admin", email: "admin@gmail.com", phone: "0901234567", role: "admin", status: "active", joinDate: "2023-01-01", orders: 0, totalSpent: 0 },
-  { id: "2", name: "Đức", email: "user@gmail.com", phone: "0912345678", role: "user", status: "active", joinDate: "2023-06-15", orders: 12, totalSpent: 125000000 },
-  { id: "3", name: "Nguyễn Văn A", email: "nva@email.com", phone: "0923456789", role: "user", status: "active", joinDate: "2023-08-20", orders: 5, totalSpent: 45000000 },
-  { id: "4", name: "Trần Thị B", email: "ttb@email.com", phone: "0934567890", role: "user", status: "inactive", joinDate: "2023-09-10", orders: 2, totalSpent: 12000000 },
-  { id: "5", name: "Lê Văn C", email: "lvc@email.com", phone: "0945678901", role: "user", status: "banned", joinDate: "2023-10-05", orders: 0, totalSpent: 0 },
-];
 
 const formatPrice = (price: number) => {
   return new Intl.NumberFormat("vi-VN", {
@@ -50,15 +38,25 @@ const getStatusLabel = (status: string) => {
 };
 
 export default function UsersPage() {
+  const { users, addUser, deleteUser, banUser, unbanUser, updateUser } = useAdmin();
   const [search, setSearch] = useState("");
   const [filterRole, setFilterRole] = useState<string>("all");
   const [filterStatus, setFilterStatus] = useState<string>("all");
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedUsers, setSelectedUsers] = useState<string[]>([]);
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [userToDelete, setUserToDelete] = useState<AdminUser | null>(null);
+  const [formData, setFormData] = useState<UserFormData>({
+    name: "",
+    email: "",
+    phone: "",
+    role: "user",
+  });
   const itemsPerPage = 10;
 
   const filteredUsers = useMemo(() => {
-    return mockUsers.filter((user) => {
+    return users.filter((user: AdminUser) => {
       const matchesSearch =
         user.name.toLowerCase().includes(search.toLowerCase()) ||
         user.email.toLowerCase().includes(search.toLowerCase()) ||
@@ -67,7 +65,7 @@ export default function UsersPage() {
       const matchesStatus = filterStatus === "all" || user.status === filterStatus;
       return matchesSearch && matchesRole && matchesStatus;
     });
-  }, [search, filterRole, filterStatus]);
+  }, [search, filterRole, filterStatus, users]);
 
   const paginatedUsers = filteredUsers.slice(
     (currentPage - 1) * itemsPerPage,
@@ -77,18 +75,18 @@ export default function UsersPage() {
   const totalPages = Math.ceil(filteredUsers.length / itemsPerPage);
 
   const stats = {
-    total: mockUsers.length,
-    admins: mockUsers.filter((u) => u.role === "admin").length,
-    users: mockUsers.filter((u) => u.role === "user").length,
-    active: mockUsers.filter((u) => u.status === "active").length,
-    banned: mockUsers.filter((u) => u.status === "banned").length,
+    total: users.length,
+    admins: users.filter((u: AdminUser) => u.role === "admin").length,
+    users: users.filter((u: AdminUser) => u.role === "user").length,
+    active: users.filter((u: AdminUser) => u.status === "active").length,
+    banned: users.filter((u: AdminUser) => u.status === "banned").length,
   };
 
   const toggleSelectAll = () => {
     if (selectedUsers.length === paginatedUsers.length) {
       setSelectedUsers([]);
     } else {
-      setSelectedUsers(paginatedUsers.map((u) => u.id));
+      setSelectedUsers(paginatedUsers.map((u: AdminUser) => u.id));
     }
   };
 
@@ -100,11 +98,58 @@ export default function UsersPage() {
     }
   };
 
+  const handleAddSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    addUser({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      role: formData.role,
+      status: "active",
+    });
+    setIsAddModalOpen(false);
+    setFormData({ name: "", email: "", phone: "", role: "user" });
+  };
+
+  const handleDeleteClick = (user: AdminUser) => {
+    setUserToDelete(user);
+    setIsDeleteModalOpen(true);
+  };
+
+  const confirmDelete = () => {
+    if (userToDelete) {
+      deleteUser(userToDelete.id);
+      setIsDeleteModalOpen(false);
+      setUserToDelete(null);
+    }
+  };
+
+  const handleBanToggle = (user: AdminUser) => {
+    if (user.status === "banned") {
+      unbanUser(user.id);
+    } else {
+      banUser(user.id);
+    }
+  };
+
+  const handleBulkMakeAdmin = () => {
+    selectedUsers.forEach((id) => updateUser(id, { role: "admin" }));
+    setSelectedUsers([]);
+  };
+
+  const handleBulkBan = () => {
+    selectedUsers.forEach((id) => banUser(id));
+    setSelectedUsers([]);
+  };
+
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <h1 className="text-2xl font-bold text-white">Quản lý người dùng</h1>
-        <button className="px-4 py-2 bg-[#e30019] hover:bg-red-700 text-white rounded-lg transition-colors flex items-center justify-center gap-2">
+        <button
+          onClick={() => setIsAddModalOpen(true)}
+          className="px-4 py-2 bg-[#e30019] hover:bg-red-700 text-white rounded-lg transition-colors flex items-center justify-center gap-2"
+        >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
           </svg>
@@ -167,10 +212,16 @@ export default function UsersPage() {
       {selectedUsers.length > 0 && (
         <div className="flex items-center gap-3 bg-gray-800 p-3 rounded-lg">
           <span className="text-gray-300">Đã chọn {selectedUsers.length} người dùng</span>
-          <button className="px-3 py-1.5 bg-gray-600 hover:bg-gray-500 text-white rounded text-sm transition-colors">
+          <button
+            onClick={handleBulkMakeAdmin}
+            className="px-3 py-1.5 bg-gray-600 hover:bg-gray-500 text-white rounded text-sm transition-colors"
+          >
             Chuyển thành admin
           </button>
-          <button className="px-3 py-1.5 bg-red-600 hover:bg-red-700 text-white rounded text-sm transition-colors">
+          <button
+            onClick={handleBulkBan}
+            className="px-3 py-1.5 bg-red-600 hover:bg-red-700 text-white rounded text-sm transition-colors"
+          >
             Cấm tài khoản
           </button>
         </div>
@@ -200,7 +251,7 @@ export default function UsersPage() {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-700">
-              {paginatedUsers.map((user) => (
+              {paginatedUsers.map((user: AdminUser) => (
                 <tr key={user.id} className="hover:bg-gray-700/30">
                   <td className="px-4 py-3">
                     <input
@@ -252,11 +303,25 @@ export default function UsersPage() {
                         </svg>
                       </Link>
                       <button
-                        className="p-2 text-gray-400 hover:text-red-400 transition-colors"
-                        title="Cấm"
+                        onClick={() => handleBanToggle(user)}
+                        className={`p-2 transition-colors ${
+                          user.status === "banned"
+                            ? "text-green-400 hover:text-green-300"
+                            : "text-gray-400 hover:text-red-400"
+                        }`}
+                        title={user.status === "banned" ? "Bỏ cấm" : "Cấm"}
                       >
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                        </svg>
+                      </button>
+                      <button
+                        onClick={() => handleDeleteClick(user)}
+                        className="p-2 text-gray-400 hover:text-red-400 transition-colors"
+                        title="Xóa"
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                         </svg>
                       </button>
                     </div>
@@ -305,6 +370,130 @@ export default function UsersPage() {
           </div>
         )}
       </div>
+
+      {/* Add User Modal */}
+      {isAddModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div
+            className="absolute inset-0 bg-black/70"
+            onClick={() => setIsAddModalOpen(false)}
+          />
+          <div className="relative bg-gray-800 rounded-xl border border-gray-700 w-full max-w-md">
+            <div className="flex items-center justify-between p-4 border-b border-gray-700">
+              <h2 className="text-lg font-bold text-white">Thêm người dùng mới</h2>
+              <button
+                onClick={() => setIsAddModalOpen(false)}
+                className="p-1.5 text-gray-400 hover:text-white transition-colors"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <form onSubmit={handleAddSubmit} className="p-4 space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-400 mb-1">Họ tên *</label>
+                <input
+                  type="text"
+                  required
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="w-full px-4 py-2 bg-gray-700 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-[#e30019] focus:border-transparent"
+                  placeholder="Nhập họ tên"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-400 mb-1">Email *</label>
+                <input
+                  type="email"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="w-full px-4 py-2 bg-gray-700 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-[#e30019] focus:border-transparent"
+                  placeholder="email@example.com"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-400 mb-1">Số điện thoại *</label>
+                <input
+                  type="tel"
+                  required
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  className="w-full px-4 py-2 bg-gray-700 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-[#e30019] focus:border-transparent"
+                  placeholder="0901234567"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-400 mb-1">Vai trò</label>
+                <select
+                  value={formData.role}
+                  onChange={(e) => setFormData({ ...formData, role: e.target.value as "admin" | "user" })}
+                  className="w-full px-4 py-2 bg-gray-700 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-[#e30019] focus:border-transparent"
+                >
+                  <option value="user">Người dùng</option>
+                  <option value="admin">Admin</option>
+                </select>
+              </div>
+              <div className="flex justify-end gap-2 pt-4 border-t border-gray-700">
+                <button
+                  type="button"
+                  onClick={() => setIsAddModalOpen(false)}
+                  className="px-4 py-2 text-gray-400 hover:text-white transition-colors"
+                >
+                  Hủy
+                </button>
+                <button
+                  type="submit"
+                  className="px-4 py-2 bg-[#e30019] text-white rounded-lg hover:bg-red-600 transition-colors"
+                >
+                  Thêm người dùng
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* Delete Confirmation Modal */}
+      {isDeleteModalOpen && userToDelete && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div
+            className="absolute inset-0 bg-black/70"
+            onClick={() => setIsDeleteModalOpen(false)}
+          />
+          <div className="relative bg-gray-800 rounded-xl border border-gray-700 w-full max-w-md p-6">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-red-500/20 rounded-full flex items-center justify-center">
+                <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div>
+                <h2 className="text-lg font-bold text-white">Xác nhận xóa</h2>
+                <p className="text-gray-400 text-sm">Hành động này không thể hoàn tác</p>
+              </div>
+            </div>
+            <p className="text-gray-300 mb-6">
+              Bạn có chắc chắn muốn xóa người dùng <span className="text-white font-medium">{userToDelete.name}</span>?
+            </p>
+            <div className="flex justify-end gap-3">
+              <button
+                onClick={() => setIsDeleteModalOpen(false)}
+                className="px-4 py-2 text-gray-400 hover:text-white transition-colors"
+              >
+                Hủy
+              </button>
+              <button
+                onClick={confirmDelete}
+                className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors"
+              >
+                Xóa người dùng
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

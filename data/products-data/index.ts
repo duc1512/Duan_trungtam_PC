@@ -69,6 +69,13 @@ export { case002 } from "./case-002";
 export { case003 } from "./case-003";
 export { case004 } from "./case-004";
 export { case005 } from "./case-005";
+// Flash sale exports
+export { flash001 } from "./flash-001";
+export { flash002 } from "./flash-002";
+export { flash003 } from "./flash-003";
+export { flash004 } from "./flash-004";
+export { flash005 } from "./flash-005";
+export { flash006 } from "./flash-006";
 
 import { laptop001 } from "./laptop-001";
 import { laptop002 } from "./laptop-002";
@@ -128,6 +135,12 @@ import { case002 } from "./case-002";
 import { case003 } from "./case-003";
 import { case004 } from "./case-004";
 import { case005 } from "./case-005";
+import { flash001 } from "./flash-001";
+import { flash002 } from "./flash-002";
+import { flash003 } from "./flash-003";
+import { flash004 } from "./flash-004";
+import { flash005 } from "./flash-005";
+import { flash006 } from "./flash-006";
 import { Product } from "./types";
 
 // Combine all products
@@ -202,6 +215,13 @@ export const products: Product[] = [
   case003,
   case004,
   case005,
+  // Flash Sale
+  flash001,
+  flash002,
+  flash003,
+  flash004,
+  flash005,
+  flash006,
 ];
 
 export const categories: Record<string, { name: string; description: string }> =
