@@ -34,6 +34,14 @@ export default function FlashSale() {
     return () => clearInterval(timer);
   }, []);
 
+  // Auto slide every 5 seconds
+  useEffect(() => {
+    const slideTimer = setInterval(() => {
+      setCurrentPage((prev) => (prev + 1) % totalPages);
+    }, 5000);
+    return () => clearInterval(slideTimer);
+  }, [totalPages]);
+
   const formatTime = (seconds: number) => {
     const h = Math.floor(seconds / 3600).toString().padStart(2, "0");
     const m = Math.floor((seconds % 3600) / 60).toString().padStart(2, "0");

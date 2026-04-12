@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { products, type Product } from "@/data/products";
 import ProductCard from "@/app/components/product/ProductCard";
@@ -14,6 +14,14 @@ export default function FeaturedProducts() {
 
   const itemsPerPage = 4;
   const totalPages = Math.ceil(featuredProducts.length / itemsPerPage);
+
+  // Auto slide every 5 seconds
+  useEffect(() => {
+    const slideTimer = setInterval(() => {
+      setCurrentPage((prev) => (prev + 1) % totalPages);
+    }, 5000);
+    return () => clearInterval(slideTimer);
+  }, [totalPages]);
 
   const handleQuickView = useCallback((product: Product) => {
     setQuickViewProduct(product);
