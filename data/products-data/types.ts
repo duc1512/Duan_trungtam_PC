@@ -31,6 +31,7 @@ export interface Product {
   inStock?: boolean;
   status?: "active" | "inactive" | "out_of_stock";
   sales?: number;
+  badge?: string;
 }
 
 export interface CategoryInfo {
