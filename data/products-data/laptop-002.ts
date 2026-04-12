@@ -9,17 +9,38 @@ export const laptop002: Product = {
   rating: 4.9,
   reviewCount: 324,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&h=600&fit=crop", alt: "MacBook Pro M3 Max - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800&h=600&fit=crop", alt: "MacBook Pro M3 Max - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=600&fit=crop", alt: "MacBook Pro M3 Max - Open" },
+    {
+      id: 1,
+      url: "http://www.maccenter.vn/App_images/MacBookPro-14-M3Pro-Black-B.jpg",
+      alt: "MacBook Pro M3 Max - Front View",
+    },
+    {
+      id: 2,
+      url: "http://www.maccenter.vn/App_images/MacBookPro-14-M3Pro-Black-B.jpg",
+      alt: "MacBook Pro M3 Max - Open",
+    },
+    {
+      id: 3,
+      url: "http://www.maccenter.vn/App_images/MacBookPro-14-M3Pro-Black-B.jpg",
+      alt: "MacBook Pro M3 Max - Keyboard",
+    },
+    {
+      id: 4,
+      url: "http://www.maccenter.vn/App_images/MacBookPro-14-M3Pro-Black-B.jpg",
+      alt: "MacBook Pro M3 Max - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&h=300&fit=crop",
-  description: "MacBook Pro 14-inch với chip M3 Max - Hiệu năng đỉnh cao cho chuyên gia sáng tạo. Màn hình Liquid Retina XDR tuyệt đẹp, thời lượng pin ấn tượng lên đến 18 giờ.",
+  image: "http://www.maccenter.vn/App_images/MacBookPro-14-M3Pro-Black-B.jpg",
+  description:
+    "MacBook Pro 14-inch với chip M3 Max - Hiệu năng đỉnh cao cho chuyên gia sáng tạo. Màn hình Liquid Retina XDR tuyệt đẹp, thời lượng pin ấn tượng lên đến 18 giờ.",
   specifications: [
     { label: "CPU", value: "Apple M3 Max (14 nhân CPU, 30 nhân GPU)" },
     { label: "RAM", value: "36GB Unified Memory" },
     { label: "Ổ cứng", value: "1TB SSD" },
-    { label: "Màn hình", value: '14.2" Liquid Retina XDR, 3024x1964, 120Hz ProMotion' },
+    {
+      label: "Màn hình",
+      value: '14.2" Liquid Retina XDR, 3024x1964, 120Hz ProMotion',
+    },
     { label: "Camera", value: "12MP Center Stage với True Tone" },
     { label: "Kết nối", value: "Wi-Fi 6E, Bluetooth 5.3, 3x Thunderbolt 4" },
     { label: "Cổng", value: "HDMI, SDXC, MagSafe 3, 3.5mm headphone" },

@@ -9,12 +9,26 @@ export const ssd001: Product = {
   rating: 4.8,
   reviewCount: 328,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "Samsung 990 PRO - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=800&h=600&fit=crop", alt: "Samsung 990 PRO - Chip View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop", alt: "Samsung 990 PRO - Box View" },
+    {
+      id: 1,
+      url: "https://img.global.news.samsung.com/global/wp-content/uploads/2022/08/SamsungSSD990PRO_main1.jpgsamsung-990pro,ssd,nvmeasamsung-990pro,ssd,nvmea",
+      alt: "Samsung 990 PRO - Front View",
+    },
+    {
+      id: 2,
+      url: "https://img.global.news.samsung.com/global/wp-content/uploads/2022/08/SamsungSSD990PRO_main1.jpg",
+      alt: "Samsung 990 PRO - Chip View",
+    },
+    {
+      id: 3,
+      url: "https://img.global.news.samsung.com/global/wp-content/uploads/2022/08/SamsungSSD990PRO_main1.jpg",
+      alt: "Samsung 990 PRO - Box View",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400&h=300&fit=crop",
-  description: "Samsung 990 PRO 2TB - SSD NVMe PCIe Gen 5.0 tốc độ vũ trụ. Tốc độ đọc lên đến 14,500MB/s, ghi 13,000MB/s. Hiệu năng vượt trội cho gaming, đồ họa và xử lý dữ liệu nặng.",
+  image:
+    "https://img.global.news.samsung.com/global/wp-content/uploads/2022/08/SamsungSSD990PRO_main1.jpg",
+  description:
+    "Samsung 990 PRO 2TB - SSD NVMe PCIe Gen 5.0 tốc độ vũ trụ. Tốc độ đọc lên đến 14,500MB/s, ghi 13,000MB/s. Hiệu năng vượt trội cho gaming, đồ họa và xử lý dữ liệu nặng.",
   specifications: [
     { label: "Dung lượng", value: "2TB (2000GB)" },
     { label: "Chuẩn kết nối", value: "PCIe Gen 5.0 x4, NVMe 2.0" },

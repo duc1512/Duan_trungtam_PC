@@ -9,13 +9,31 @@ export const cpu001: Product = {
   rating: 4.8,
   reviewCount: 234,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "Intel Core i9-14900K - Box View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop", alt: "Intel Core i9-14900K - CPU View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=800&h=600&fit=crop", alt: "Intel Core i9-14900K - Detail View" },
-    { id: 4, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "Intel Core i9-14900K - Socket View" },
+    {
+      id: 1,
+      url: "https://m.media-amazon.com/images/I/61My4F2-XUL._AC_.jpg",
+      alt: "Intel Core i9-14900K - Box View",
+    },
+    {
+      id: 2,
+      url: "https://m.media-amazon.com/images/I/61My4F2-XUL._AC_.jpg",
+      alt: "Intel Core i9-14900K - CPU View",
+    },
+    {
+      id: 3,
+      url: "https://m.media-amazon.com/images/I/61My4F2-XUL._AC_.jpg",
+      alt: "Intel Core i9-14900K - Detail View",
+    },
+    {
+      id: 4,
+      url: "https://m.media-amazon.com/images/I/61My4F2-XUL._AC_.jpg",
+      alt: "Intel Core i9-14900K - Socket View",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=400&h=300&fit=crop",
-  description: "Intel Core i9-14900K - CPU đỉnh cao dòng Raptor Lake Refresh với 24 nhân 32 luồng, xung nhịp lên đến 6.0GHz. Hiệu năng vượt trội cho gaming, streaming và đồ họa chuyên nghiệp.",
+  image:
+    "https://m.media-amazon.com/images/I/61My4F2-XUL._AC_.jpg",
+  description:
+    "Intel Core i9-14900K - CPU đỉnh cao dòng Raptor Lake Refresh với 24 nhân 32 luồng, xung nhịp lên đến 6.0GHz. Hiệu năng vượt trội cho gaming, streaming và đồ họa chuyên nghiệp.",
   specifications: [
     { label: "Dòng CPU", value: "Intel Core 14th Gen Raptor Lake Refresh" },
     { label: "Nhân luồng", value: "24 nhân (8P+16E), 32 luồng" },

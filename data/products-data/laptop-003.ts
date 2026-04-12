@@ -9,14 +9,36 @@ export const laptop003: Product = {
   rating: 4.7,
   reviewCount: 189,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800&h=600&fit=crop", alt: "ASUS ROG G15 - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&h=600&fit=crop", alt: "ASUS ROG G15 - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=600&fit=crop", alt: "ASUS ROG G15 - Open" },
+    {
+      id: 1,
+      url: "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408.jpg",
+      alt: "ROG Strix G15 - Front View",
+    },
+    {
+      id: 2,
+      url: "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408.jpg",
+      alt: "ROG Strix G15 - Open",
+    },
+    {
+      id: 3,
+      url: "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408.jpg",
+      alt: "ROG Strix G15 - Keyboard",
+    },
+    {
+      id: 4,
+      url: "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408.jpg",
+      alt: "ROG Strix G15 - Ports",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=400&h=300&fit=crop",
-  description: "Laptop Gaming ASUS ROG Strix G15 với RTX 4070 và Intel Core i7-13700H. Hiệu năng mạnh mẽ cho gaming 1440p, thiết kế tản nhiệt tiên tiến, màn hình 165Hz siêu mượt.",
+  image:
+    "https://laptopmedia.com/wp-content/uploads/2023/01/1-4-e1672813274408.jpg",
+  description:
+    "Laptop Gaming ASUS ROG Strix G15 với RTX 4070 và Intel Core i7-13700H. Hiệu năng mạnh mẽ cho gaming 1440p, thiết kế tản nhiệt tiên tiến, màn hình 165Hz siêu mượt.",
   specifications: [
-    { label: "CPU", value: "Intel Core i7-13700H (14 nhân, 20 luồng, up to 5.0GHz)" },
+    {
+      label: "CPU",
+      value: "Intel Core i7-13700H (14 nhân, 20 luồng, up to 5.0GHz)",
+    },
     { label: "GPU", value: "NVIDIA GeForce RTX 4070 8GB GDDR6" },
     { label: "RAM", value: "16GB DDR5-4800 (2 khe, nâng cấp tối đa 32GB)" },
     { label: "Ổ cứng", value: "512GB PCIe 4.0 NVMe M.2 SSD" },
@@ -37,7 +59,12 @@ export const laptop003: Product = {
   ],
   category: "Laptop Gaming",
   categoryId: "laptop-gaming",
-  specs: { cpu: "i7-13700H", ram: "16GB", storage: "512GB SSD", gpu: "RTX 4070" },
+  specs: {
+    cpu: "i7-13700H",
+    ram: "16GB",
+    storage: "512GB SSD",
+    gpu: "RTX 4070",
+  },
   inStock: true,
   status: "active",
   sales: 156,

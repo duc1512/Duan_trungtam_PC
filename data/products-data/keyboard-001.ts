@@ -9,12 +9,31 @@ export const keyboard001: Product = {
   rating: 4.7,
   reviewCount: 312,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800&h=600&fit=crop", alt: "AKKO 3098B - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1587829741301-dc798b91add1?w=800&h=600&fit=crop", alt: "AKKO 3098B - RGB On" },
-    { id: 3, url: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=800&h=600&fit=crop", alt: "AKKO 3098B - Side View" },
+    {
+      id: 1,
+      url: "https://minhancomputercdn.com/media/lib/01-09-2023/bn-phm-c-akko-3098b-multi-modes-world-tour-tokyo-r2-2.jpg",
+      alt: "AKKO 3098B Tokyo - Front View",
+    },
+    {
+      id: 2,
+      url: "https://minhancomputercdn.com/media/lib/01-09-2023/bn-phm-c-akko-3098b-multi-modes-world-tour-tokyo-r2-2.jpg",
+      alt: "AKKO 3098B Tokyo - Side View",
+    },
+    {
+      id: 3,
+      url: "https://minhancomputercdn.com/media/lib/01-09-2023/bn-phm-c-akko-3098b-multi-modes-world-tour-tokyo-r2-2.jpg",
+      alt: "AKKO 3098B Tokyo - Switches",
+    },
+    {
+      id: 4,
+      url: "https://minhancomputercdn.com/media/lib/01-09-2023/bn-phm-c-akko-3098b-multi-modes-world-tour-tokyo-r2-2.jpg",
+      alt: "AKKO 3098B Tokyo - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1595225476474-87563907a212?w=400&h=300&fit=crop",
-  description: "Bàn phím cơ AKKO 3098B Plus phiên bản World Tour Tokyo với 98 phím layout compact. Switch CS Jelly Pink siêu êm, kết nối 3 chế độ (Bluetooth 5.0/2.4Ghz/Type-C), RGB backlit 18 triệu màu.",
+  image:
+    "https://minhancomputercdn.com/media/lib/01-09-2023/bn-phm-c-akko-3098b-multi-modes-world-tour-tokyo-r2-2.jpg",
+  description:
+    "Bàn phím cơ AKKO 3098B Plus phiên bản World Tour Tokyo với 98 phím layout compact. Switch CS Jelly Pink siêu êm, kết nối 3 chế độ (Bluetooth 5.0/2.4Ghz/Type-C), RGB backlit 18 triệu màu.",
   specifications: [
     { label: "Layout", value: "98 phím (1800 Compact)" },
     { label: "Switch", value: "AKKO CS Jelly Pink (Linear)" },
