@@ -83,9 +83,9 @@ export default function Navigation() {
         {/* Links ngang */}
         <div className="flex flex-1 ml-6 gap-6 text-sm font-semibold uppercase">
           <Link href="/khuyen-mai-hot" className="hover:text-yellow-400 transition-colors">🔥 Khuyến mãi hot</Link>
-          <Link href="/laptop-gaming" className="hover:text-yellow-400 transition-colors">Laptop Gaming</Link>
-          <Link href="/pc-gaming" className="hover:text-yellow-400 transition-colors">PC Gaming</Link>
-          <Link href="/tin-tuc" className="hover:text-yellow-400 transition-colors">Tin tức công nghệ</Link>
+          <Link href="/category/laptop-gaming" className="hover:text-yellow-400 transition-colors">Laptop Gaming</Link>
+          <Link href="/category/pc-gaming" className="hover:text-yellow-400 transition-colors">PC Gaming</Link>
+          <Link href="/news" className="hover:text-yellow-400 transition-colors">Tin tức công nghệ</Link>
           <Link href="/ho-tro-khach-hang" className="hover:text-yellow-400 transition-colors">Hỗ trợ khách hàng</Link>
           <Link href="/lien-he" className="hover:text-yellow-400 transition-colors">Liên hệ</Link>
         </div>
