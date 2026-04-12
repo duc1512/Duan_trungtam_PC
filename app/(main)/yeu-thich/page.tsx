@@ -4,82 +4,10 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useCart } from "@/hooks/useCart";
+import { useFavorites, type FavoriteItem } from "@/hooks/useFavorites";
 
-// ==================== TYPES ====================
-interface WishlistItem {
-  id: string;
-  name: string;
-  brand: string;
-  price: number;
-  originalPrice?: number;
-  rating: number;
-  reviewCount: number;
-  image: string;
-  addedAt: string;
-  inStock: boolean;
-}
-
-// ==================== MOCK DATA ====================
-const mockWishlist: WishlistItem[] = [
-  {
-    id: "wish-1",
-    name: "Laptop Gaming ASUS ROG Strix G16 G614JV-N3135W",
-    brand: "ASUS",
-    price: 44990000,
-    originalPrice: 49990000,
-    rating: 4.8,
-    reviewCount: 128,
-    image: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=400&h=300&fit=crop",
-    addedAt: "2026-04-01T10:00:00",
-    inStock: true,
-  },
-  {
-    id: "wish-2",
-    name: "MSI Katana 15 B13VFK-676VN",
-    brand: "MSI",
-    price: 32990000,
-    rating: 4.5,
-    reviewCount: 89,
-    image: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=400&h=300&fit=crop",
-    addedAt: "2026-03-28T15:30:00",
-    inStock: true,
-  },
-  {
-    id: "wish-3",
-    name: "Chuột Logitech G Pro X Superlight",
-    brand: "Logitech",
-    price: 2490000,
-    originalPrice: 2990000,
-    rating: 4.9,
-    reviewCount: 456,
-    image: "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=400&h=300&fit=crop",
-    addedAt: "2026-03-25T09:00:00",
-    inStock: true,
-  },
-  {
-    id: "wish-4",
-    name: "Bàn phím Keychron K2 Wireless",
-    brand: "Keychron",
-    price: 1890000,
-    rating: 4.6,
-    reviewCount: 234,
-    image: "https://images.unsplash.com/photo-1595225476474-87563907a212?w=400&h=300&fit=crop",
-    addedAt: "2026-03-20T14:00:00",
-    inStock: false,
-  },
-  {
-    id: "wish-5",
-    name: "Tai nghe HyperX Cloud II Wireless",
-    brand: "HyperX",
-    price: 1590000,
-    originalPrice: 1890000,
-    rating: 4.7,
-    reviewCount: 312,
-    image: "https://images.unsplash.com/photo-1612444530582-fc87183c41a2?w=400&h=300&fit=crop",
-    addedAt: "2026-03-18T11:00:00",
-    inStock: true,
-  },
-];
+// WishlistItem is now FavoriteItem from useFavorites
+interface WishlistItem extends FavoriteItem {}
 
 // ==================== UTILITY FUNCTIONS ====================
 const formatPrice = (price: number) => {
@@ -104,18 +32,40 @@ const formatDate = (dateString: string) => {
 // Breadcrumb
 const Breadcrumb = () => (
   <nav className="flex items-center gap-2 text-sm text-gray-600 mb-6">
-    <Link href="/" className="hover:text-[#e30019] transition-colors">Trang chủ</Link>
-    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+    <Link href="/" className="hover:text-[#e30019] transition-colors">
+      Trang chủ
+    </Link>
+    <svg
+      className="w-4 h-4"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M9 5l7 7-7 7"
+      />
     </svg>
     <span className="text-gray-900 font-medium">Sản phẩm yêu thích</span>
   </nav>
 );
 
 // Star Rating
-const StarRating = ({ rating, reviewCount }: { rating: number; reviewCount: number }) => (
+const StarRating = ({
+  rating,
+  reviewCount,
+}: {
+  rating: number;
+  reviewCount: number;
+}) => (
   <div className="flex items-center gap-1">
-    <svg className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+    <svg
+      className="w-4 h-4 text-yellow-400"
+      fill="currentColor"
+      viewBox="0 0 20 20"
+    >
       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
     </svg>
     <span className="text-sm font-medium text-gray-700">{rating}</span>
@@ -140,7 +90,10 @@ const WishlistItemCard = ({
   return (
     <div className="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300">
       {/* Image */}
-      <Link href={`/product/${item.id}`} className="block relative aspect-[4/3] bg-gray-100 overflow-hidden">
+      <Link
+        href={`/product/${item.id}`}
+        className="block relative aspect-[4/3] bg-gray-100 overflow-hidden"
+      >
         <Image
           src={item.image}
           alt={item.name}
@@ -155,7 +108,9 @@ const WishlistItemCard = ({
         )}
         {!item.inStock && (
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-            <span className="bg-gray-900 text-white px-3 py-1 rounded-lg text-sm font-medium">Hết hàng</span>
+            <span className="bg-gray-900 text-white px-3 py-1 rounded-lg text-sm font-medium">
+              Hết hàng
+            </span>
           </div>
         )}
 
@@ -168,8 +123,18 @@ const WishlistItemCard = ({
           className="absolute top-2 right-2 p-2 bg-white/90 hover:bg-red-50 text-gray-400 hover:text-red-500 rounded-full shadow-sm opacity-0 group-hover:opacity-100 transition-all"
           title="Xóa khỏi yêu thích"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         </button>
       </Link>
@@ -187,9 +152,13 @@ const WishlistItemCard = ({
 
         {/* Price */}
         <div className="mt-2 flex items-baseline gap-2">
-          <span className="text-lg font-bold text-[#e30019]">{formatPrice(item.price)}</span>
+          <span className="text-lg font-bold text-[#e30019]">
+            {formatPrice(item.price)}
+          </span>
           {item.originalPrice && (
-            <span className="text-sm text-gray-400 line-through">{formatPrice(item.originalPrice)}</span>
+            <span className="text-sm text-gray-400 line-through">
+              {formatPrice(item.originalPrice)}
+            </span>
           )}
         </div>
 
@@ -209,8 +178,18 @@ const WishlistItemCard = ({
                 : "bg-gray-200 text-gray-400 cursor-not-allowed"
             }`}
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+              />
             </svg>
             {item.inStock ? "Thêm vào giỏ" : "Hết hàng"}
           </button>
@@ -220,8 +199,18 @@ const WishlistItemCard = ({
             className="p-2.5 border border-gray-300 hover:border-red-300 hover:text-red-500 rounded-lg transition-colors"
             title="Xóa"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+              />
             </svg>
           </button>
         </div>
@@ -234,18 +223,42 @@ const WishlistItemCard = ({
 const EmptyWishlist = () => (
   <div className="text-center py-16 bg-white rounded-xl border border-gray-200">
     <div className="w-32 h-32 bg-gray-100 rounded-full mx-auto mb-6 flex items-center justify-center">
-      <svg className="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+      <svg
+        className="w-16 h-16 text-gray-400"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+        />
       </svg>
     </div>
-    <h2 className="text-xl font-bold text-gray-900 mb-2">Danh sách yêu thích trống</h2>
-    <p className="text-gray-600 mb-6">Bạn chưa có sản phẩm nào trong danh sách yêu thích</p>
+    <h2 className="text-xl font-bold text-gray-900 mb-2">
+      Danh sách yêu thích trống
+    </h2>
+    <p className="text-gray-600 mb-6">
+      Bạn chưa có sản phẩm nào trong danh sách yêu thích
+    </p>
     <Link
       href="/"
       className="inline-flex items-center gap-2 bg-[#e30019] hover:bg-red-700 text-white font-bold py-3 px-8 rounded-xl transition-colors"
     >
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+      <svg
+        className="w-5 h-5"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+        />
       </svg>
       Tiếp tục mua sắm
     </Link>
@@ -255,20 +268,49 @@ const EmptyWishlist = () => (
 // Similar Products
 const SimilarProducts = () => {
   const products = [
-    { id: "sim-1", name: "Laptop Dell XPS 15 9520", price: 45990000, image: "https://images.unsplash.com/photo-1593642632823-8f78536788c6?w=300&h=200&fit=crop" },
-    { id: "sim-2", name: "MacBook Pro 14 M3 Pro", price: 52990000, image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=300&h=200&fit=crop" },
-    { id: "sim-3", name: "Acer Predator Helios 300", price: 38990000, image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop" },
-    { id: "sim-4", name: "Razer Blade 14", price: 55990000, image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=300&h=200&fit=crop" },
+    {
+      id: "sim-1",
+      name: "Laptop Dell XPS 15 9520",
+      price: 45990000,
+      image:
+        "https://images.unsplash.com/photo-1593642632823-8f78536788c6?w=300&h=200&fit=crop",
+    },
+    {
+      id: "sim-2",
+      name: "MacBook Pro 14 M3 Pro",
+      price: 52990000,
+      image:
+        "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=300&h=200&fit=crop",
+    },
+    {
+      id: "sim-3",
+      name: "Acer Predator Helios 300",
+      price: 38990000,
+      image:
+        "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=200&fit=crop",
+    },
+    {
+      id: "sim-4",
+      name: "Razer Blade 14",
+      price: 55990000,
+      image:
+        "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=300&h=200&fit=crop",
+    },
   ];
 
   const { addItem } = useCart();
 
   return (
     <div className="mt-12">
-      <h2 className="text-xl font-bold text-gray-900 mb-6">Có thể bạn cũng thích</h2>
+      <h2 className="text-xl font-bold text-gray-900 mb-6">
+        Có thể bạn cũng thích
+      </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {products.map((product) => (
-          <div key={product.id} className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+          <div
+            key={product.id}
+            className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow"
+          >
             <Link href={`/product/${product.id}`}>
               <div className="relative aspect-[3/2]">
                 <Image
@@ -287,7 +329,9 @@ const SimilarProducts = () => {
                 </h3>
               </Link>
               <div className="flex items-center justify-between">
-                <span className="font-bold text-[#e30019]">{formatPrice(product.price)}</span>
+                <span className="font-bold text-[#e30019]">
+                  {formatPrice(product.price)}
+                </span>
                 <button
                   onClick={() =>
                     addItem({
@@ -300,8 +344,18 @@ const SimilarProducts = () => {
                   }
                   className="p-2 bg-gray-100 hover:bg-[#e30019] hover:text-white rounded-lg transition-colors"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 4v16m8-8H4"
+                    />
                   </svg>
                 </button>
               </div>
@@ -315,13 +369,20 @@ const SimilarProducts = () => {
 
 // ==================== MAIN WISHLIST PAGE ====================
 export default function WishlistPage() {
-  const [wishlistItems, setWishlistItems] = useState<WishlistItem[]>(mockWishlist);
+  const {
+    items: wishlistItems,
+    removeFromFavorites,
+    clearFavorites,
+  } = useFavorites();
   const { addItem } = useCart();
-  const [showToast, setShowToast] = useState<{ message: string; type: "success" | "error" } | null>(null);
+  const [showToast, setShowToast] = useState<{
+    message: string;
+    type: "success" | "error";
+  } | null>(null);
 
   // Remove from wishlist
   const handleRemove = (id: string) => {
-    setWishlistItems((prev) => prev.filter((item) => item.id !== id));
+    removeFromFavorites(id);
     showToastMessage("Đã xóa khỏi danh sách yêu thích", "success");
   };
 
@@ -340,46 +401,49 @@ export default function WishlistPage() {
         image: item.image,
         maxQuantity: 10,
       },
-      1
+      1,
     );
     showToastMessage("Đã thêm vào giỏ hàng", "success");
   };
 
   // Add all to cart
   const handleAddAllToCart = () => {
-    const availableItems = wishlistItems.filter((item) => item.inStock);
-    if (availableItems.length === 0) {
-      showToastMessage("Không có sản phẩm nào còn hàng", "error");
-      return;
-    }
-
-    availableItems.forEach((item) => {
-      addItem(
-        {
-          id: item.id,
-          name: item.name,
-          price: item.price,
-          image: item.image,
-          maxQuantity: 10,
-        },
-        1
-      );
+    let addedCount = 0;
+    wishlistItems.forEach((item) => {
+      if (item.inStock) {
+        addItem(
+          {
+            id: item.id,
+            name: item.name,
+            price: item.price,
+            image: item.image,
+            maxQuantity: 10,
+          },
+          1,
+        );
+        addedCount++;
+      }
     });
-    showToastMessage(`Đã thêm ${availableItems.length} sản phẩm vào giỏ hàng`, "success");
+    if (addedCount > 0) {
+      showToastMessage(
+        `Đã thêm ${addedCount} sản phẩm vào giỏ hàng`,
+        "success",
+      );
+    } else {
+      showToastMessage("Không có sản phẩm nào có thể thêm", "error");
+    }
+  };
+
+  // Clear all favorites
+  const handleClearAll = () => {
+    clearFavorites();
+    showToastMessage("Đã xóa tất cả sản phẩm yêu thích", "success");
   };
 
   // Show toast
   const showToastMessage = (message: string, type: "success" | "error") => {
     setShowToast({ message, type });
     setTimeout(() => setShowToast(null), 3000);
-  };
-
-  // Clear wishlist
-  const handleClearWishlist = () => {
-    if (confirm("Bạn có chắc muốn xóa tất cả sản phẩm khỏi danh sách yêu thích?")) {
-      setWishlistItems([]);
-      showToastMessage("Đã xóa tất cả sản phẩm", "success");
-    }
   };
 
   return (
@@ -391,8 +455,12 @@ export default function WishlistPage() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
           <div>
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Sản phẩm yêu thích</h1>
-            <p className="text-gray-600 mt-1">{wishlistItems.length} sản phẩm trong danh sách</p>
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900">
+              Sản phẩm yêu thích
+            </h1>
+            <p className="text-gray-600 mt-1">
+              {wishlistItems.length} sản phẩm trong danh sách
+            </p>
           </div>
 
           {wishlistItems.length > 0 && (
@@ -401,17 +469,37 @@ export default function WishlistPage() {
                 onClick={handleAddAllToCart}
                 className="px-4 py-2 bg-[#e30019] hover:bg-red-700 text-white font-medium rounded-lg transition-colors flex items-center gap-2"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
                 </svg>
                 Thêm tất cả vào giỏ
               </button>
               <button
-                onClick={handleClearWishlist}
+                onClick={handleClearAll}
                 className="px-4 py-2 border border-gray-300 hover:border-red-300 hover:text-red-500 text-gray-700 font-medium rounded-lg transition-colors"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                  />
                 </svg>
               </button>
             </div>
@@ -442,11 +530,19 @@ export default function WishlistPage() {
 
       {/* Toast Notification */}
       {showToast && (
-        <div className={`fixed bottom-4 right-4 px-6 py-3 rounded-lg shadow-lg flex items-center gap-2 animate-slide-in ${
-          showToast.type === "success" ? "bg-green-500 text-white" : "bg-red-500 text-white"
-        }`}>
+        <div
+          className={`fixed bottom-4 right-4 px-6 py-3 rounded-lg shadow-lg flex items-center gap-2 animate-slide-in ${
+            showToast.type === "success"
+              ? "bg-green-500 text-white"
+              : "bg-red-500 text-white"
+          }`}
+        >
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            <path
+              fillRule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+              clipRule="evenodd"
+            />
           </svg>
           {showToast.message}
         </div>
