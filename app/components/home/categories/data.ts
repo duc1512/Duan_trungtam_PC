@@ -3,9 +3,9 @@ import { CategoryIcons } from "./CategoryIcons";
 
 export const categories: Category[] = [
   {
-    id: "laptop",
-    name: "Laptop",
-    slug: "laptop",
+    id: "laptop-gaming",
+    name: "Laptop Gaming",
+    slug: "laptop-gaming",
     productCount: 156,
     icon: CategoryIcons.laptop,
     gradient: "from-blue-500/10 to-indigo-500/10",
@@ -19,15 +19,6 @@ export const categories: Category[] = [
     icon: CategoryIcons.pcGaming,
     gradient: "from-red-500/10 to-orange-500/10",
     image: "/images/categories/pc-gaming.jpg",
-  },
-  {
-    id: "linh-kien",
-    name: "Linh Kiện PC",
-    slug: "linh-kien-pc",
-    productCount: 342,
-    icon: CategoryIcons.components,
-    gradient: "from-emerald-500/10 to-teal-500/10",
-    image: "/images/categories/components.jpg",
   },
   {
     id: "man-hinh",
@@ -50,7 +41,7 @@ export const categories: Category[] = [
   {
     id: "chuot",
     name: "Chuột Gaming",
-    slug: "chuot-gaming",
+    slug: "chuot",
     productCount: 94,
     icon: CategoryIcons.mouse,
     gradient: "from-cyan-500/10 to-blue-500/10",
@@ -75,13 +66,13 @@ export const categories: Category[] = [
     image: "/images/categories/network.jpg",
   },
   {
-    id: "o-cung",
-    name: "Ổ Cứng & SSD",
-    slug: "o-cung-ssd",
+    id: "linh-kien-pc",
+    name: "Linh Kiện PC",
+    slug: "linh-kien-pc",
     productCount: 203,
-    icon: CategoryIcons.storage,
+    icon: CategoryIcons.components,
     gradient: "from-slate-500/10 to-gray-500/10",
-    image: "/images/categories/storage.jpg",
+    image: "/images/categories/components.jpg",
   },
   {
     id: "ghe-gaming",

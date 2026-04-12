@@ -4,18 +4,18 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const categories = [
-  "Laptop Gaming",
-  "PC Gaming", 
-  "Card VGA",
-  "CPU - Bộ vi xử lý",
-  "Mainboard",
-  "RAM",
-  "SSD - Ổ cứng",
-  "Màn hình",
-  "Bàn phím",
-  "Chuột gaming",
-  "Tai nghe",
-  "Case - Vỏ case"
+  { name: "Laptop Gaming", slug: "laptop-gaming" },
+  { name: "PC Gaming", slug: "pc-gaming" },
+  { name: "Card VGA", slug: "linh-kien-pc" },
+  { name: "CPU - Bộ vi xử lý", slug: "linh-kien-pc" },
+  { name: "Mainboard", slug: "linh-kien-pc" },
+  { name: "RAM", slug: "linh-kien-pc" },
+  { name: "SSD - Ổ cứng", slug: "linh-kien-pc" },
+  { name: "Màn hình", slug: "man-hinh" },
+  { name: "Bàn phím", slug: "ban-phim" },
+  { name: "Chuột gaming", slug: "chuot" },
+  { name: "Tai nghe", slug: "tai-nghe" },
+  { name: "Case - Vỏ case", slug: "case" },
 ];
 
 export default function Navigation() {
@@ -70,11 +70,11 @@ export default function Navigation() {
             {categories.map((category, idx) => (
               <Link 
                 key={idx} 
-                href={`/category/${idx + 1}`} 
+                href={`/category/${category.slug}`} 
                 className="block px-3 py-2 border-b border-gray-100 hover:text-[#e30019] hover:bg-gray-50 text-sm font-medium"
                 onClick={closeDropdown}
               >
-                {category}
+                {category.name}
               </Link>
             ))}
           </div>
