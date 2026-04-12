@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/hooks/useCart";
+import { FavoritesProvider } from "@/hooks/useFavorites";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "TDuke - Công Nghệ Cao Cấp",
-  description: "TDuke tự hào là đơn vị chuyên cung cấp thiết bị công nghệ, PC Gaming và linh kiện cao cấp với giá tốt nhất thị trường. Cam kết 100% chính hãng.",
+  description:
+    "TDuke tự hào là đơn vị chuyên cung cấp thiết bị công nghệ, PC Gaming và linh kiện cao cấp với giá tốt nhất thị trường. Cam kết 100% chính hãng.",
 };
 
 export default function RootLayout({
@@ -30,7 +32,7 @@ export default function RootLayout({
     >
       <body className="min-h-full">
         <CartProvider>
-          {children}
+          <FavoritesProvider>{children}</FavoritesProvider>
         </CartProvider>
       </body>
     </html>
