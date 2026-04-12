@@ -9,12 +9,31 @@ export const mouse001: Product = {
   rating: 4.8,
   reviewCount: 567,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&h=600&fit=crop", alt: "Logitech G Pro X - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=800&h=600&fit=crop", alt: "Logitech G Pro X - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1563297007-0686b70087af?w=800&h=600&fit=crop", alt: "Logitech G Pro X - Gaming" },
+    {
+      id: 1,
+      url: "https://www.tncstore.vn/media/product/250-9061-chuot-logitech-g-pro-x-superlight-2-wireless-12.jpg",
+      alt: "G Pro X Superlight - Front View",
+    },
+    {
+      id: 2,
+      url: "https://www.tncstore.vn/media/product/250-9061-chuot-logitech-g-pro-x-superlight-2-wireless-12.jpg",
+      alt: "G Pro X Superlight - Side View",
+    },
+    {
+      id: 3,
+      url: "https://www.tncstore.vn/media/product/250-9061-chuot-logitech-g-pro-x-superlight-2-wireless-12.jpg",
+      alt: "G Pro X Superlight - Top View",
+    },
+    {
+      id: 4,
+      url: "https://www.tncstore.vn/media/product/250-9061-chuot-logitech-g-pro-x-superlight-2-wireless-12.jpg",
+      alt: "G Pro X Superlight - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&h=300&fit=crop",
-  description: "Chuột gaming siêu nhẹ Logitech G Pro X Superlight chỉ 63g. Cảm biến HERO 25K, độ chính xác cực cao, thời lượng pin 70h. Thiết kế ambidextrous phù hợp cả tay trái và phải.",
+  image:
+    "https://www.tncstore.vn/media/product/250-9061-chuot-logitech-g-pro-x-superlight-2-wireless-12.jpg",
+  description:
+    "Chuột gaming siêu nhẹ Logitech G Pro X Superlight chỉ 63g. Cảm biến HERO 25K, độ chính xác cực cao, thời lượng pin 70h. Thiết kế ambidextrous phù hợp cả tay trái và phải.",
   specifications: [
     { label: "Cảm biến", value: "Logitech HERO 25K" },
     { label: "DPI", value: "100 - 25,600" },

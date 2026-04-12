@@ -9,13 +9,31 @@ export const gpu001: Product = {
   rating: 4.9,
   reviewCount: 512,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800&h=600&fit=crop", alt: "RTX 4090 - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1587202372775-4abc9295e321?w=800&h=600&fit=crop", alt: "RTX 4090 - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800&h=600&fit=crop", alt: "RTX 4090 - Ports" },
-    { id: 4, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "RTX 4090 - Detail" },
+    {
+      id: 1,
+      url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6521/6521430cv13d.jpg",
+      alt: "RTX 4090 - Front View",
+    },
+    {
+      id: 2,
+      url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6521/6521430cv13d.jpg",
+      alt: "RTX 4090 - Side View",
+    },
+    {
+      id: 3,
+      url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6521/6521430cv13d.jpg",
+      alt: "RTX 4090 - Ports",
+    },
+    {
+      id: 4,
+      url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6521/6521430cv13d.jpg",
+      alt: "RTX 4090 - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=400&h=300&fit=crop",
-  description: "NVIDIA GeForce RTX 4090 - Card đồ họa gaming đỉnh cao với kiến trúc Ada Lovelace. 24GB GDDR6X, hiệu năng gấp 2-4 lần RTX 3090 Ti. Hỗ trợ DLSS 3, Ray Tracing, cho trải nghiệm gaming 4K 144FPS mượt mà.",
+  image:
+    "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6521/6521430cv13d.jpg",
+  description:
+    "NVIDIA GeForce RTX 4090 - Card đồ họa gaming đỉnh cao với kiến trúc Ada Lovelace. 24GB GDDR6X, hiệu năng gấp 2-4 lần RTX 3090 Ti. Hỗ trợ DLSS 3, Ray Tracing, cho trải nghiệm gaming 4K 144FPS mượt mà.",
   specifications: [
     { label: "GPU", value: "NVIDIA AD102-300-A1 (Ada Lovelace)" },
     { label: "CUDA Cores", value: "16,384" },

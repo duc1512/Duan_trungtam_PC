@@ -9,23 +9,51 @@ export const monitor001: Product = {
   rating: 4.7,
   reviewCount: 234,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&h=600&fit=crop", alt: "ASUS ROG Strix XG27AQ - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=800&h=600&fit=crop", alt: "ASUS ROG Strix XG27AQ - Side View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800&h=600&fit=crop", alt: "ASUS ROG Strix XG27AQ - Gaming Setup" },
+    {
+      id: 1,
+      url: "https://dlcdnwebimgs.asus.com/gain/4BE715FF-0D4F-456E-A9E7-ED41A168FAEB/w717/h525",
+      alt: "ROG Swift PG27AQN - Front View",
+    },
+    {
+      id: 2,
+      url: "https://dlcdnwebimgs.asus.com/gain/4BE715FF-0D4F-456E-A9E7-ED41A168FAEB/w717/h525",
+      alt: "ROG Swift PG27AQN - Side View",
+    },
+    {
+      id: 3,
+      url: "https://dlcdnwebimgs.asus.com/gain/4BE715FF-0D4F-456E-A9E7-ED41A168FAEB/w717/h525",
+      alt: "ROG Swift PG27AQN - Stand",
+    },
+    {
+      id: 4,
+      url: "https://dlcdnwebimgs.asus.com/gain/4BE715FF-0D4F-456E-A9E7-ED41A168FAEB/w717/h525",
+      alt: "ROG Swift PG27AQN - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&h=300&fit=crop",
-  description: "Màn hình gaming ASUS ROG Strix XG27AQ 27 inch với độ phân giải 2K (2560x1440), tần số quét 170Hz, thời gian phản hồi 1ms GtG. Công nghệ G-Sync Compatible, HDR400, màu sắc chính xác 95% DCI-P3.",
+  image:
+    "https://dlcdnwebimgs.asus.com/gain/4BE715FF-0D4F-456E-A9E7-ED41A168FAEB/w717/h525",
+  description:
+    "Màn hình gaming ASUS ROG Strix XG27AQ 27 inch với độ phân giải 2K (2560x1440), tần số quét 170Hz, thời gian phản hồi 1ms GtG. Công nghệ G-Sync Compatible, HDR400, màu sắc chính xác 95% DCI-P3.",
   specifications: [
-    { label: "Kích thước", value: '27 inch (68.5 cm)' },
+    { label: "Kích thước", value: "27 inch (68.5 cm)" },
     { label: "Độ phân giải", value: "2560 x 1440 (WQHD 2K)" },
     { label: "Tấm nền", value: "Fast IPS" },
     { label: "Tần số quét", value: "170Hz (Overclock)" },
     { label: "Thời gian phản hồi", value: "1ms GtG" },
-    { label: "Công nghệ đồng bộ", value: "NVIDIA G-Sync Compatible, AMD FreeSync Premium" },
+    {
+      label: "Công nghệ đồng bộ",
+      value: "NVIDIA G-Sync Compatible, AMD FreeSync Premium",
+    },
     { label: "Độ sáng", value: "400 nits (HDR400)" },
     { label: "Màu sắc", value: "95% DCI-P3, 130% sRGB" },
-    { label: "Cổng kết nối", value: "2x HDMI 2.0, 1x DisplayPort 1.2, 2x USB 3.0" },
-    { label: "Tính năng", value: "RGB Aura Sync, chân đế Ergo có thể điều chỉnh" },
+    {
+      label: "Cổng kết nối",
+      value: "2x HDMI 2.0, 1x DisplayPort 1.2, 2x USB 3.0",
+    },
+    {
+      label: "Tính năng",
+      value: "RGB Aura Sync, chân đế Ergo có thể điều chỉnh",
+    },
   ],
   stock: 25,
   sku: "XG27AQ-ROG",

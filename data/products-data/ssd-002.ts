@@ -9,12 +9,26 @@ export const ssd002: Product = {
   rating: 4.7,
   reviewCount: 892,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&h=600&fit=crop", alt: "Samsung 980 PRO - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1562976540-ff2e8d5b2a8a?w=800&h=600&fit=crop", alt: "Samsung 980 PRO - Chip View" },
-    { id: 3, url: "https://images.unsplash.com/photo-1587202372775-4abc9295e321?w=800&h=600&fit=crop", alt: "Samsung 980 PRO - Box View" },
+    {
+      id: 1,
+      url: "https://static-01.daraz.com.np/p/dda9589395b7be994877df040782ab21.jpg",
+      alt: "Samsung 980 PRO - Front View",
+    },
+    {
+      id: 2,
+      url: "https://static-01.daraz.com.np/p/dda9589395b7be994877df040782ab21.jpg",
+      alt: "Samsung 980 PRO - Chip View",
+    },
+    {
+      id: 3,
+      url: "https://static-01.daraz.com.np/p/dda9589395b7be994877df040782ab21.jpg",
+      alt: "Samsung 980 PRO - Box View",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400&h=300&fit=crop",
-  description: "Samsung 980 PRO 1TB - SSD NVMe PCIe Gen 4.0 hàng đầu. Tốc độ đọc lên đến 7,000MB/s, ghi 5,000MB/s. Hiệu năng vượt trội cho gaming và xử lý dữ liệu.",
+  image:
+    "https://static-01.daraz.com.np/p/dda9589395b7be994877df040782ab21.jpg",
+  description:
+    "Samsung 980 PRO 1TB - SSD NVMe PCIe Gen 4.0 hàng đầu. Tốc độ đọc lên đến 7,000MB/s, ghi 5,000MB/s. Hiệu năng vượt trội cho gaming và xử lý dữ liệu.",
   specifications: [
     { label: "Dung lượng", value: "1TB (1000GB)" },
     { label: "Chuẩn kết nối", value: "PCIe Gen 4.0 x4, NVMe 1.4" },
