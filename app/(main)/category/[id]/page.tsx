@@ -449,8 +449,8 @@ export default function CategoryPage() {
   const filteredProducts = useMemo(() => {
     let result = [...products];
 
-    // Category filter (in real app, this would filter by category)
-    // products = products.filter((p) => p.category === categoryId);
+    // Category filter - filter by categoryId
+    result = result.filter((p) => p.categoryId === categoryId);
 
     // Brand filter
     if (filters.brands.length > 0) {
@@ -492,7 +492,7 @@ export default function CategoryPage() {
     }
 
     return result;
-  }, [filters, sortBy]);
+  }, [filters, sortBy, categoryId]);
 
   // Pagination
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
