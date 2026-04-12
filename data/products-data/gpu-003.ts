@@ -1,0 +1,62 @@
+import { Product } from "./types";
+
+export const gpu003: Product = {
+  id: "gpu-003",
+  name: "MSI Gaming X Trio RTX 4070 12GB GDDR6X",
+  brand: "MSI",
+  price: 16990000,
+  originalPrice: 18990000,
+  rating: 4.7,
+  reviewCount: 356,
+  images: [
+    {
+      id: 1,
+      url: "https://c1.neweggimages.com/productimage/nb1280/14-137-791-09.jpg",
+      alt: "RTX 4070 MSI - Front View",
+    },
+    {
+      id: 2,
+      url: "https://c1.neweggimages.com/productimage/nb1280/14-137-791-09.jpg",
+      alt: "RTX 4070 MSI - Side View",
+    },
+    {
+      id: 3,
+      url: "https://c1.neweggimages.com/productimage/nb1280/14-137-791-09.jpg",
+      alt: "RTX 4070 MSI - RGB",
+    },
+    {
+      id: 4,
+      url: "https://c1.neweggimages.com/productimage/nb1280/14-137-791-09.jpg",
+      alt: "RTX 4070 MSI - Detail",
+    },
+  ],
+  image:
+    "https://c1.neweggimages.com/productimage/nb1280/14-137-791-09.jpg",
+  description:
+    "MSI Gaming GeForce RTX 4070 12GB Gaming X Trio - Card đồ họa tầm trung cao cấp với tản nhiệt TRI FROZR 3, phù hợp gaming 2K 144Hz và streaming.",
+  specifications: [
+    { label: "GPU", value: "NVIDIA AD104-250-A1 (Ada Lovelace)" },
+    { label: "CUDA Cores", value: "5,888" },
+    { label: "Bộ nhớ", value: "12GB GDDR6X 192-bit" },
+    { label: "Xung nhịp", value: "2.61 GHz (Boost)" },
+    { label: "TDP", value: "200W (Khuyến nghị PSU 650W)" },
+    { label: "Tản nhiệt", value: "TRI FROZR 3, 3 quạt TORX FAN 5.0" },
+    { label: "Kích thước", value: "337 x 140 x 62 mm (3 slot)" },
+    { label: "Cổng kết nối", value: "1x HDMI 2.1a, 3x DisplayPort 1.4a" },
+  ],
+  stock: 28,
+  sku: "RTX-4070-GAMING-X-TRIO-12G",
+  warranty: "36 tháng chính hãng MSI",
+  features: [
+    "Gaming 2K 144Hz max setting",
+    "Hiệu năng/Watt tuyệt vời",
+    "Tản nhiệt MSI êm ái",
+    "DLSS 3 Frame Generation",
+    "NVIDIA Reflex low latency",
+  ],
+  category: "Linh kiện PC",
+  categoryId: "linh-kien-pc",
+  inStock: true,
+  status: "active",
+  sales: 178,
+};

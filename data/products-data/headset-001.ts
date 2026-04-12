@@ -9,12 +9,31 @@ export const headset001: Product = {
   rating: 4.6,
   reviewCount: 278,
   images: [
-    { id: 1, url: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=600&fit=crop", alt: "Razer Kraken V3 - Front View" },
-    { id: 2, url: "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&h=600&fit=crop", alt: "Razer Kraken V3 - RGB On" },
-    { id: 3, url: "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&h=600&fit=crop", alt: "Razer Kraken V3 - Side View" },
+    {
+      id: 1,
+      url: "https://3mat.com.vn/wp-content/uploads/2022/08/46922_tai_nghe_razer_kraken_v3_wired_usb_gaming_headset_rz04_03770200_r3m1_h3.jpg",
+      alt: "G Pro X 2 - Front View",
+    },
+    {
+      id: 2,
+      url: "https://3mat.com.vn/wp-content/uploads/2022/08/46922_tai_nghe_razer_kraken_v3_wired_usb_gaming_headset_rz04_03770200_r3m1_h3.jpg",
+      alt: "G Pro X 2 - Side View",
+    },
+    {
+      id: 3,
+      url: "https://3mat.com.vn/wp-content/uploads/2022/08/46922_tai_nghe_razer_kraken_v3_wired_usb_gaming_headset_rz04_03770200_r3m1_h3.jpg",
+      alt: "G Pro X 2 - Mic",
+    },
+    {
+      id: 4,
+      url: "https://3mat.com.vn/wp-content/uploads/2022/08/46922_tai_nghe_razer_kraken_v3_wired_usb_gaming_headset_rz04_03770200_r3m1_h3.jpg",
+      alt: "G Pro X 2 - Detail",
+    },
   ],
-  image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop",
-  description: "Tai nghe gaming Razer Kraken V3 Pro với công nghệ Razer HyperSense haptic feedback. Driver 50mm Titanium cho âm thanh vòm THX Spatial Audio 7.1, micro Razer HyperClear Cardioid.",
+  image:
+    "https://3mat.com.vn/wp-content/uploads/2022/08/46922_tai_nghe_razer_kraken_v3_wired_usb_gaming_headset_rz04_03770200_r3m1_h3.jpg",
+  description:
+    "Tai nghe gaming Razer Kraken V3 Pro với công nghệ Razer HyperSense haptic feedback. Driver 50mm Titanium cho âm thanh vòm THX Spatial Audio 7.1, micro Razer HyperClear Cardioid.",
   specifications: [
     { label: "Driver", value: "Razer TriForce Titanium 50mm" },
     { label: "Tần số", value: "20 Hz - 20 kHz" },
